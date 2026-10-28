@@ -133,17 +133,21 @@
         "tab": "Spark",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Get started",
+            "icon": "rocket",
             "pages": [
-              "spark/get-started/introduction",
-              "spark/get-started/core-concepts",
-              "spark/get-started/quickstart"
+              "spark/get-started/how-spark-works",
+              "spark/get-started/install-and-sign-in",
+              "spark/get-started/quickstart",
+              "spark/get-started/core-concepts"
             ]
           },
           {
-            "group": "Organizations & Productions",
+            "group": "Set up your team",
+            "icon": "users",
             "pages": [
               "spark/organizations-productions/organizations",
+              "spark/organizations-productions/members-and-seats",
               "spark/organizations-productions/productions"
             ]
           },
@@ -373,6 +377,10 @@
     {
       "source": "/spark/scripts/collaboration",
       "destination": "/spark/scripts/versioning"
+    },
+    {
+      "source": "/spark/get-started/introduction",
+      "destination": "/spark/get-started/how-spark-works"
     }
   ]
 }
