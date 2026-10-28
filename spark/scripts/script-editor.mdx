@@ -1,0 +1,92 @@
+---
+title: 'Script editor'
+description: 'Read a script in View mode, and write and format it in Edit mode.'
+---
+
+The script page has two modes. View shows the published script as a formatted screenplay. Edit opens its text, so you can write and format it.
+
+<img
+  src="/images/spark/scripts/script-editor-overview.png"
+  alt="A script in Edit mode. Marker 1 is on the View and Edit switch, 2 on Add elements, 3 on Save pattern, 4 on the script text and 5 on the Versioning column."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+1. **View** and **Edit**.
+2. **Add elements**, a panel of screenplay elements to insert.
+3. **Save pattern**, to keep your own text for reuse.
+4. The script, which you type into.
+5. The **Versioning** column. See [Drafts and versions](/spark/scripts/versioning).
+
+## View and Edit
+
+Click the switch, or press **Ctrl+E** (**Cmd+E** on a Mac). In Edit mode, the **Versioning** column takes the place of the 3D scene list.
+
+Spark saves your typing as you go, as a draft that only you see. Others see it once you publish it. See [Publish your edits](/spark/scripts/versioning#publish-your-edits).
+
+<Tip>
+  The **Light** and **Dark** switch changes only the script page, from a dark page to white paper.
+</Tip>
+
+## Write scene headings
+
+Start a line with `INT.`, `EXT.`, `EST.`, `INT./EXT.` or `I/E.`, then the place and the time of day.
+
+```text Scene headings
+INT. STUDIO - DAY
+
+EXT. ROOFTOP - NIGHT
+
+.FLASHBACK
+```
+
+A line that starts with a period counts as a heading too, as `.FLASHBACK` does here. A new heading joins **Script scenes** once you publish.
+
+## Format screenplay elements
+
+Spark writes scripts in [Fountain](https://fountain.io), plain text that formats itself. Click **Add elements** to insert an element without typing its syntax.
+
+<Steps>
+  <Step title="Place the cursor">
+    Click in the script where the element should go.
+  </Step>
+  <Step title="Insert the element">
+    Click **Add elements**, then click an element. Spark inserts sample text at the cursor.
+  </Step>
+  <Step title="Replace the sample">
+    Type over the sample text with your own.
+  </Step>
+</Steps>
+
+| Element | What it is | Sample Spark inserts |
+|---------|------------|----------------------|
+| Title Block | Title page details | `Title: My Script` |
+| Scene Heading | Place and time | `INT. LOCATION - DAY` |
+| Action | What happens on screen | `Action description.` |
+| Dialogue | A character's name, then their line | `CHARACTER NAME` |
+| Parenthetical | How a line is said, between name and line | `(quietly)` |
+| Transition | A cut to the next scene, set to the right | `CUT TO:` |
+| Centered | Text set in the middle, such as an act break | `>THE END<` |
+| Section | An act or section marker that doesn't print | `# ACT ONE` |
+| Note | A comment that doesn't print | `[[Director note]]` |
+
+To save your own pattern, select the text, click **Save pattern**, name it, then click **Save**. It appears under **Custom** in **Add elements**.
+
+<AccordionGroup>
+  <Accordion title="See every Fountain element in one script">
+    Add a script with **Use default script**. The Fountain Syntax Guide shows each element, including dual dialogue, lyrics, page breaks and emphasis, with the syntax beside it.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={3}>
+  <Card title="Scripts and script scenes" icon="file-text" href="/spark/scripts/scripts-and-script-scenes">
+    Add, switch and rename scripts.
+  </Card>
+  <Card title="Drafts and versions" icon="history" href="/spark/scripts/versioning">
+    Publish your edits for everyone.
+  </Card>
+  <Card title="3D scene list" icon="box" href="/spark/scripts/script-outline-and-3d-scene-list">
+    Build 3D scenes for each script scene.
+  </Card>
+</CardGroup>
