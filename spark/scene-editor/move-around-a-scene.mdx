@@ -1,0 +1,59 @@
+---
+title: 'Move around a scene'
+description: 'Fly through the 3D canvas, select items, and look down on the floor plan.'
+---
+
+You move through the 3D canvas like a camera in flight: keys move you, and dragging turns your view. Click the canvas first, so it takes your key presses.
+
+<img
+  src="/images/spark/scene-editor/top-down-view.jpg"
+  alt="The Opulent Hall seen from straight above. Marker 1 is on the Top-Down View button in the canvas toolbar, and 2 on the Cull Y box, ticked at 0.2."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+1. **Top-Down View** in the canvas toolbar.
+2. **Cull Y**, which cuts away everything above a height.
+
+## Fly through a 3D scene
+
+| To | Do this |
+|----|---------|
+| Move forward, back, left or right | **W**, **S**, **A**, **D** |
+| Move up or down | **E**, **Q** |
+| Move faster | Hold **Shift** while you move |
+| Look around | Drag on the canvas |
+| Orbit | **Alt**+drag |
+| Move forward or back in steps | Scroll |
+
+To change how fast you fly, click **Camera Controls** (the gear) in the canvas toolbar.
+
+- **Move** sets how fast the keys move you.
+- **Look** sets how fast dragging turns the view.
+- **Boost** sets how much faster you move while you hold **Shift**.
+
+**Reset to defaults** puts all three back. The defaults are **Move** 0.15, **Look** 0.0020 and **Boost** 2.0.
+
+## Select an item
+
+Click the item's row in the Outliner. Its settings open in the Properties panel.
+
+- **Shift**+click adds another item to the selection.
+- **Esc** clears the selection.
+- Double-click an object on the canvas to select one of its parts. See [Parts of an object](/spark/scene-editor/parts-of-an-object).
+
+## Top-Down View
+
+Click **Top-Down View** to look straight down on the scene. Middle-drag to pan, and scroll to zoom.
+
+A **Cull Y** box shows at the top left, ticked, at 0.2. Spark hides the location above that height, so you see the floor plan instead of the ceiling. Change the number to cut higher or lower, or untick the box to show everything.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Scene editor" icon="layout-panel-left" href="/spark/scene-editor/scene-editor">
+    The canvas toolbar and the panels around it.
+  </Card>
+  <Card title="Objects" icon="box" href="/spark/scene-editor/objects">
+    Move, rotate or scale what you selected.
+  </Card>
+</CardGroup>

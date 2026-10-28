@@ -1,20 +1,29 @@
 ---
 title: 'Scene lighting'
-description: 'How the Spark web app and Spark iOS app match lighting models'
+description: 'Every 3D scene uses the same fixed studio lighting. There are no lights to add.'
 ---
 
-## A fixed studio environment
+Every 3D scene is lit by one fixed environment, Lightcraft's **Spark Studio** lighting. You can't add lights or pick another environment, so a scene looks the same in the Spark web app and the Spark iOS app.
 
-Every scene is lit by a single baked HDRI — Lightcraft's own "Spark Studio" environment — used identically by the Spark web app and the Spark iOS app. There is no per-scene light to add and no environment to choose: a scene looks the same on both platforms because they're matched by construction, not by eye.
+## The fixed studio lighting
 
-Of course, we are well aware of the creative need for adjustable lighting, and we're working towards this. The field of relighting Gaussian splats is changing very rapidly, and as we find technical approaches that fit our needs for speed and ease of use, we will be adding them.
+- The Outliner has no **Lights** row. You can't add a directional, spot or point light.
+- There's no environment picker and no brightness control.
+- The lighting falls on USD objects only. A Gaussian splat keeps the lighting it was scanned or rendered with.
 
-## What this means in practice
+Lightcraft is working on adjustable lighting. Relighting splats is a fast-moving field, and Spark will add it once an approach is fast and easy enough.
 
-- There's no **Lights** category in the outliner, and no way to add a directional, spot, or point light.
-- There's no environment preset picker and no environment intensity control.
-- Lighting affects USD assets only, through image-based lighting. It does not relight Gaussian splats — a splat's own baked lighting carries through unchanged on both platforms.
+<Tip>
+  To change the look, bake it into the asset: light the splat before you scan or render it, or give a USD object its own material.
+</Tip>
 
-<Note>
-If a scene needs a different look than the fixed studio environment provides, bake the lighting into the asset itself — a Gaussian splat's own scan, or a USD material — rather than looking for a lighting control in Spark. There isn't one.
-</Note>
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Locations" icon="mountain" href="/spark/scene-editor/locations">
+    Splats keep their own lighting.
+  </Card>
+  <Card title="Objects" icon="box" href="/spark/scene-editor/objects">
+    Give objects USD materials.
+  </Card>
+</CardGroup>

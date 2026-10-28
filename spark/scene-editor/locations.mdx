@@ -1,0 +1,106 @@
+---
+title: 'Locations'
+description: 'Add the world a 3D scene takes place in, replace it, and set how it looks.'
+---
+
+A location is the world a 3D scene takes place in, usually a Gaussian splat scan. Each 3D scene holds one location, and every setup in it shares that location.
+
+<img
+  src="/images/spark/scene-editor/locations-overview.jpg"
+  alt="The scene editor with the Opulent Hall location selected. Marker 1 is on the location in the 3D canvas, 2 on Replace location, 3 on the Opulent Hall row in the Outliner and 4 on Location Properties."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+1. The location in the 3D canvas.
+2. **Replace location**, on the **Locations** row.
+3. The location's row. Hover it for the eye and the trash.
+4. **Location Properties**, with **Remove from Scene** and **Name**.
+
+## Add a location
+
+<Steps titleSize="h3">
+  <Step title="Open the location library">
+    In the Outliner, click **+** on the **Locations** row.
+  </Step>
+  <Step title="Add a location">
+    Hover a location, then click **Add to Scene**. To use your own file, click **Add to Library** first. See [Location Settings](#location-settings).
+  </Step>
+  <Step title="Wait for it to load">
+    The location's row shows in the Outliner within seconds. The splat itself can take about 30 seconds to draw.
+  </Step>
+</Steps>
+
+## Replace a location
+
+Once a scene has a location, the **+** on the **Locations** row becomes **Replace location** (↻). Click it, pick another location, then click **Replace** to confirm.
+
+<img
+  src="/images/spark/scene-editor/replace-location.png"
+  alt="The Replace Location window: This will overwrite Opulent Hall with P5 test room, with Cancel and Replace."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '440px' }}
+/>
+
+<Note>
+  The camera preview can keep showing the old location for a minute or more. The 3D canvas shows the new one.
+</Note>
+
+## Location Settings
+
+**Location Settings** opens when you upload a location with **Add to Library**. It takes a splat or a USD set: `.ply`, `.splat`, `.spz`, `.usd`, `.usdc`, `.usda` or `.usdz`.
+
+<img
+  src="/images/spark/scene-editor/location-settings.png"
+  alt="The Location Settings window for an uploaded splat. Marker 1 is on the Preview, 2 on Subcategory, 3 on Invert Up and Z-Up, and 4 on Add to Library."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+1. **Preview**. Drag to look around, and use **W**, **A**, **S**, **D**, **Q** and **E** to move.
+2. **Subcategory**, **Interior** or **Exterior**. It's required.
+3. **Invert Up (Flip 180°)** and **Z-Up (Blender/3ds Max)** turn a location that loads upside down or on its side.
+4. **Add to Library** uploads it.
+
+Step 3 of the window sets the scale. Add the human figure to check that the world is the right size. If you leave the scale as it is, Spark asks **Scale hasn't been adjusted. Are you sure it's right?**
+
+### Add a collision mesh
+
+The same window takes a **Collision Mesh (Optional)**, a `.glb` file. Once the location is in a scene, the mesh shows under the location's row as **Collider**.
+
+## Fix orientation or scale
+
+Select the location, then change **Position**, **Rotation** or **Scale** under **Transformation** in **Location Properties**. **Scale** has a lock beside it.
+
+## Set the splat quality
+
+**Splat Quality** sits at the bottom of **Location Properties**. Spark keeps your choice after a reload.
+
+<img
+  src="/images/spark/scene-editor/splat-quality.png"
+  alt="The bottom of Location Properties: Position, Rotation and Scale, then Splat Quality set to Medium, between Low and High."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '300px' }}
+/>
+
+| Setting | What Spark draws |
+|---------|------------------|
+| **Low** | Skips faint and large splats. |
+| **Medium** | The default. |
+| **High** | Draws more of the faint and large splats. |
+
+## Hide a location
+
+Hover the location's row, then click the eye. The location disappears from the 3D canvas and the camera preview, and the row turns dim. Click the eye again to show it.
+
+To take the location out of the scene, click **Remove from Scene** in **Location Properties**.
+
+## Related
+
+<CardGroup cols={3}>
+  <Card title="Asset Library" icon="library" href="/spark/scene-editor/asset-library">
+    Upload your own locations.
+  </Card>
+  <Card title="Move around a scene" icon="move-3d" href="/spark/scene-editor/move-around-a-scene">
+    See the floor plan with Top-Down View.
+  </Card>
+  <Card title="Bring in an Unreal scene" icon="import" href="/spark/scene-editor/importing-unreal-scenes">
+    Make a location from Unreal Engine.
+  </Card>
+</CardGroup>

@@ -1,0 +1,87 @@
+---
+title: 'Objects'
+description: 'Add objects to a 3D scene, prepare your own USD files, and move, rename, replace or remove them.'
+---
+
+Objects are the USD models you place in a location: props, vehicles and characters. Each object belongs to a setup, and shows under that setup in the Outliner.
+
+<img
+  src="/images/spark/scene-editor/object-selected.jpg"
+  alt="The scene editor with the P5 bike object selected in the hall. Marker 1 is on the move, rotate and scale buttons, 2 on the object's row in the Outliner, 3 on Remove from Scene, 4 on Name and 5 on the Replace and settings buttons."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+1. **Position**, **Rotation** and **Scale**, for the gizmo.
+2. The object's row in the Outliner, under its setup and kind.
+3. **Remove from Scene**.
+4. **Name**.
+5. **Replace with another file** (↻), and the file's settings (⚙).
+
+## Add an object
+
+<Steps titleSize="h3">
+  <Step title="Open the object library">
+    On the setup's row in the Outliner, click **Add an object to this setup** (the cube). The Asset Library opens on **Objects**.
+  </Step>
+  <Step title="Pick an object">
+    Hover an object, then click **Add to Scene**. The library closes.
+  </Step>
+  <Step title="Place it">
+    Spark says **Click on canvas to place object. Press Esc to cancel.** Click where it goes in the 3D canvas.
+  </Step>
+</Steps>
+
+## Prepare USD objects
+
+Upload your own object with **Add to Library**. The **Object Settings** window asks for a subcategory and a name, and checks which way is up.
+
+<img
+  src="/images/spark/scene-editor/scale-warning.png"
+  alt="Object Settings for an uploaded USDA file: Step 1 with Subcategory Prop and the name, Step 2 detecting Y-Up, and the warning Scale hasn't been adjusted with Let me check and Add it anyway."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
+/>
+
+- **Step 2** reads the file's up axis, such as **Detected: Y-Up**. Tick **Invert Up** or **Z-Up** if the preview is upside down or on its side.
+- If you leave the scale as it is, Spark asks **Scale hasn't been adjusted. Are you sure it's right?** Click **Let me check**, or **Add it anyway**.
+
+<Warning>
+  Export every model as a mesh. Spark doesn't draw USD shapes such as Cube or Sphere. It also ignores `displayColor`, so put colour in a USD material.
+</Warning>
+
+## Move, rotate or scale
+
+Select the object, then drag the gizmo in the 3D canvas. Switch the gizmo with the buttons at the top right of the canvas.
+
+| Button | Shortcut |
+|--------|----------|
+| **Position** | **Ctrl+1** |
+| **Rotation** | **Ctrl+2** |
+| **Scale** | **Ctrl+3** |
+
+To type exact values, use **Position**, **Rotation** and **Scale** in **Object Properties**. Press **Enter** or **Tab** after each value.
+
+## Rename, replace or remove an object
+
+- **Rename:** change **Name** in **Object Properties**. The Outliner and Timeline update.
+- **Replace:** click ↻ **Replace with another file**. The library opens with **Replace** on each card. The object keeps its place and takes the new file's name.
+- **Hide:** hover the object's row, then click the eye. The row turns dim. Your choice stays after a reload.
+- **Remove:** click **Remove from Scene**, then **Remove**. The object leaves the scene and every setup. Its file stays in the library, and **Ctrl+Z** brings it back.
+
+The trash on the object's row does the same as **Remove from Scene**.
+
+Objects can't be parented to other objects. Only a camera can follow an object. See [Setups and cameras](/spark/scene-editor/setups-and-cameras).
+
+<Note>
+  ⚙ on the asset row edits the file in the library. The change applies to new placements only. Objects already in a scene keep their settings.
+</Note>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Parts of an object" icon="shapes" href="/spark/scene-editor/parts-of-an-object">
+    Select and change one part of an object.
+  </Card>
+  <Card title="Asset Library" icon="library" href="/spark/scene-editor/asset-library">
+    Upload your own objects.
+  </Card>
+</CardGroup>

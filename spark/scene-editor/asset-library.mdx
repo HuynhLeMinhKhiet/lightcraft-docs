@@ -1,0 +1,71 @@
+---
+title: 'Asset Library'
+description: 'Browse the default assets and upload your own locations, objects and sound files.'
+---
+
+The Asset Library holds every file a production can use: locations, objects and audio. Open it from the **Asset Library** tab, or from a **+** in the Outliner, which opens it on that category.
+
+<img
+  src="/images/spark/scene-editor/asset-library-overview.png"
+  alt="The Asset Library page. Marker 1 is on Show default assets, 2 on the category list, 3 on Add Multiple, 4 on Add to Library and 5 on the Default assets divider."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+1. **Show default assets** shows or hides Lightcraft's own files.
+2. The categories, with a count for each.
+3. **Add Multiple** uploads a batch of files of one kind.
+4. **Add to Library** uploads one file.
+5. Your production's files sit above **Default assets**. Lightcraft's files sit below.
+
+## Categories and default assets
+
+| Category | Files | Subcategories |
+|----------|-------|---------------|
+| **Locations** | `.ply` `.splat` `.spz` `.usd` `.usdc` `.usda` `.usdz` | Interior, Exterior |
+| **Objects** | `.usd` `.usdc` `.usda` `.usdz` | Character, Vehicle, Prop, Primitive |
+| **Audio** | `.mp3` `.wav` `.ogg` `.m4a` `.aac` `.flac` | — |
+
+Default assets come with every production, such as the Opulent Hall location and the Motorcycle object. Use them to try Spark before you upload anything.
+
+## Add a file
+
+<Steps titleSize="h3">
+  <Step title="Click Add to Library">
+    From **All assets**, Spark asks what kind of file it is. Pick **Location**, **Object** or **Audio**. Inside a category, Spark skips this step.
+
+    <img
+      src="/images/spark/scene-editor/select-category.png"
+      alt="The Select Category window, asking what kind of file you are uploading, with Location, Object and Audio and the file types for each."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '620px' }}
+    />
+  </Step>
+  <Step title="Choose the file">
+    Drag it in, or click **Choose from browser**. A preview shows on the left.
+  </Step>
+  <Step title="Fill in the settings">
+    Name the file and pick its subcategory. Locations and objects also ask how to turn and size them. See [Locations](/spark/scene-editor/locations#location-settings) and [Objects](/spark/scene-editor/objects#prepare-usd-objects).
+  </Step>
+  <Step title="Click Add to Library">
+    The upload's progress shows at the top of the page. The file then shows in its category.
+  </Step>
+</Steps>
+
+On a file's card in the Asset Library tab, **⋯** holds **Edit Metadata**, **Download** and **Delete**.
+
+## Upload limits
+
+You add files only by uploading them to the library. The old **Load Locally** option is gone.
+
+- One file can be up to 1 GB. Spark refuses an empty file.
+- **Add Multiple** takes up to 50 files of one kind. It skips duplicates, and refuses a file of the wrong kind.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Locations" icon="mountain" href="/spark/scene-editor/locations">
+    Add a location to a 3D scene.
+  </Card>
+  <Card title="Objects" icon="box" href="/spark/scene-editor/objects">
+    Add and arrange objects.
+  </Card>
+</CardGroup>
