@@ -27,6 +27,10 @@ html.dark #sidebar-content a:not([aria-current]):hover { color: #E8EDFB; }
 html.dark #content-area h1, html.dark #content-area h2, html.dark #content-area h3, html.dark #content-area h4 { color: #F5F8FF; }
 html.dark #content-area .prose { color: #C8D0E6; }
 html.dark #content-area h2 { border-top-color: rgb(89 126 247 / 0.18); }
+/* A short brand-blue bar marks each section heading (Kit picked it over a larger size, 2026-10-28). */
+#content-area h2 { position: relative; padding-left: 0.9rem; }
+#content-area h2::before { content: ""; position: absolute; left: 0; top: calc(1.75rem + 0.15em); width: 4px; height: 1.05em; border-radius: 2px; background: #2F54EB; }
+html.dark #content-area h2::before { background: #597EF7; }
 #content-area .prose strong { color: inherit; filter: brightness(1.12); }
 
 /* Page description and "On this page" links in the same grey-blue as the sidebar links. */
