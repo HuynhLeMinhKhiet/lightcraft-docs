@@ -148,11 +148,12 @@
             ]
           },
           {
-            "group": "Scripts",
+            "group": "Write the script",
+            "icon": "file-text",
             "pages": [
-              "spark/scripts/importing-scripts",
-              "spark/scripts/writing-scripts",
-              "spark/scripts/collaboration",
+              "spark/scripts/scripts-and-script-scenes",
+              "spark/scripts/script-editor",
+              "spark/scripts/versioning",
               "spark/scripts/script-outline-and-3d-scene-list"
             ]
           },
@@ -359,5 +360,19 @@
       "x": "https://x.com/LightcraftPro",
       "linkedin": "https://linkedin.com/company/lightcraft-technology"
     }
-  }
+  },
+  "redirects": [
+    {
+      "source": "/spark/scripts/importing-scripts",
+      "destination": "/spark/scripts/scripts-and-script-scenes"
+    },
+    {
+      "source": "/spark/scripts/writing-scripts",
+      "destination": "/spark/scripts/script-editor"
+    },
+    {
+      "source": "/spark/scripts/collaboration",
+      "destination": "/spark/scripts/versioning"
+    }
+  ]
 }
