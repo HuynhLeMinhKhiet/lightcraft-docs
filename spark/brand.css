@@ -1,0 +1,38 @@
+/* Site-wide: Mintlify loads every .css file in the repo. Tints the left sidebar with the Spark brand blue (Agreement 22). */
+#sidebar-content {
+  background: linear-gradient(180deg, rgb(47 84 235 / 0.07), rgb(47 84 235 / 0.03) 55%, rgb(19 194 194 / 0.04));
+  border: 1px solid rgb(47 84 235 / 0.14);
+  border-radius: 14px;
+}
+html.dark #sidebar-content {
+  background: linear-gradient(180deg, rgb(47 84 235 / 0.14), rgb(47 84 235 / 0.05) 55%, rgb(19 194 194 / 0.05));
+  border-color: rgb(89 126 247 / 0.18);
+}
+
+/* Group icons in brand blue, group names in near-white blue, page links in grey-blue. */
+#sidebar-content .sidebar-group-header svg { background-color: #2F54EB; }
+#sidebar-content .sidebar-group-header { color: #0A1230; }
+#sidebar-content a:not([aria-current]) { color: #4A5578; }
+#sidebar-content a:not([aria-current]):hover { color: #0A1230; }
+html.dark #sidebar-content .sidebar-group-header svg { background-color: #597EF7; }
+html.dark #sidebar-content .sidebar-group-header { color: #E8EDFB; }
+html.dark #sidebar-content a:not([aria-current]) { color: #A3ACC6; }
+html.dark #sidebar-content a:not([aria-current]):hover { color: #E8EDFB; }
+
+/* Text hierarchy by lightness, weight and space, no extra colours (Material's high/medium emphasis idea).
+   Headings: brightest blue-white. Body: a step dimmer. Each H2 opens a section with a faint rule and extra space above. */
+#content-area h1, #content-area h2, #content-area h3, #content-area h4 { color: #050B24; }
+#content-area .prose { color: #2D3A5C; }
+#content-area h2 { margin-top: 3rem; padding-top: 1.75rem; border-top: 1px solid rgb(47 84 235 / 0.14); font-weight: 700; }
+html.dark #content-area h1, html.dark #content-area h2, html.dark #content-area h3, html.dark #content-area h4 { color: #F5F8FF; }
+html.dark #content-area .prose { color: #C8D0E6; }
+html.dark #content-area h2 { border-top-color: rgb(89 126 247 / 0.18); }
+#content-area .prose strong { color: inherit; filter: brightness(1.12); }
+
+/* Page description and "On this page" links in the same grey-blue as the sidebar links. */
+#content-area #header .prose { color: #4A5578; }
+#table-of-contents li:not([data-active="true"]) a { color: #4A5578; }
+#table-of-contents li:not([data-active="true"]) a:hover { color: #0A1230; }
+html.dark #content-area #header .prose { color: #A3ACC6; }
+html.dark #table-of-contents li:not([data-active="true"]) a { color: #A3ACC6; }
+html.dark #table-of-contents li:not([data-active="true"]) a:hover { color: #E8EDFB; }

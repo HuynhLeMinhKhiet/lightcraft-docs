@@ -3,9 +3,31 @@
   "theme": "mint",
   "name": "Lightcraft Docs",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#2F54EB",
+    "light": "#597EF7",
+    "dark": "#1D39C4"
+  },
+  "background": {
+    "color": {
+      "light": "#F0F5FF",
+      "dark": "#0C1013"
+    },
+    "image": {
+      "light": "/images/spark/theme/background-light.png",
+      "dark": "/images/spark/theme/background-dark.png"
+    }
+  },
+  "fonts": {
+    "family": "Manrope"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "appearance": {
+    "default": "dark"
+  },
+  "styling": {
+    "eyebrows": "section"
   },
   "favicon": "/logo/lightcraft-logo-icon-black.png",
   "navigation": {
