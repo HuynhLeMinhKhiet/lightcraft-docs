@@ -1,180 +1,87 @@
 ---
 title: 'Organizations'
-description: 'Create and manage organizations, invite team members, and configure roles'
+description: 'Create an organization, switch between them, and see what Owners, Admins and Users can do.'
 ---
 
-## Creating an organization
-
-To create a new organization, click **New Organization** on the Home page and enter a name. You become the owner of any organization you create, with the Admin role.
-
-## Inviting team members
-
-Invite collaborators to your organization by email. Invited members receive a notification and can join immediately if they already have a Spark web account.
-
-To send an invitation, click the gear icon in the top bar, open **Organization Settings**, and click **Invite** in the **Members** section. Only the organization owner can invite.
-
-### Choosing production access
-
-When you invite someone as a **User**, the **Production access** section of the invite window sets which productions they can open once they accept.
+An organization is your team's space in Spark. It holds the members, the billing and every production.
 
 <img
-  src="/images/spark/invite-production-access.png"
-  alt="The Invite member window with the Production access section. Two productions are ticked and one is marked Everyone."
+  src="/images/spark/organizations-productions/your-organizations.png"
+  alt="An organization card under Your Organizations. Marker 1 is on the organization name, 2 on Your role and 3 on the more menu."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '480px' }}
+/>
+
+1. The organization. Click its name to open it.
+2. **Your role** shows your title, such as Editor. It doesn't change what you can open.
+3. **⋯** holds **Settings** and **Leave Organization**.
+
+## Organizations and roles
+
+Each member has an access level. It decides what they can open and change. A title, such as Director or Editor, only names their job.
+
+| Access | What they can do |
+|--------|------------------|
+| **Owner** | Everything an Admin can, plus invite, change and remove members, manage billing and delete the organization. Each organization has one Owner. |
+| **Admin** | Open every production, create productions and open **Settings**. |
+| **User** | Open the productions shared with the whole organization, plus any they're given access to. |
+
+## Your Organizations page
+
+The Home page lists your recent scripts, then every organization you belong to under **Your Organizations**. Each card shows the Owner and how many members, productions, scripts and scenes it holds.
+
+## Create an organization
+
+<Steps>
+  <Step title="Open the form">
+    On the Home page, click **New Organization**.
+  </Step>
+  <Step title="Name it">
+    Enter **Organization Name**. Pick **Your Title**, such as Director or Producer.
+  </Step>
+  <Step title="Create it">
+    Click **Create Organization**. You become its Owner.
+  </Step>
+</Steps>
+
+## Switch organizations
+
+In the breadcrumb at the top, click the arrow beside the organization's name. The list shows each organization with your access and its member count. You can also open one from **Your Organizations** on the Home page.
+
+## Organization Settings
+
+Click **⋯** on the organization's card, then **Settings**. Admins and the Owner can open it.
+
+<img
+  src="/images/spark/organizations-productions/organization-settings.png"
+  alt="Organization Settings. Marker 1 is on Organization Name, 2 on Invite, 3 on the seat line, 4 on the Owner row and 5 on Billing."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. **Search productions** filters the list by name.
-2. **Select all** ticks every production the search is showing.
-3. The count shows how many productions are ticked.
-4. A production marked **Everyone** is already open to the whole organization. It has no checkbox, because every member can open it.
+1. **Organization Name**.
+2. **Invite** adds members. Only the Owner sees it.
+3. How many seats are in use.
+4. Each member, with their title and access.
+5. **Billing**: the trial, seats and storage.
 
-One choice applies to every person in the invitation who has the User role.
+Below Billing, **Delete Organization** removes the organization with all its productions, files and member access. Only the Owner can click **Delete permanently**.
 
-If everyone in the invitation is an **Admin**, the list is replaced by a note. Admins can open every production, so there is nothing to choose.
+<Warning>
+  Deleting cancels a paid subscription at once, with no refund for the current period.
+</Warning>
 
-### Changing access after you invite
+For members and seats, see [Members and seats](/spark/organizations-productions/members-and-seats).
 
-A sent invitation appears in the **Members** list until the person accepts.
+## Leave an organization
 
-<img
-  src="/images/spark/members-pending-invitation.png"
-  alt="The Members list with a pending invitation row showing a Pending tag, a production count, and an arrow button."
-  style={{ borderRadius: '0.5rem' }}
-/>
+Click **⋯** on the organization's card, then **Leave Organization**. Click **Leave** to confirm. The Owner can't leave their own organization, so the item is greyed out for them.
 
-1. **Pending** marks an invitation that has not been accepted yet.
-2. The count is the productions this person can open after they accept. It includes productions open to everyone, so it can be higher than the number you ticked.
-3. The arrow opens **Production access** for that row. Clicking anywhere on the row does the same.
+## Related
 
-In **Production access**, tick or clear productions and click **Save Changes**. This works for a pending invitation and for a member who has already joined.
-
-<img
-  src="/images/spark/production-access-window.png"
-  alt="The Production access window for a member, with a list of productions and a Save Changes button."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. The productions this person can be given. Ticked productions are the ones they can open.
-2. **Save Changes** applies the new set.
-
-## Seats and invitations
-
-An organization has a fixed number of seats. Each member uses one seat, and so does each invitation that has not been accepted yet.
-
-### The seat line
-
-Open **Organization Settings** and look under **Members**. A line shows how many seats are in use, such as **1 of 3 seats used**. An invitation that has not been accepted yet holds a seat and is counted as pending: **2 of 3 seats used · 1 pending**.
-
-When every seat is taken, the line turns red and reads **3 of 3 seats used · 2 pending — add a paid seat from Billing to invite more**. The **Invite** button is greyed out, with the tooltip **Seat capacity reached**.
-
-<img
-  src="/images/spark/seat-line-full.png"
-  alt="The Members section of Organization Settings. The seat line is red and reads 3 of 3 seats used, 2 pending, add a paid seat from Billing to invite more. The Invite button is greyed out with the tooltip Seat capacity reached. Below are the owner and two pending invitations."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. The seat line of a full organization.
-2. **Invite** is greyed out until a seat is free.
-
-### The invite window
-
-The **Invite member** window shows the number of free seats under **Invite by email**. It checks each address when you leave the box.
-
-<img
-  src="/images/spark/invite-window-free-seats.png"
-  alt="The Invite member window. Under Invite by email it reads 2 free seats. The email box holds abc and shows Invalid email format under it."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. The free seats left in the organization.
-2. The message under an address that cannot be invited.
-
-| Message | Meaning |
-|---|---|
-| **Invalid email format** | The text is not an email address. |
-| **Already a member** | That person is in the organization. |
-| **Invitation already sent** | That address has an invitation that is still pending. |
-| **Invitation expired**, with **Resend it** | That address has an invitation that ran out. Click **Resend it** to send it again. |
-
-**Add more user** is greyed out, with the tooltip **No more free seats**, when the rows in the window already use every free seat.
-
-### Pending invitations
-
-An invitation appears in the **Members** list with the tag **Pending** and the time left, such as **expires in 7 days**.
-
-<img
-  src="/images/spark/pending-invitation-row.png"
-  alt="The Members list with one pending invitation. The seat line reads 2 of 3 seats used, 1 pending. The invitation row shows expires in 7 days, the tag Pending, an envelope icon and a red X."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. The seat line counts the invitation as pending.
-2. The invitation row, with the envelope icon and the **X**.
-
-- The envelope icon (**Resend invitation**) sends it again and shows **Invitation resent to** with the address.
-- The **X** asks **Cancel this invitation?** and warns **The invite link will no longer work.** Click **Cancel invitation**. The message **Invitation cancelled!** appears, and the seat is free again.
-
-<img
-  src="/images/spark/cancel-invitation-confirm.png"
-  alt="A small box over the Members list that asks Cancel this invitation? The invite link will no longer work. It has the buttons Cancel and Cancel invitation."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-### Expired invitations
-
-An invitation that has run out moves under the heading **Expired invitations · don't hold a seat**. It has the tag **Expired** and the date it ran out. It is no longer counted on the seat line, so its seat can go to someone else.
-
-<img
-  src="/images/spark/expired-invitations-group.png"
-  alt="The Members list with a group named Expired invitations, don't hold a seat. One row in it has the tag Expired and reads expired Oct 7. The seat line reads 2 of 3 seats used, 1 pending, and the Invite button is enabled."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. The seat line no longer counts the expired invitation.
-2. The expired invitation, under its own heading.
-3. **Invite** is enabled again.
-
-To send an expired invitation again, click the resend icon on its row, or type the address in the invite window and click **Resend it**. The invitation is **Pending** again and holds a seat.
-
-<img
-  src="/images/spark/invite-window-resend-it.png"
-  alt="The Invite member window. Under the email box it reads Invitation expired, with a Resend it link beside it."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. The message for an address whose invitation ran out.
-2. **Resend it** sends the invitation again.
-
-If the organization has no free seat, the resend icon is greyed out, with the tooltip **No free seat — add one from Billing to resend**.
-
-<img
-  src="/images/spark/resend-greyed-no-free-seat.png"
-  alt="The Members list of a full organization. The resend icon on the expired invitation is greyed out, with the tooltip No free seat, add one from Billing to resend."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. The greyed resend icon and its tooltip.
-2. The seat line of the full organization.
-
-### Accepting when the organization is full
-
-A person who accepts an invitation while the organization has no free seat is not added. They see a page that names the organization and says it **is out of seats**.
-
-<img
-  src="/images/spark/out-of-seats-page.png"
-  alt="A page that reads QA seats is out of seats. Under it: The organization needs more seats before you can join. Ask its administrator to add a seat, then try again. Your invitation stays valid until 15/10/2026. Two buttons: Try again and Go to Home."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-The page says the invitation stays valid and gives its last day. After the owner frees or adds a seat, **Try again** lets the person in.
-
-## Roles and permissions
-
-Organizations support the following roles:
-
-- **Admin** — Full access to organization settings, member management, and all productions.
-- **User** — Can open the productions shared with the whole organization, plus any productions they are given access to. Cannot manage organization settings or members.
-
-## Leaving an organization
-
-You can leave an organization at any time from the organization settings. If you are the only admin, you must assign another admin before leaving.
+<CardGroup cols={2}>
+  <Card title="Members and seats" icon="user-plus" href="/spark/organizations-productions/members-and-seats">
+    Invite people and manage seats.
+  </Card>
+  <Card title="Productions" icon="clapperboard" href="/spark/organizations-productions/productions">
+    Create a production and choose who opens it.
+  </Card>
+</CardGroup>

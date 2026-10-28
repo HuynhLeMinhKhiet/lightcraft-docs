@@ -1,50 +1,78 @@
 ---
-title: 'New production'
-description: 'Create productions, navigate the dashboard, and manage your projects'
+title: 'Productions'
+description: 'Create a production, choose who can open it, and rename or delete it.'
 ---
 
-## Creating a new production
-
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://player.vimeo.com/video/1221836569"
-  title="Video walkthrough"
-  allow="autoplay; fullscreen; picture-in-picture"
-  allowFullScreen
-></iframe>
-
-From your organization page, select **New Production** and enter a name. Productions act as containers for scripts, scenes, and the Gallery.
-
-## Choosing who can open a production
-
-Each production has an **Access** setting. You choose it when you create the production, and you can change it later: on the organization page, open the **…** menu on the production's card and click **Settings**.
-
-- **Everyone in the organization** — Every member can open the production.
-- **Only selected people** — Admins can open it, plus the members you tick.
+A production holds one film, episode or commercial: its scripts, assets, takes and edits. Admins create productions, and choose who else can open each one.
 
 <img
-  src="/images/spark/production-settings-access.png"
-  alt="The Access section of Production Settings with Only selected people chosen. One member is ticked and an admin row is locked."
+  src="/images/spark/organizations-productions/productions-overview.png"
+  alt="An organization page. Marker 1 is on Search a production, 2 on New Production, 3 on a production card, 4 on its Access avatars and 5 on its more menu."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. **Only selected people** shows the list of members.
-2. A ticked member can open this production.
-3. An **Admin** has no checkbox, because admins can open every production.
+1. **Search a production** filters the cards by name.
+2. **New Production** creates one. Only Admins see it.
+3. A production. Click it to open it.
+4. **Access** shows who can open it.
+5. **⋯** holds **Settings** and **Delete**.
 
-Click **Save Changes** to apply the new set. You can also set this per person from the organization's **Members** list. See [changing access after you invite](/spark/organizations-productions/organizations#changing-access-after-you-invite).
+## Productions and access
 
-## Production dashboard overview
+Each production is open to **Everyone in the organization**, or to **Only selected people**. Admins can open every production either way. A User opens a selected production only once someone gives them access.
 
-The production dashboard displays all productions in your organization. You can switch between grid and list views and sort by name or date.
+## Create a production
 
-## Navigating scripts and scenes
+On the organization page, click **New Production**.
 
-Within a production, use the sidebar to move between:
+<img
+  src="/images/spark/organizations-productions/create-production.png"
+  alt="The Create New Production window. Marker 1 is on Production Name, 2 on Production Code, 3 on Camera Preset, 4 on Frame Rate and 5 on Access."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
+/>
 
-- **Scripts** — Open the script editor to write or review screenplays.
-- **Scenes** — Access the scene editor for any scene generated from script headings.
+1. **Production Name**, required.
+2. **Production Code**, a short code Spark fills in from the name's initials. You can change it.
+3. **Camera Preset**, the camera body and sensor. Pick landscape or portrait beside it.
+4. **Frame Rate**, 24fps or 25fps. It sets the timeline's frame grid and the frame rate on USD export.
+5. **Access**, who can open the production.
 
-## Deleting a production
+You can also add a square **Production Image** of up to 10 MB. Click **Create Production** to finish.
 
-Admins can delete a production from the production settings. Deleting a production removes all associated scripts, scenes, and Gallery content. This action cannot be undone.
+## Set who can open a production
+
+Click **⋯** on the production's card, then **Settings**. Under **Access**, choose **Everyone in the organization** or **Only selected people**.
+
+<img
+  src="/images/spark/organizations-productions/production-access.png"
+  alt="The Access section of Production Settings. Marker 1 is on Only selected people, 2 on a ticked member and 3 on an Admin row without a checkbox."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
+/>
+
+1. **Only selected people** shows the member list.
+2. A ticked member can open the production.
+3. An Admin has no checkbox, because Admins open every production.
+
+Click **Save Changes**. To set access for one person across productions, see [Change a member's access](/spark/organizations-productions/members-and-seats#change-a-members-access).
+
+## Rename or delete a production
+
+Click **⋯** on the production's card.
+
+- To rename it, click **Settings**, change **Production Name**, then click **Save Changes**. The same window changes the camera preset and the frame rate.
+- To delete it, click **Delete**, then **Delete** again to confirm.
+
+<Warning>
+  Deleting a production removes all its files and data for good. It can't be undone.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Scripts and script scenes" icon="file-text" href="/spark/scripts/scripts-and-script-scenes">
+    Add the first script to a production.
+  </Card>
+  <Card title="Members and seats" icon="user-plus" href="/spark/organizations-productions/members-and-seats">
+    Invite people and give them access.
+  </Card>
+</CardGroup>

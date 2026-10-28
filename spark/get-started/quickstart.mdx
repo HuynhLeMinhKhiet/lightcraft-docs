@@ -1,73 +1,49 @@
 ---
 title: 'Quickstart'
-description: 'Create an account, set up your first organization and production, and explore the basics of Spark'
+description: 'Make your first 3D scene in a few minutes, from the sample script to a CG Take.'
 ---
 
-## Prerequisites
+You need a production you can open. To create one, see [Create a production](/spark/organizations-productions/productions#create-a-production).
 
-- Google Chrome on a recent Mac or PC, with hardware acceleration enabled (other browsers are not supported)
-- A Google or Apple account
-- Invitation or whitelist access to Spark
+<Steps>
+  <Step title="Add the sample script">
+    In your production, open **Scripts** and click **Use default script**. If the production already has scripts, click **Add a Script** first. Spark lists the 14 scene headings under **Script scenes**.
+  </Step>
+  <Step title="Create a 3D scene">
+    Click **INT. COFFEE SHOP - DAY**, then **Create a new 3D scene**. Keep the name and click **Create**.
 
-<Warning>
-If the 3D viewport is slow or unresponsive, check that Chrome hardware acceleration is turned on before troubleshooting anything else. This is the most common cause of a sluggish viewport.
-</Warning>
+    <img src="/images/spark/get-started/quickstart-create-3d-scene.png" alt="The Create 3D Scene window, with Camera Preset, Landscape or Portrait, and the Name field filled with INT. COFFEE SHOP - DAY." style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }} />
+  </Step>
+  <Step title="Add a location">
+    Click the new 3D scene to open it. In the Outliner, click **+** on the **Locations** row. Point at **Opulent Hall** and click **Import & Add**.
 
-## Sign in for the first time
+    <img src="/images/spark/get-started/quickstart-add-location.jpg" alt="The Asset Library with Locations selected. Marker 1 is on Import and Add over the Opulent Hall card." style={{ borderRadius: '0.5rem' }} />
 
-[Open Spark in Chrome](https://spark.lightcraft.pro) and sign in with your Google or Apple account — use the email address you were invited with. If you have been invited to an existing organization, you will see it after signing in.
+    The location can take half a minute to appear, and longer to load.
+  </Step>
+  <Step title="Frame the camera">
+    Click **Camera 1** in the Outliner. Change **Focal Length** and watch the camera preview.
 
-<Note>
-Sign in on the Spark web app before opening the Spark iOS app. Opening the iOS app before your web account exists is the most common cause of access problems for new users.
-</Note>
+    <img src="/images/spark/get-started/quickstart-frame-camera.jpg" alt="Opulent Hall in the scene editor. Marker 1 is on Camera 1 in the Outliner, 2 on Focal Length set to 35 and 3 on the camera preview." style={{ borderRadius: '0.5rem' }} />
+  </Step>
+  <Step title="Make the CG Take">
+    Open the **Gallery** tab and click **INT. COFFEE SHOP - DAY**. On the **Camera 1** card, click **Generate preview**.
 
-## Install the Spark iOS app
+    <img src="/images/spark/get-started/quickstart-cg-take.png" alt="The Camera 1 card in the Gallery, showing the hall at 35mm. Marker 1 is on the CG Take tag." style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '320px' }} />
+  </Step>
+</Steps>
 
-Once you're logged into the Spark web app, you'll see a QR code for the [Lightcraft Spark iOS app.](https://apps.apple.com/us/app/lightcraft-spark/id6761484818)
-
-Install the Spark iOS app, then see [Spark iOS setup](/spark/spark-ios/spark-ios-setup) for signing in and loading your first scene on the device.
-
-## Install Spark Desktop
-
-Spark Desktop pulls the live-action composites you shoot in the Spark iOS app onto your computer, so you can review them in the Gallery.
-
-- [Spark Desktop for macOS](https://downloads.lightcraft.pro/lightcraftsync/download/mac)
-- [Spark Desktop for Windows](https://downloads.lightcraft.pro/lightcraftsync/download/windows)
-
-See [Spark Desktop and takes](/spark/gallery/spark-desktop) for the full offload workflow.
-
-## Create your first organization
-
-Organizations are team workspaces that contain members and productions. Create one to get started:
-
-1. On the Home page, click **New Organization**.
-2. Enter a name for your organization.
-3. Invite team members by email (you can also do this later).
-
-## Create a production
-
-Productions are project containers — one per film, episode, or commercial.
-
-1. Open your organization.
-2. Select **New Production**.
-3. Give the production a name and optional description.
-
-## Quick walkthrough
-
-Once your production is created, try this end-to-end flow:
-
-1. **Upload a script** — Add a `.fountain`, Final Draft `.FDX`, or PDF file or create a blank script in the script editor.
-2. **Open a scene** — Scene headings in your script automatically generate scenes. Select one to open the scene editor.
-3. **View in 3D** — Navigate the 3D viewport to see your scene. Import assets, position objects, and set up a camera.
-
-## Getting help inside Spark
-
-The **Help** button in the lower right of the Spark web app opens an in-app assistant, wired to this documentation. Type a question about Spark, Jetset, or Autoshot, and it returns guidance pulled from current Lightcraft documentation.
-
-The **?** icon in the top bar opens the **Help & support** menu: **Report an issue**, **Join our Discord**, **Get Lightcraft Spark for iPhone**, and **What's new**. **What's new** opens the [releases](/spark/changelog/changelog) page in a new browser tab.
+<Check>
+  You have a 3D scene with a location, a camera and a CG Take.
+</Check>
 
 ## Next steps
 
-- [Core concepts](/spark/get-started/core-concepts) — Learn the key terminology used throughout Spark.
-- [Script editor](/spark/scripts/script-editor) — Dive deeper into the script editor and Fountain format.
-- [Scene overview](/spark/scene-editor/scene-overview) — Explore the scene editor layout and controls.
+<CardGroup cols={2}>
+  <Card title="Setups and cameras" icon="layers" href="/spark/scene-editor/setups-and-cameras">
+    Plan a second camera arrangement on the same set.
+  </Card>
+  <Card title="Shoot takes" icon="smartphone" href="/spark/spark-ios/compositing-and-recording">
+    Shoot real takes inside the scene.
+  </Card>
+</CardGroup>

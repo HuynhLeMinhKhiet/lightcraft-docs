@@ -1,0 +1,102 @@
+---
+title: 'How Spark works'
+description: 'The five stages of a Spark production, from script to finished cut.'
+---
+
+export const STAGES = [
+  { title: 'Write the script', line: 'Scene headings become script scenes.', img: '/images/spark/get-started/stage-script.jpg', href: '/spark/scripts/scripts-and-script-scenes' },
+  { title: 'Build 3D scenes', line: 'Add a location and objects to each 3D scene.', img: '/images/spark/get-started/stage-3d-scene.jpg', href: '/spark/scene-editor/scene-overview' },
+  { title: 'Plan the cameras', line: 'Place cameras and set their lenses.', img: '/images/spark/get-started/stage-cameras.jpg', href: '/spark/scene-editor/setups-and-cameras' },
+  { title: 'Shoot takes', line: 'Film on iPhone inside the 3D scene.', img: '/images/jetset/cine-compositing.JPG', href: '/spark/spark-ios/compositing-and-recording' },
+  { title: 'Review and edit', line: 'Pick the best takes and cut them together.', img: '/images/spark/get-started/stage-review.jpg', href: '/spark/gallery/gallery' },
+];
+
+export const StageStrip = () => {
+  const [active, setActive] = React.useState(0);
+  const [paused, setPaused] = React.useState(false);
+  React.useEffect(() => {
+    const still = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (paused || still) return;
+    const id = setTimeout(() => setActive((active + 1) % STAGES.length), 5000);
+    return () => clearTimeout(id);
+  }, [active, paused]);
+  const s = STAGES[active];
+  return (
+    <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} style={{
+      borderRadius: '1rem', padding: '1rem', margin: '1.5rem 0',
+      background: 'radial-gradient(120% 90% at 0% 0%, rgba(47,84,235,0.6), transparent 60%), radial-gradient(90% 80% at 100% 100%, rgba(54,207,201,0.4), transparent 60%), #06142F',
+      border: '1px solid rgba(89,126,247,0.35)',
+    }}>
+      <div role="tablist" aria-label="Stages of a Spark production" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0, 1fr))', gap: '0.4rem', marginBottom: '0.9rem' }}>
+        {STAGES.map((st, i) => (
+          <button key={st.title} role="tab" aria-selected={i === active} onClick={() => { setActive(i); setPaused(true); }}
+            style={{ textAlign: 'left', cursor: 'pointer', border: 'none', background: 'transparent', padding: '0.35rem 0.25rem 0', color: i === active ? '#FFFFFF' : 'rgba(230,236,250,0.6)' }}>
+            <div style={{ height: '3px', borderRadius: '3px', background: 'rgba(255,255,255,0.15)', overflow: 'hidden', marginBottom: '0.5rem' }}>
+              <div key={active + '-' + paused} style={{
+                height: '100%', background: i < active ? '#597EF7' : i === active ? 'linear-gradient(90deg, #597EF7, #36CFC9)' : 'transparent',
+                width: i < active || (i === active && paused) ? '100%' : '0%',
+                animation: i === active && !paused ? 'sparkStageFill 5s linear forwards' : 'none',
+              }} />
+            </div>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.35rem' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: i === active ? '#36CFC9' : 'inherit' }}>{i + 1}</span>
+              <span className="spk-tab-title" style={{ fontSize: '0.85rem', fontWeight: 700, lineHeight: 1.25 }}>{st.title}</span>
+            </div>
+          </button>
+        ))}
+      </div>
+      <a href={s.href} style={{ display: 'block', textDecoration: 'none', borderBottom: 'none', borderRadius: '0.6rem', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 18px 40px rgba(6,20,47,0.6)' }}>
+        <div style={{ position: 'relative', aspectRatio: '16 / 9', background: '#0B1018' }}>
+          {STAGES.map((st, i) => (
+            <img key={st.img} src={st.img} alt={i === active ? st.title : ''} style={{
+              position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top',
+              margin: 0, borderRadius: 0, opacity: i === active ? 1 : 0, transform: i === active ? 'scale(1)' : 'scale(1.03)',
+              transition: 'opacity 500ms ease, transform 900ms ease',
+            }} />
+          ))}
+          <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0, padding: '2.5rem 1rem 0.85rem', background: 'linear-gradient(transparent, rgba(6,20,47,0.92))', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '1rem', flexWrap: 'wrap' }}>
+            <span style={{ color: '#FFFFFF', fontSize: '0.95rem', fontWeight: 600 }}><span className="spk-cap-title" style={{ display: 'none', fontWeight: 800 }}>{active + 1}. {s.title}<br /></span>{s.line}</span>
+            <span style={{ color: '#36CFC9', fontSize: '0.85rem', fontWeight: 700, whiteSpace: 'nowrap' }}>Open the guide →</span>
+          </div>
+        </div>
+      </a>
+      <style>{`@keyframes sparkStageFill { from { width: 0% } to { width: 100% } } @media (max-width: 640px) { .spk-tab-title { display: none } .spk-cap-title { display: inline !important } }`}</style>
+    </div>
+  );
+};
+
+Spark is a web app where a film crew plans a shoot before anyone arrives on set. You turn a script into 3D scenes, plan the cameras, shoot with an iPhone or iPad, then review and cut the takes.
+
+<StageStrip />
+
+## What holds what
+
+| Item | Holds |
+|------|-------|
+| Organization | Members, billing and every production |
+| Production | Scripts, the Asset Library, the Gallery and edits |
+| Script | One script scene for each scene heading |
+| 3D scene | Setups, cameras and takes for one script scene |
+
+The tabs at the bottom of a production follow the same order: **Scripts**, **Asset Library**, **3D Scene**, **Gallery** and **Editor**.
+
+## Spark, Jetset and Autoshot
+
+Spark is where a Lightcraft production starts. Jetset tracks the cinema camera on set, and Autoshot brings that tracking into Blender, Unreal, After Effects or Nuke. Click **Export** in the scene editor to send a 3D scene to Jetset.
+
+## Where to go next
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="zap" href="/spark/get-started/quickstart">
+    Make your first 3D scene in a few minutes.
+  </Card>
+  <Card title="Set up your team" icon="users" href="/spark/organizations-productions/organizations">
+    Create an organization, invite members, start a production.
+  </Card>
+  <Card title="Write the script" icon="file-text" href="/spark/scripts/scripts-and-script-scenes">
+    Add a script and see its script scenes.
+  </Card>
+  <Card title="Shoot takes" icon="smartphone" href="/spark/spark-ios/compositing-and-recording">
+    Record takes inside the 3D scene.
+  </Card>
+</CardGroup>
