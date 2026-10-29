@@ -1,0 +1,212 @@
+---
+title: 'Cameras'
+description: 'Add cameras to a setup, set their lens, and aim or attach them.'
+---
+
+A camera belongs to one setup and sees that setup's arrangement. Its view shows in the camera preview, and the canvas draws what it sees as an orange frustum.
+
+<img
+  src="/images/spark/setups-cameras/cameras-overview.jpg"
+  alt="The scene editor with Camera 2 selected. Box 1 is on its Outliner row, 2 on the camera in the canvas, 3 on the camera preview, 4 on Camera Properties, 5 on Camera Settings and 6 on its Timeline row."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-3">
+
+1. Camera row
+2. Camera in the canvas
+3. Camera preview
+4. **Camera Properties**
+5. **Camera Settings**
+6. Timeline row
+
+</div>
+
+## Add a camera
+
+<Steps titleSize="h3">
+  <Step title="Open New Camera">
+    On the setup's row in the Outliner, click **Add a camera to this setup**.
+
+    <img
+      src="/images/spark/setups-cameras/add-camera-button.png"
+      alt="The Setup A row, with a box on its Add a camera to this setup button."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '268px' }}
+    />
+  </Step>
+  <Step title="Describe the camera">
+    Name it, pick its preset, framing and subject, and say what it does in **Action**. Then click **Place Camera**.
+
+    <img
+      src="/images/spark/setups-cameras/new-camera.png"
+      alt="The New Camera window for a camera on Setup A. Boxes 1 to 6 are on Camera Name, Camera Preset with the landscape and portrait toggle, Framing, Subject, Action and Place Camera."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '494px' }}
+    />
+
+    <div className="key cols-3 left">
+
+    1. **Camera Name**
+    2. **Camera Preset**
+    3. **Framing**
+    4. **Subject**
+    5. **Action**
+    6. **Place Camera**
+
+    </div>
+
+    **Framing** runs from **Extreme Wide Shot** to **Extreme Close-Up**. **Subject** lists the scene's objects.
+  </Step>
+  <Step title="Place it">
+    **Click to Place** drops the camera where you click in the scene. **Match your view** places it at your current view angle.
+
+    <img
+      src="/images/spark/setups-cameras/place-camera.png"
+      alt="The Place Camera window. Box 1 is on Click to Place and 2 on Match your view."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '448px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. **Click to Place**
+    2. **Match your view**
+
+    </div>
+  </Step>
+</Steps>
+
+## Camera Properties
+
+Click a camera's row to open **Camera Properties**. The card at the top shows its framing, focal length and location.
+
+<img
+  src="/images/spark/setups-cameras/camera-properties.png"
+  alt="Camera Properties for Camera 2. Box 1 is on Delete Camera, 2 on the pencil, 3 on the camera preset, 4 on Focal Length, 5 on T-Stop and 6 on Focus Distance."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '280px' }}
+/>
+
+<div className="key cols-3 left">
+
+1. **Delete Camera**
+2. Edit the camera
+3. Preset
+4. **Focal Length**
+5. **T-Stop**
+6. **Focus Distance**
+
+</div>
+
+The pencil opens **Edit Camera** to change those details. Click **Update Camera** to save.
+
+## Set the lens
+
+Pick a body and sensor in the preset list, and landscape or portrait beside it. Then set the lens values:
+
+- **Focal Length**, in mm. The camera preview changes as you type.
+- **T-Stop**, from 2.2 to 22.
+- **Focus Distance**, in meters, up to 60. A new camera starts at -1.0.
+
+A fixed lens shows **T-Stop** and **Focus Distance** greyed out.
+
+## Place and frame
+
+Type the camera's **Position** and **Rotation** in Camera Properties, and watch the camera preview. Press **Shift+F** to enlarge the preview over the canvas, and again to shrink it.
+
+## Aim at a target
+
+**Aim At** keeps the camera pointed at its subject.
+
+1. Give the camera a **Subject**: click the pencil, choose an object, then **Update Camera**.
+2. Click **Aim At**. The camera turns to the subject.
+
+<img
+  src="/images/spark/setups-cameras/camera-aim.png"
+  alt="Camera Properties, with a box on the Aim At button, which is on, and Aim At Offset below it."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+/>
+
+**Aim At Offset** shifts the aim point.
+
+## Parent to an object or part
+
+A parented camera follows the object's motion. Open **Parent** and choose an object, or one of its parts, marked **↳**. Choose **None (world)** to set it free.
+
+<img
+  src="/images/spark/setups-cameras/camera-parent.png"
+  alt="The Parent list, open. Box 1 is on the list, 2 on the parts Shade and Pole under P5 desk lamp mesh, and 3 on the eyedropper."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+/>
+
+<div className="key cols-3 left">
+
+1. **Parent**
+2. Parts
+3. Pick in the canvas
+
+</div>
+
+To pick in the canvas instead, click the eyedropper, then click what the camera should follow. See [Parts of an object](/spark/scene-editor/parts-of-an-object).
+
+## Change duration
+
+A camera runs from its first keyframe to its last, shown as a bar on its Timeline row. To make it longer, add a keyframe later on. See [Animate with keyframes](/spark/setups-cameras/timeline-and-animation#animate-with-keyframes).
+
+## Track script coverage
+
+Link a camera to the script lines it covers.
+
+<Steps titleSize="h3">
+  <Step title="Open the script">
+    In Camera Properties, click **Link script lines**. The Script tab opens.
+
+    <img
+      src="/images/spark/setups-cameras/link-script-lines.png"
+      alt="The Script section of Camera Properties, with a box on Link script lines."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '280px' }}
+    />
+  </Step>
+  <Step title="Select the lines">
+    Drag across the lines, then click **Update Camera**.
+
+    <img
+      src="/images/spark/setups-cameras/link-lines-select.png"
+      alt="The Script tab with the line Maya runs down the stairs selected. Box 1 is on the line and 2 on Update Camera."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. Selected line
+    2. **Update Camera**
+
+    </div>
+  </Step>
+</Steps>
+
+The lines then show under **Script** in Camera Properties, with a pencil to change them.
+
+<img
+  src="/images/spark/setups-cameras/linked-line.png"
+  alt="The Script section of Camera Properties, with a box on the linked line Maya runs down the stairs and its pencil."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+/>
+
+## Delete a camera
+
+Click **Delete Camera** in Camera Properties, then **Delete**. Its keyframes go with it, and **Ctrl+Z** brings it back.
+
+<img
+  src="/images/spark/setups-cameras/delete-camera.png"
+  alt="The window Delete camera Camera 2? This will delete the camera and all its keyframes. Ctrl+Z to undo. A box is on Delete."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '432px' }}
+/>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Camera setups" icon="layers" href="/spark/setups-cameras/setups">
+    Arrange a scene in several ways.
+  </Card>
+  <Card title="Timeline and animation" icon="clock" href="/spark/setups-cameras/timeline-and-animation">
+    Keyframe a camera's moves.
+  </Card>
+</CardGroup>

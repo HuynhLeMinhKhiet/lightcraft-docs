@@ -1,0 +1,135 @@
+---
+title: 'Camera setups'
+description: 'Arrange one 3D scene in several ways, each with its own cameras.'
+---
+
+A setup is one arrangement of a 3D scene. Every scene starts with **Base Setup**, and a clone such as **Setup A** can change it without touching the others. Each setup holds its own cameras.
+
+<img
+  src="/images/spark/setups-cameras/setups-overview.jpg"
+  alt="The scene editor with two setups. Box 1 is on Base Setup in the Outliner with its objects and Camera 1, 2 on the Setup A row, 3 on the setup chip at the bottom left of the canvas, and 4 on the camera preview reading No Camera."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-2">
+
+1. **Base Setup**, with its objects and cameras
+2. **Setup A**, a clone
+3. Setup chip
+4. Camera preview
+
+</div>
+
+## Setups and Base Setup
+
+Each setup row in the Outliner lists the setup's objects and cameras. Its buttons add to that setup.
+
+<img
+  src="/images/spark/setups-cameras/setup-row-buttons.png"
+  alt="The Base Setup and Setup A rows in the Outliner. Boxes 1 to 3 are on the three buttons of the Base Setup row, and 4 on the trash of the Setup A row."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '268px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. **Add an object to this setup**
+2. **Add a camera to this setup**
+3. **Clone this setup**
+4. **Delete this setup**
+
+</div>
+
+Base Setup has no delete. An object added from a clone's row shows **In this setup** on its Outliner row.
+
+## Add a setup
+
+<Steps titleSize="h3">
+  <Step title="Clone a setup">
+    On the row of the setup to start from, click **Clone this setup**. The clone is named **Setup A**, then **Setup B** and so on, and becomes the active setup.
+
+    <img
+      src="/images/spark/setups-cameras/clone-setup.png"
+      alt="The Base Setup row, with a box on its Clone this setup button."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '268px' }}
+    />
+  </Step>
+  <Step title="Add its cameras">
+    A clone keeps the objects but not the cameras, so the preview reads **No Camera**. On its row, click **Add a camera to this setup**. See [Add a camera](/spark/setups-cameras/cameras#add-a-camera).
+
+    <img
+      src="/images/spark/setups-cameras/add-camera-button.png"
+      alt="The Setup A row, with a box on its Add a camera to this setup button."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '268px' }}
+    />
+  </Step>
+</Steps>
+
+You can't rename a setup.
+
+## Switch setups
+
+The canvas shows one setup at a time, the active one. Click the setup chip at the bottom left of the canvas, then pick a setup. Clicking a setup's row in the Outliner also makes it active.
+
+<img
+  src="/images/spark/setups-cameras/setup-chip-menu.png"
+  alt="The setup chip reading Setup A, with its tooltip Showing Setup A — click to switch arrangement. Box 1 is on the chip and 2 on its menu listing Base Setup and Setup A."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. Setup chip
+2. Setups
+
+</div>
+
+## Hide an object in one setup
+
+1. Make the setup active.
+2. On the object's row, click the eye. The row dims.
+
+<img
+  src="/images/spark/setups-cameras/setup-hidden.png"
+  alt="Setup A in the Outliner. The P5 bike row is dimmed, with a box on its crossed-out eye."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '280px' }}
+/>
+
+The object stays in every other setup. Click the eye again to show it.
+
+<img
+  src="/images/spark/setups-cameras/setup-base-shows.png"
+  alt="Base Setup in the Outliner, with a box on its P5 bike row, which is not dimmed."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '280px' }}
+/>
+
+<Note>
+Hiding is saved in this browser only, so other browsers and other people still see the object. **Ctrl+Z** doesn't undo it.
+</Note>
+
+## Delete a setup
+
+1. On the setup's row, click **Delete this setup**.
+2. Click **Delete**. Its cameras, the objects only in it, and its changes go with it.
+
+<img
+  src="/images/spark/setups-cameras/delete-setup-trash.png"
+  alt="The Setup A row, with a box on its Delete this setup button."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '268px' }}
+/>
+
+<img
+  src="/images/spark/setups-cameras/delete-setup.png"
+  alt="The Delete Setup window: Delete Setup A? Its cameras, the objects that exist only in it, and everything it changes about the scene go with it. A box is on Delete."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '432px' }}
+/>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Cameras" icon="video" href="/spark/setups-cameras/cameras">
+    Add a camera and set its lens.
+  </Card>
+  <Card title="Timeline and animation" icon="clock" href="/spark/setups-cameras/timeline-and-animation">
+    Play a scene and keyframe its cameras.
+  </Card>
+</CardGroup>

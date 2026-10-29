@@ -1,0 +1,122 @@
+---
+title: 'Timeline and animation'
+description: 'Play a 3D scene, keyframe cameras and objects, and place animation clips.'
+---
+
+The Timeline sits under the 3D canvas. It lists the scene's objects, cameras and audio as rows, with their clips and keyframes against a time ruler.
+
+<img
+  src="/images/spark/setups-cameras/timeline-overview.jpg"
+  alt="The Timeline. Box 1 is on the play button and time, 2 on the time ruler, 3 on the pinned row for the selected p5-sliding-box, 4 on its animation clip, and 5 on the bar of Camera 2 with its keyframes."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key">
+
+1. Play and the time
+2. Time ruler
+3. Selected item
+4. Animation clip
+5. Camera keyframes
+
+</div>
+
+## Play the scene
+
+Click play or press **Space**. The playhead runs across the ruler, and animated objects move in the canvas.
+
+| Key | Does |
+|---|---|
+| **Space** | Play or pause |
+| **←** / **→** | One frame back or forward |
+| **Shift+←** / **Shift+→** | 1 second back or forward |
+| **Shift+↑** | Jump to the start |
+| **Shift+↓** | Jump to the end, or the selected camera's last keyframe |
+| **Alt+↑** / **Alt+↓** | Zoom the Timeline in or out |
+
+## Animate with keyframes
+
+A keyframe holds where a camera or an object is at one time.
+
+<Steps titleSize="h3">
+  <Step title="Turn on Auto-keyframe">
+    Select the camera or object. Under **Transformation**, switch **Auto-keyframe** on. Spark places a keyframe at the playhead.
+
+    <img
+      src="/images/spark/setups-cameras/auto-keyframe.png"
+      alt="The Transformation section. Box 1 is on Auto-keyframe, switched on, 2 on Delete Keyframe and 3 on the interpolation menu."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+    />
+
+    <div className="key cols-3 left">
+
+    1. **Auto-keyframe**
+    2. Keyframe button
+    3. Interpolation
+
+    </div>
+  </Step>
+  <Step title="Move the playhead">
+    Press **Shift+→** to move 1 second later.
+  </Step>
+  <Step title="Change the position">
+    Type a new **Position** or **Rotation**. Spark adds a keyframe at the playhead.
+
+    <img
+      src="/images/spark/setups-cameras/position-fields.png"
+      alt="The Position section, with a box on its X, Y and Z fields."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '280px' }}
+    />
+  </Step>
+</Steps>
+
+The keyframe button reads **Place Keyframe**, or **Delete Keyframe** when the playhead is on one. The menu beside it sets how the move eases between keyframes, such as **Smooth**.
+
+## Add a pre-animated USD clip
+
+A USD file with its own animation brings it in as a clip. When you upload it, **Object Settings** shows the animation's length.
+
+<Steps titleSize="h3">
+  <Step title="Add the object">
+    Add it to the setup like any object. See [Add an object](/spark/scene-editor/objects#add-an-object).
+  </Step>
+  <Step title="Add the clip">
+    Expand the object's row in the Outliner. Move the playhead to where the clip starts, then click **+** on the **Animation** row.
+
+    <img
+      src="/images/spark/setups-cameras/animation-node.png"
+      alt="The Outliner with p5-sliding-box expanded. Box 1 is on its row and 2 on the plus button of its Animation row, 2.0s long."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. Object row
+    2. **Add to timeline at playhead**
+
+    </div>
+  </Step>
+</Steps>
+
+The clip shows on the object's Timeline row. Its properties gain **Animation**, with **Remove Animation**.
+
+## Move a clip
+
+Drag a clip along its row to start it at another time. Dragging an end moves the whole clip, so clips can't be trimmed here. To trim a sound, see [Add audio](/spark/scene-editor/audio-locators-and-rulers#add-audio).
+
+<img
+  src="/images/spark/setups-cameras/clip-moved.png"
+  alt="Timeline rows for p5-sliding-box and Camera 2, with a box on the p5-sliding-box clip, moved to start later."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '620px' }}
+/>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Cameras" icon="video" href="/spark/setups-cameras/cameras">
+    Add a camera and set its lens.
+  </Card>
+  <Card title="Objects" icon="box" href="/spark/scene-editor/objects">
+    Add and move objects.
+  </Card>
+</CardGroup>
