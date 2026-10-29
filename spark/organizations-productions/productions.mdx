@@ -7,15 +7,21 @@ A production holds one film, episode or commercial: its scripts, assets, takes a
 
 <img
   src="/images/spark/organizations-productions/productions-overview.png"
-  alt="An organization page. Marker 1 is on Search a production, 2 on New Production, 3 on a production card, 4 on its Access avatars and 5 on its more menu."
+  alt="An organization page. Box 1 is on Search a production, 2 on New Production, 3 on a production card, 4 on its Access avatars and 5 on its more menu."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. **Search a production** filters the cards by name.
-2. **New Production** creates one. Only Admins see it.
-3. A production. Click it to open it.
-4. **Access** shows who can open it.
-5. **⋯** holds **Settings** and **Delete**.
+<div className="key">
+
+1. **Search a production**
+2. **New Production**: Admins only
+3. Production
+4. **Access**: who can open it
+5. **⋯**: **Settings**, **Delete**
+
+</div>
+
+Click a production to open it.
 
 ## Productions and access
 
@@ -27,15 +33,21 @@ On the organization page, click **New Production**.
 
 <img
   src="/images/spark/organizations-productions/create-production.png"
-  alt="The Create New Production window. Marker 1 is on Production Name, 2 on Production Code, 3 on Camera Preset, 4 on Frame Rate and 5 on Access."
+  alt="The Create New Production window. Box 1 is on Production Name, 2 on Production Code, 3 on Camera Preset, 4 on Frame Rate and 5 on Access."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
 />
 
-1. **Production Name**, required.
-2. **Production Code**, a short code Spark fills in from the name's initials. You can change it.
-3. **Camera Preset**, the camera body and sensor. Pick landscape or portrait beside it.
-4. **Frame Rate**, 24fps or 25fps. It sets the timeline's frame grid and the frame rate on USD export.
-5. **Access**, who can open the production.
+<div className="key left">
+
+1. **Production Name**, required
+2. **Production Code**
+3. **Camera Preset** and orientation
+4. **Frame Rate**
+5. **Access**
+
+</div>
+
+Spark fills in the **Production Code** from the name's initials, and you can change it. **Camera Preset** is the camera body and sensor, with landscape or portrait beside it. **Frame Rate** is 24fps or 25fps. It sets the timeline's frame grid and the frame rate on USD export.
 
 You can also add a square **Production Image** of up to 10 MB. Click **Create Production** to finish.
 
@@ -45,13 +57,19 @@ Click **⋯** on the production's card, then **Settings**. Under **Access**, cho
 
 <img
   src="/images/spark/organizations-productions/production-access.png"
-  alt="The Access section of Production Settings. Marker 1 is on Only selected people, 2 on a ticked member and 3 on an Admin row without a checkbox."
+  alt="The Access section of Production Settings. Box 1 is on Only selected people, 2 on a ticked member and 3 on an Admin row without a checkbox."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
 />
 
-1. **Only selected people** shows the member list.
-2. A ticked member can open the production.
-3. An Admin has no checkbox, because Admins open every production.
+<div className="key cols-3 left">
+
+1. **Only selected people**
+2. Ticked member
+3. Admin
+
+</div>
+
+A ticked member can open the production. An Admin has no checkbox, because Admins open every production.
 
 Click **Save Changes**. To set access for one person across productions, see [Change a member's access](/spark/organizations-productions/members-and-seats#change-a-members-access).
 

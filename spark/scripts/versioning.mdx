@@ -7,15 +7,21 @@ Every edit saves as a draft version that only you see. The team reads the publis
 
 <img
   src="/images/spark/scripts/versioning-column.png"
-  alt="The Versioning column in Edit mode. Marker 1 is on Publish changes, 2 on Import Newer Version, 3 on a draft version, 4 on the Imported tag and 5 on the Current Version tag."
+  alt="The Versioning column in Edit mode. Box 1 is on Publish changes, 2 on Import Newer Version, 3 on a draft version, 4 on the Imported tag and 5 on the Current Version tag."
   style={{ borderRadius: '0.5rem', maxWidth: '360px' }}
 />
 
-1. **Publish changes** appears when you have a draft to publish.
-2. **Import Newer Version** brings in a new draft from a file.
-3. A version, with its time and author. The newest is at the top.
-4. **Imported** marks a version that came from a file.
-5. **Current Version** marks the published one that everyone reads.
+<div className="key left">
+
+1. **Publish changes**
+2. **Import Newer Version**
+3. Version: time, author
+4. **Imported**
+5. **Current Version**
+
+</div>
+
+**Publish changes** appears when you have a draft to publish. **Import Newer Version** brings in a new draft from a file. The newest version is at the top. **Imported** marks a version that came from a file, and **Current Version** marks the published one that everyone reads.
 
 ## The Versioning column
 
@@ -31,6 +37,12 @@ The Current Version is what everyone reads. 3D scenes, lists and downloads use i
   </Step>
   <Step title="Publish it">
     Click **Publish changes**, then **Publish changes** again to confirm.
+
+    <img
+      src="/images/spark/scripts/publish-changes.png"
+      alt="The Publish your edits window, with Keep editing and a box on Publish changes."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '440px' }}
+    />
   </Step>
 </Steps>
 
@@ -43,12 +55,37 @@ Use this when a new draft arrives from your screenwriting app. It adds the file 
 <Steps>
   <Step title="Open the Versioning column">
     Switch the script to **Edit**, then click **Import Newer Version**.
+
+    <img
+      src="/images/spark/scripts/import-newer-version.png"
+      alt="The top of the Versioning column. Box 1 is on the Edit switch and 2 on Import Newer Version."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '436px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. **Edit**
+    2. **Import Newer Version**
+
+    </div>
   </Step>
   <Step title="Choose the file">
     Drag in a `.fountain`, `.txt`, `.fdx` or `.pdf` file, or click **Choose from browser**. Check the preview.
+
+    <img
+      src="/images/spark/scripts/import-choose-file.png"
+      alt="The Import Version window, with a box on Choose from browser."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '420px' }}
+    />
   </Step>
   <Step title="Import and publish">
     Click **Import**. The file becomes a draft tagged **Imported**. Publish it as you would any edit.
+
+    <img
+      src="/images/spark/scripts/import-button.png"
+      alt="The top of the Import Version window for rooftop-test-v2, with a box on Import."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '560px' }}
+    />
   </Step>
 </Steps>
 
@@ -57,9 +94,21 @@ Use this when a new draft arrives from your screenwriting app. It adds the file 
 <Steps>
   <Step title="Open the version">
     In the **Versioning** column, click the version you want. **Version History** shows it beside the version before it.
+
+    <img
+      src="/images/spark/scripts/version-card.png"
+      alt="The Versioning column with four versions, and a box on the 6:10 PM version."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '300px' }}
+    />
   </Step>
   <Step title="Revert to it">
     Click **Revert to this version**, then **Revert**. Spark adds it as a new draft.
+
+    <img
+      src="/images/spark/scripts/revert-confirm.png"
+      alt="The Revert to version 1 window, with Cancel and a box on Revert."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '440px' }}
+    />
   </Step>
   <Step title="Publish it">
     Click **Publish changes** to make it the Current Version.
@@ -68,12 +117,18 @@ Use this when a new draft arrives from your screenwriting app. It adds the file 
 
 <img
   src="/images/spark/scripts/version-history.png"
-  alt="The Version History window. Marker 1 is on Revert to this version, and 2 on lines shown in red because the selected version doesn't have them."
+  alt="The Version History window. Box 1 is on Revert to this version, and 2 on lines shown in red because the selected version doesn't have them."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. **Revert to this version**.
-2. Lines in red are in the version before it, but not in the one you picked.
+<div className="key cols-2">
+
+1. **Revert to this version**
+2. Lines only in the version before
+
+</div>
+
+Lines in red are in the version before it, but not in the one you picked.
 
 Nothing is lost when you revert. Every version stays in the list, so you can return to any of them later.
 

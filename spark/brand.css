@@ -40,12 +40,13 @@ html.dark #content-area #header .prose { color: #A3ACC6; }
 html.dark #table-of-contents li:not([data-active="true"]) a { color: #A3ACC6; }
 html.dark #table-of-contents li:not([data-active="true"]) a:hover { color: #E8EDFB; }
 
-/* Image key: a small centred caption under a screenshot, in even columns (cols-2 for 2 or 4 labels, cols-3 for 3 or 6,
+/* Image key: a small caption (centred, or left under a narrow image: .left) under a screenshot, in even columns (cols-2 for 2 or 4 labels, cols-3 for 3 or 6,
    none for 5 or 7), one column on a phone. Numbers are magenta dots that match the screenshot's markers. */
 #content-area .key { margin-top: -0.5rem; font-size: 0.85rem; opacity: 0.85; }
 #content-area .key ol { list-style: none !important; counter-reset: k; margin: 0 !important; padding: 0 !important; display: grid; grid-template-columns: max-content; justify-content: center; gap: 0.35rem 2rem; }
 #content-area .key.cols-2 ol { grid-template-columns: repeat(2, max-content); }
 #content-area .key.cols-3 ol { grid-template-columns: repeat(3, max-content); }
+#content-area .key.left ol { justify-content: start; }
 @media (max-width: 640px) { #content-area .key ol, #content-area .key.cols-2 ol, #content-area .key.cols-3 ol { grid-template-columns: 1fr; justify-content: start; } }
 #content-area .key li { counter-increment: k; position: relative; margin: 0 !important; padding: 0.1rem 0 0.1rem 1.85rem !important; line-height: 1.4; }
 #content-area .key li::marker { content: none; }

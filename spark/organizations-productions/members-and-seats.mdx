@@ -7,16 +7,22 @@ Only the organization's Owner can invite, change and remove members. Everything 
 
 <img
   src="/images/spark/organizations-productions/invite-window.png"
-  alt="The Invite member window. Marker 1 is on the free seats count, 2 on Add more user, 3 on Title, 4 on the access level, 5 on Production access and 6 on Invite."
+  alt="The Invite member window. Box 1 is on the free seats count, 2 on Add more user, 3 on Title, 4 on the access level, 5 on Production access and 6 on Invite."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '560px' }}
 />
 
-1. Free seats left in the organization.
-2. **Add more user** adds a row, to invite several people at once.
-3. **Title**, such as Director. It only names the job.
-4. **Admin** or **User**. This decides what they can open.
-5. **Production access**, for people invited as a User.
-6. **Invite** sends the invitations.
+<div className="key cols-3 left">
+
+1. Free seats
+2. **Add more user**
+3. **Title**
+4. **Admin** or **User**
+5. **Production access**
+6. **Invite**
+
+</div>
+
+**Add more user** adds a row, so you can invite several people at once. **Title**, such as Director, only names the job. **Admin** or **User** decides what they can open. **Production access** applies to people invited as a User.
 
 ## Seats and billing
 
@@ -26,12 +32,18 @@ When every seat is taken, the line turns red and asks you to add a paid seat fro
 
 <img
   src="/images/spark/organizations-productions/seat-line-full.png"
-  alt="The Members section of a full organization. Marker 1 is on the red seat line, 3 of 3 seats used, 2 pending. Marker 2 is on the greyed Invite button with the tooltip Seat capacity reached."
+  alt="The Members section of a full organization. Box 1 is on the red seat line, 3 of 3 seats used, 2 pending. Box 2 is on the greyed Invite button with the tooltip Seat capacity reached."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. The seat line of a full organization.
-2. **Invite** stays greyed out until a seat is free.
+<div className="key cols-2">
+
+1. Seat line, full
+2. **Invite**, greyed out
+
+</div>
+
+**Invite** stays greyed out until a seat is free.
 
 **Billing** lists paid seats at $30 a month each, plus any free bonus seats. A new organization starts on a free trial, and nothing is charged until it ends.
 
@@ -44,15 +56,48 @@ When every seat is taken, the line turns red and asks you to add a paid seat fro
 <Steps>
   <Step title="Open the invite window">
     In **Organization Settings**, click **Invite** under **Members**.
+
+    <img
+      src="/images/spark/organizations-productions/invite-button.png"
+      alt="The Members section of Organization Settings, with a box on Invite."
+      style={{ borderRadius: '0.5rem' }}
+    />
   </Step>
   <Step title="Add each person">
     Type their email, pick a **Title**, and choose **Admin** or **User**. Click **Add more user** for another row.
+
+    <img
+      src="/images/spark/organizations-productions/invite-add-person.png"
+      alt="The Invite by email row. Box 1 is on the email field, 2 on Title, 3 on User and 4 on Add more user."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '600px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. Email
+    2. **Title**
+    3. **Admin** or **User**
+    4. **Add more user**
+
+    </div>
   </Step>
   <Step title="Choose their productions">
     For a User, tick the productions they can open. Productions marked **Everyone** are open to every member already.
+
+    <img
+      src="/images/spark/organizations-productions/invite-productions.png"
+      alt="Production access in the invite window, with a box on the list of productions, both marked Everyone."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '600px' }}
+    />
   </Step>
   <Step title="Send it">
     Click **Invite**. The invitation appears under **Members** as **Pending**, and holds a seat for 7 days.
+
+    <img
+      src="/images/spark/organizations-productions/invite-send.png"
+      alt="The bottom of the invite window, with a box on Invite."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '600px' }}
+    />
   </Step>
 </Steps>
 
@@ -71,13 +116,19 @@ An invitation that runs out moves under **Expired invitations**, and no longer h
 
 <img
   src="/images/spark/organizations-productions/expired-invitations.png"
-  alt="The Members list. Marker 1 is on the seat line, 2 of 3 seats used, 1 pending. Marker 2 is on the Expired invitations group, and 3 on the Invite button."
+  alt="The Members list. Box 1 is on the seat line, 2 of 3 seats used, 1 pending. Box 2 is on the Expired invitations group, and 3 on the Invite button."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. The seat line doesn't count the expired invitation.
-2. The expired invitation, with its resend icon.
-3. **Invite** works again.
+<div className="key cols-3">
+
+1. Seat line
+2. Expired invitation
+3. **Invite**
+
+</div>
+
+The seat line doesn't count the expired invitation, so **Invite** works again. The expired invitation has a resend icon.
 
 <AccordionGroup>
   <Accordion title="They accept while the organization is full">
@@ -93,12 +144,18 @@ Click the arrow at the end of a member's row, or of a pending invitation. **Prod
 
 <img
   src="/images/spark/organizations-productions/member-production-access.png"
-  alt="The Production access window for one member. Marker 1 is on the list of productions with checkboxes, and 2 on Save Changes."
+  alt="The Production access window for one member. Box 1 is on the list of productions with checkboxes, and 2 on Save Changes."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
 />
 
-1. Ticked productions are the ones they can open.
-2. **Save Changes** applies the new set.
+<div className="key cols-2 left">
+
+1. Ticked productions
+2. **Save Changes**
+
+</div>
+
+They can open the ticked productions. **Save Changes** applies the new set.
 
 Admins open every production, so their window has nothing to choose. The Owner can also change a member's access level and title on their row.
 
