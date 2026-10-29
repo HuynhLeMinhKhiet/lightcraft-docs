@@ -42,12 +42,12 @@ html.dark #table-of-contents li:not([data-active="true"]) a:hover { color: #E8ED
 
 /* Image key: a small caption (centred, or left under a narrow image: .left) under a screenshot, in even columns (cols-2 for 2 or 4 labels, cols-3 for 3 or 6,
    none for 5 or 7), one column on a phone. Numbers are magenta dots that match the screenshot's markers. */
-#content-area .key { margin-top: -0.5rem; font-size: 0.85rem; opacity: 0.85; }
+#content-area .key { margin-top: -0.5rem; font-size: 0.8rem; opacity: 0.85; }
 #content-area .key ol { list-style: none !important; counter-reset: k; margin: 0 !important; padding: 0 !important; display: grid; grid-template-columns: max-content; justify-content: center; gap: 0.35rem 2rem; }
 #content-area .key.cols-2 ol { grid-template-columns: repeat(2, max-content); }
 #content-area .key.cols-3 ol { grid-template-columns: repeat(3, max-content); }
 #content-area .key.left ol { justify-content: start; }
 @media (max-width: 640px) { #content-area .key ol, #content-area .key.cols-2 ol, #content-area .key.cols-3 ol { grid-template-columns: 1fr; justify-content: start; } }
-#content-area .key li { counter-increment: k; position: relative; margin: 0 !important; padding: 0.1rem 0 0.1rem 1.85rem !important; line-height: 1.4; }
+#content-area .key li { counter-increment: k; position: relative; margin: 0 !important; padding: 0.1rem 0 0.1rem 1.6rem !important; line-height: 1.4; }
 #content-area .key li::marker { content: none; }
-#content-area .key li::before { content: counter(k); position: absolute; left: 0; top: 0.1rem; width: 1.3rem; height: 1.3rem; border-radius: 50%; background: #E0107A; color: #fff; font: 800 0.72rem/1 Manrope, 'Segoe UI', sans-serif; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1.5px #fff; }
+#content-area .key li::before { content: counter(k); position: absolute; left: 0; top: 0.15rem; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: #E0107A; color: #fff; font: 800 0.62rem/1 Manrope, 'Segoe UI', sans-serif; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1.25px #fff; }
