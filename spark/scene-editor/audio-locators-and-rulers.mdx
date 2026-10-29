@@ -40,9 +40,21 @@ Sound goes in two stages: you add the file to the scene, then place it on a Time
     2. Audio **+** on the Timeline
 
     </div>
+
+    <img
+      src="/images/spark/scene-editor/audio-library-card.png"
+      alt="The audio library with the pointer on the P5 tone card, and a box on its Add to Scene button."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '640px' }}
+    />
   </Step>
   <Step title="Add a track">
     On the Timeline, click **+** on the **Audio** row. Spark adds a track named **Audio 1**.
+
+    <img
+      src="/images/spark/scene-editor/audio-track.png"
+      alt="The Timeline track list, with a box on the plus button of the Audio row."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '600px' }}
+    />
   </Step>
   <Step title="Place the clip">
     Move the playhead to where the sound starts. On the sound's row in the Outliner, click **+** (**Add to timeline at playhead**).
@@ -67,6 +79,21 @@ Sound goes in two stages: you add the file to the scene, then place it on a Time
 Click the clip to set its **Start Time**, **Trim Start**, **Trim End** and **Volume**. Click the track for **Track Name**, **Track Volume** and **Muted**.
 
 To upload a sound, click **Add to Library** in the audio library. Spark reads its length, format and size. Audio files can be `.mp3`, `.wav`, `.ogg`, `.m4a`, `.aac` or `.flac`.
+
+<img
+  src="/images/spark/scene-editor/audio-settings.jpg"
+  alt="The Audio Settings window for p5-tone. Box 1 is on the Preview player, 2 on Audio name and Tags, 3 on Audio Info and 4 on Add to Library."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-2">
+
+1. **Preview**
+2. **Audio name** and **Tags**
+3. **Audio Info**
+4. **Add to Library**
+
+</div>
 
 ## Use locators
 
@@ -114,13 +141,51 @@ A locator marks a point in the scene, such as where an actor stands. Locators ar
   </Step>
   <Step title="Add a ruler">
     Click **+** on the **Rulers** row, then click two points on the 3D canvas. The length shows on the canvas.
+
+    <img
+      src="/images/spark/scene-editor/ruler-placed.png"
+      alt="A ruler on the 3D canvas. Box 1 is on its length label, 0.401 ft, and 2 on the ruler between its two ends."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '540px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. Length
+    2. Ruler
+
+    </div>
   </Step>
   <Step title="Adjust it">
     Drag either end with its gizmo, or type **Start** and **End** values in **Ruler Properties**.
+
+    <img
+      src="/images/spark/scene-editor/ruler-adjust.jpg"
+      alt="The scene editor with Ruler 1 selected. Box 1 is on the gizmo at one end of the ruler, and 2 on the Start and End values in Ruler Properties."
+      style={{ borderRadius: '0.5rem' }}
+    />
+
+    <div className="key cols-2">
+
+    1. End gizmo
+    2. **Start** and **End**
+
+    </div>
   </Step>
 </Steps>
 
 To delete a locator or a ruler, hover its row, click the trash, then confirm.
+
+<img
+  src="/images/spark/scene-editor/locator-row-trash.png"
+  alt="A locator row in the Outliner, Untitled Locator with its position, and a box on the trash."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '300px' }}
+/>
+
+<img
+  src="/images/spark/scene-editor/delete-item.png"
+  alt="The Delete Item window, Delete Untitled Locator?, with Cancel and a box on Delete."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '440px' }}
+/>
 
 ## Related
 

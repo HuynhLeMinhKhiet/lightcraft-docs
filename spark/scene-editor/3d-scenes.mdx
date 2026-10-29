@@ -25,9 +25,21 @@ A 3D scene is a set you build for one script scene. A script scene can hold seve
 <Steps titleSize="h3">
   <Step title="Pick the script scene">
     On the script page, click the script scene in the left column. Its 3D scenes show on the right.
+
+    <img
+      src="/images/spark/scene-editor/create-pick-scene.png"
+      alt="The Script scenes column, with a box on INT. PARK - DAY and its 3D scene count."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '560px' }}
+    />
   </Step>
   <Step title="Click Create a new 3D scene">
     The **Create 3D Scene** window opens. Spark fills in the name from the scene heading.
+
+    <img
+      src="/images/spark/scene-editor/create-new-button.png"
+      alt="The right column of the script page, with a box on Create a new 3D scene."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '680px' }}
+    />
   </Step>
   <Step title="Choose the camera">
     Pick a **Camera Preset**, then landscape or portrait. Change the name if you like.
@@ -47,6 +59,19 @@ A 3D scene is a set you build for one script scene. A script scene can hold seve
   </Step>
   <Step title="Create it">
     Spark says **Scene created!**. The new card starts with 1 setup, 1 camera and 1 take.
+
+    <img
+      src="/images/spark/scene-editor/scene-created.png"
+      alt="The script page after creating a 3D scene. Box 1 is on the Scene created! message and 2 on the new P5 park test card, with 1 setup, 1 camera and 1 take."
+      style={{ borderRadius: '0.5rem' }}
+    />
+
+    <div className="key cols-2">
+
+    1. **Scene created!**
+    2. New 3D scene card
+
+    </div>
   </Step>
 </Steps>
 
@@ -97,6 +122,34 @@ Hover the card, then click **⋯**.
 | **Clone** | Makes a copy named **Clone -** and the original name. Change the name, then confirm. |
 | **Delete** | Deletes the 3D scene, with its cameras, keyframes, audio clips and other data. It can't be undone. |
 
+<img
+  src="/images/spark/scene-editor/scene-settings.png"
+  alt="The 3D Scene Settings window. Box 1 is on Camera Preset with Landscape and Portrait, 2 on Name, 3 on the Danger Zone with Delete 3D Scene, and 4 on Save."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '540px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. Camera preset and orientation
+2. **Name**
+3. **Delete 3D Scene**
+4. **Save**
+
+</div>
+
+<img
+  src="/images/spark/scene-editor/clone-scene.png"
+  alt="The Clone 3D Scene window. Box 1 is on Name, filled with Clone - P5 park, and 2 on Clone."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '540px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. **Name**
+2. **Clone**
+
+</div>
+
 <Note>
   The list doesn't update after a clone or a delete until you reload the page.
 </Note>
@@ -119,6 +172,20 @@ Drag the card by its handle (⠿, top left) onto another script scene.
 </div>
 
 Spark also asks when you publish script edits that renamed a heading. The **Before publishing: where do these 3D scenes go?** window lists each changed heading and pre-picks the new one.
+
+<img
+  src="/images/spark/scene-editor/publish-move-scenes.png"
+  alt="The Before publishing window. Box 1 is on the changed heading, INT. STAIRWELL - NIGHT to INT. STAIRWELL - DAWN, 2 on Publish, decide later and 3 on Publish and move scenes."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-3">
+
+1. Old and new heading
+2. **Publish, decide later**
+3. **Publish & move scenes**
+
+</div>
 
 - **Publish & move scenes** moves the 3D scenes to the headings shown.
 - **Publish, decide later** publishes and leaves them without a heading. Drag them back later.
