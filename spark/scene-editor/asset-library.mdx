@@ -6,16 +6,20 @@ description: 'Browse the default assets and upload your own locations, objects a
 The Asset Library holds every file a production can use: locations, objects and audio. Open it from the **Asset Library** tab, or from a **+** in the Outliner, which opens it on that category.
 
 <img
-  src="/images/spark/scene-editor/asset-library-overview.png"
-  alt="The Asset Library page. Marker 1 is on Show default assets, 2 on the category list, 3 on Add Multiple, 4 on Add to Library and 5 on the Default assets divider."
+  src="/images/spark/scene-editor/asset-library-overview.jpg"
+  alt="The Asset Library page. Box 1 is on Show default assets, 2 on the category list, 3 on Add Multiple, 4 on Add to Library and 5 on the Default assets divider."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. **Show default assets** shows or hides Lightcraft's own files.
-2. The categories, with a count for each.
-3. **Add Multiple** uploads a batch of files of one kind.
-4. **Add to Library** uploads one file.
-5. Your production's files sit above **Default assets**. Lightcraft's files sit below.
+<div className="key">
+
+1. **Show default assets**: Lightcraft's own files
+2. Categories, with counts
+3. **Add Multiple**: a batch of one kind
+4. **Add to Library**: one file
+5. **Default assets**: Lightcraft's files below, yours above
+
+</div>
 
 ## Categories and default assets
 
@@ -35,15 +39,34 @@ Default assets come with every production, such as the Opulent Hall location and
 
     <img
       src="/images/spark/scene-editor/select-category.png"
-      alt="The Select Category window, asking what kind of file you are uploading, with Location, Object and Audio and the file types for each."
+      alt="The Select Category window, asking what kind of file you are uploading, with a box on the Location, Object and Audio cards and the file types for each."
       style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '620px' }}
     />
   </Step>
   <Step title="Choose the file">
     Drag it in, or click **Choose from browser**. A preview shows on the left.
+
+    <img
+      src="/images/spark/scene-editor/choose-file.png"
+      alt="The upload area, Drag and drop or Choose from browser, with a box on Choose from browser and the file types listed below."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '560px' }}
+    />
   </Step>
   <Step title="Fill in the settings">
     Name the file and pick its subcategory. Locations and objects also ask how to turn and size them. See [Locations](/spark/scene-editor/locations#location-settings) and [Objects](/spark/scene-editor/objects#prepare-usd-objects).
+
+    <img
+      src="/images/spark/scene-editor/fill-in-settings.png"
+      alt="The Location Settings window. Box 1 is on the settings column with Subcategory, Location name, Tags and Transformation, and 2 on Add to Library."
+      style={{ borderRadius: '0.5rem' }}
+    />
+
+    <div className="key cols-2">
+
+    1. Settings
+    2. **Add to Library**
+
+    </div>
   </Step>
   <Step title="Click Add to Library">
     The upload's progress shows at the top of the page. The file then shows in its category.
@@ -51,6 +74,12 @@ Default assets come with every production, such as the Opulent Hall location and
 </Steps>
 
 On a file's card in the Asset Library tab, **⋯** holds **Edit Metadata**, **Download** and **Delete**.
+
+<img
+  src="/images/spark/scene-editor/library-card-menu.jpg"
+  alt="The Asset Library tab with a box on the menu button at the top right of the P5 desk lamp card."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '800px' }}
+/>
 
 ## Upload limits
 

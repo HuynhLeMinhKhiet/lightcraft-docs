@@ -6,15 +6,19 @@ description: 'Create a 3D scene for a script scene, open it, and rename, clone o
 A 3D scene is a set you build for one script scene. A script scene can hold several 3D scenes, each with its own location, objects and cameras.
 
 <img
-  src="/images/spark/scene-editor/3d-scenes-overview.png"
-  alt="A script open in Spark. Marker 1 is on the script scene INT. STAIRWELL - DAWN with a count of 1, 2 on Create a new 3D scene, 3 on a 3D scene card and 4 on the card's menu with Settings, Clone and Delete."
+  src="/images/spark/scene-editor/3d-scenes-overview.jpg"
+  alt="A script open in Spark. Box 1 is on the script scene INT. STAIRWELL - DAWN with a count of 1, 2 on Create a new 3D scene, 3 on a 3D scene card and 4 on the card's menu with Settings, Clone and Delete."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. The selected script scene. The number counts its 3D scenes.
-2. **Create a new 3D scene**.
-3. A 3D scene card, with its setup, camera and take counts.
-4. The card's **⋯** menu: **Settings**, **Clone** and **Delete**.
+<div className="key cols-2">
+
+1. Script scene and its 3D scene count
+2. **Create a new 3D scene**
+3. 3D scene card: setups, cameras, takes
+4. Card menu: **Settings**, **Clone**, **Delete**
+
+</div>
 
 ## Create a 3D scene
 
@@ -27,6 +31,19 @@ A 3D scene is a set you build for one script scene. A script scene can hold seve
   </Step>
   <Step title="Choose the camera">
     Pick a **Camera Preset**, then landscape or portrait. Change the name if you like.
+
+    <img
+      src="/images/spark/scene-editor/create-3d-scene.png"
+      alt="The Create 3D Scene window. Box 1 is on Camera Preset with Landscape and Portrait, and 2 on Create. The name reads INT. PARK - DAY."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '560px' }}
+    />
+
+    <div className="key cols-2">
+
+    1. Camera preset and orientation
+    2. **Create**
+
+    </div>
   </Step>
   <Step title="Create it">
     Spark says **Scene created!**. The new card starts with 1 setup, 1 camera and 1 take.
@@ -37,15 +54,42 @@ A 3D scene is a set you build for one script scene. A script scene can hold seve
 
 Click its card. The scene editor opens on the **3D Scene** tab. The card shows when you last opened it, such as **Opened 3 minutes ago**.
 
+<img
+  src="/images/spark/scene-editor/open-3d-scene.png"
+  alt="The right column of the script page, with a box on the P5 stairwell 3D scene card."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
+/>
+
 ## Scene navigation
 
 **Scene navigation** (☰, top left) moves between 3D scenes without leaving the scene editor. It lists the script's scene headings and the 3D scenes of the selected heading.
 
 Click a 3D scene to open it, or click **New 3D Scene** to add one to that heading.
 
+<img
+  src="/images/spark/scene-editor/scene-navigation.jpg"
+  alt="Scene navigation open over the scene editor. Box 1 is on the menu button at the top left, 2 on the list of script scene headings, 3 on the P5 stairwell 3D scene and 4 on New 3D Scene."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-2">
+
+1. **Scene navigation**
+2. Script scene headings
+3. 3D scene
+4. **New 3D Scene**
+
+</div>
+
 ## Rename, clone or delete a 3D scene
 
 Hover the card, then click **⋯**.
+
+<img
+  src="/images/spark/scene-editor/card-menu.png"
+  alt="A 3D scene card with its menu open and boxed: Settings, Clone and Delete."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
+/>
 
 | Item | What it does |
 |------|--------------|
@@ -60,6 +104,19 @@ Hover the card, then click **⋯**.
 ## Move a 3D scene to another heading
 
 Drag the card by its handle (⠿, top left) onto another script scene.
+
+<img
+  src="/images/spark/scene-editor/move-3d-scene.jpg"
+  alt="The script page. Box 1 is on the handle at the top left of a 3D scene card, and 2 on the list of script scenes on the left."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-2">
+
+1. Card handle
+2. Script scenes
+
+</div>
 
 Spark also asks when you publish script edits that renamed a heading. The **Before publishing: where do these 3D scenes go?** window lists each changed heading and pre-picks the new one.
 

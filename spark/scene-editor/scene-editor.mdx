@@ -7,30 +7,42 @@ The scene editor is the **3D Scene** tab, where you build a 3D scene. The 3D can
 
 <img
   src="/images/spark/scene-editor/scene-editor-overview.jpg"
-  alt="The scene editor with the Opulent Hall location loaded. Marker 1 is on the canvas toolbar, 2 on the camera preview, 3 on the Outliner, 4 on the Properties panel, 5 on the Timeline and 6 on the Script tab."
+  alt="The scene editor with the Opulent Hall location loaded. Box 1 is on the canvas toolbar, 2 on the camera preview, 3 on the Outliner, 4 on the Properties panel, 5 on the Timeline and 6 on the Script tab."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. The canvas toolbar.
-2. The camera preview, showing what the selected camera sees.
-3. The **Outliner**, listing everything in the 3D scene.
-4. The **Properties** panel for the selected item.
-5. The **Timeline**, for keyframes and audio.
-6. The **Script** tab, beside **Outliner**.
+<div className="key cols-3">
+
+1. Canvas toolbar
+2. Camera preview
+3. **Outliner**
+4. **Properties** panel
+5. **Timeline**
+6. **Script** tab
+
+</div>
 
 ## 3D canvas and toolbar
 
 The 3D canvas is the view you fly through and click in. Its toolbar runs along the top left.
 
-| Icon | Name |
-|------|------|
-| Gear | **Camera Controls** |
-| Compass | **Show Gizmo** |
-| Square | **Hide Ground Plane** |
-| Bug | **Show Debug Info** |
-| Arrow down | **Top-Down View** |
-| House | **Reset view** |
-| Keyboard | **Keyboard shortcuts** |
+<img
+  src="/images/spark/scene-editor/canvas-toolbar.png"
+  alt="The canvas toolbar, with a numbered box on each of its seven buttons: a gear, a compass, a square, a bug, an arrow down, a house and a keyboard."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '620px' }}
+/>
+
+<div className="key">
+
+1. **Camera Controls**
+2. **Show Gizmo**
+3. **Hide Ground Plane**
+4. **Show Debug Info**
+5. **Top-Down View**
+6. **Reset view**
+7. **Keyboard shortcuts**
+
+</div>
 
 **Camera Controls** sets your flying speed. See [Fly through a 3D scene](/spark/scene-editor/move-around-a-scene#fly-through-a-3d-scene). **Top-Down View** looks straight down, and **Reset view** brings the view back to where it started.
 
@@ -39,6 +51,19 @@ When you select an item, the move, rotate and scale buttons show at the top righ
 ## Camera preview
 
 The camera preview shows the view through the selected camera, with its lens below, such as **16:9, 20mm**.
+
+<img
+  src="/images/spark/scene-editor/camera-preview.jpg"
+  alt="The 3D canvas with the camera preview at the bottom right. Box 1 is on the enlarge button in the preview's header, and 2 on the minus button beside it."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-2">
+
+1. Enlarge (**Shift+F**)
+2. **—** Fold away
+
+</div>
 
 - Press **Shift+F**, or click the enlarge button, to make it larger over the canvas. Press **Shift+F** again to shrink it.
 - Click **—** to fold it into a **Camera 1** chip at the bottom right. Click the chip to bring it back.
@@ -57,6 +82,23 @@ The Outliner lists everything in the 3D scene, in rows you can fold.
 
 Hover an item's row to show its buttons: an eye to hide it, **Replace file**, and a trash to delete it. A setup row has three buttons: **Add an object to this setup**, **Add a camera to this setup** and **Clone this setup**.
 
+<img
+  src="/images/spark/scene-editor/outliner-row-buttons.png"
+  alt="The Base Setup row and the P5 bike row under it. Boxes 1 to 3 are on the setup row's cube, camera and layers buttons. Boxes 4 to 6 are on the bike row's eye, Replace file and trash."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '340px' }}
+/>
+
+<div className="key cols-3">
+
+1. Add an object
+2. Add a camera
+3. Clone this setup
+4. Hide
+5. **Replace file**
+6. Delete
+
+</div>
+
 ## Properties panel
 
 The Properties panel shows the settings of the item you selected, such as **Object Properties** or **Location Properties**. With nothing selected, it reads **Select a node to edit its properties.**
@@ -64,6 +106,12 @@ The Properties panel shows the settings of the item you selected, such as **Obje
 ## Script tab
 
 The **Script** tab shows the text of the script scene this 3D scene belongs to. Click **Outliner** to go back.
+
+<img
+  src="/images/spark/scene-editor/script-tab.jpg"
+  alt="The right side of the scene editor with a box on the Script tab. It shows the Rooftop Test scene INT. STAIRWELL - DAWN."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '800px' }}
+/>
 
 ## Related
 

@@ -6,13 +6,17 @@ description: 'Fly through the 3D canvas, select items, and look down on the floo
 You move through the 3D canvas like a camera in flight: keys move you, and dragging turns your view. Click the canvas first, so it takes your key presses.
 
 <img
-  src="/images/spark/scene-editor/top-down-view.jpg"
-  alt="The Opulent Hall seen from straight above. Marker 1 is on the Top-Down View button in the canvas toolbar, and 2 on the Cull Y box, ticked at 0.2."
+  src="/images/spark/scene-editor/canvas-toolbar-move.jpg"
+  alt="The 3D canvas. Box 1 is on the gear at the left of the canvas toolbar, and 2 on the arrow-down button, the fifth in the toolbar."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. **Top-Down View** in the canvas toolbar.
-2. **Cull Y**, which cuts away everything above a height.
+<div className="key cols-2">
+
+1. **Camera Controls**
+2. **Top-Down View**
+
+</div>
 
 ## Fly through a 3D scene
 
@@ -27,6 +31,20 @@ You move through the 3D canvas like a camera in flight: keys move you, and dragg
 
 To change how fast you fly, click **Camera Controls** (the gear) in the canvas toolbar.
 
+<img
+  src="/images/spark/scene-editor/camera-controls.png"
+  alt="The Camera Controls panel under the gear. Box 1 is on the gear, 2 on Move 0.15, Look 0.0020 and Boost 2.0, and 3 on Reset to defaults."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+<div className="key cols-3">
+
+1. **Camera Controls**
+2. **Move**, **Look**, **Boost**
+3. **Reset to defaults**
+
+</div>
+
 - **Move** sets how fast the keys move you.
 - **Look** sets how fast dragging turns the view.
 - **Boost** sets how much faster you move while you hold **Shift**.
@@ -37,6 +55,12 @@ To change how fast you fly, click **Camera Controls** (the gear) in the canvas t
 
 Click the item's row in the Outliner. Its settings open in the Properties panel.
 
+<img
+  src="/images/spark/scene-editor/select-item.jpg"
+  alt="The Outliner with a box on the selected P5 desk lamp mesh row. Object Properties for the lamp shows below."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '800px' }}
+/>
+
 - **Shift**+click adds another item to the selection.
 - **Esc** clears the selection.
 - Double-click an object on the canvas to select one of its parts. See [Parts of an object](/spark/scene-editor/parts-of-an-object).
@@ -44,6 +68,12 @@ Click the item's row in the Outliner. Its settings open in the Properties panel.
 ## Top-Down View
 
 Click **Top-Down View** to look straight down on the scene. Middle-drag to pan, and scroll to zoom.
+
+<img
+  src="/images/spark/scene-editor/top-down-view.jpg"
+  alt="The Opulent Hall seen from straight above, with a box on the Cull Y box at the top left, ticked at 0.2."
+  style={{ borderRadius: '0.5rem' }}
+/>
 
 A **Cull Y** box shows at the top left, ticked, at 0.2. Spark hides the location above that height, so you see the floor plan instead of the ceiling. Change the number to cut higher or lower, or untick the box to show everything.
 

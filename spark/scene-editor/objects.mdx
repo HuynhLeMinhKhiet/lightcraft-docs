@@ -7,27 +7,49 @@ Objects are the USD models you place in a location: props, vehicles and characte
 
 <img
   src="/images/spark/scene-editor/object-selected.jpg"
-  alt="The scene editor with the P5 bike object selected in the hall. Marker 1 is on the move, rotate and scale buttons, 2 on the object's row in the Outliner, 3 on Remove from Scene, 4 on Name and 5 on the Replace and settings buttons."
+  alt="The scene editor with the P5 bike object selected in the hall. Box 1 is on the move, rotate and scale buttons, 2 on the object's row in the Outliner, 3 on Remove from Scene, 4 on Name and 5 on the Replace and settings buttons."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. **Position**, **Rotation** and **Scale**, for the gizmo.
-2. The object's row in the Outliner, under its setup and kind.
-3. **Remove from Scene**.
-4. **Name**.
-5. **Replace with another file** (↻), and the file's settings (⚙).
+<div className="key">
+
+1. Gizmo: **Position**, **Rotation**, **Scale**
+2. Object row, under its setup and kind
+3. **Remove from Scene**
+4. **Name**
+5. ↻ **Replace with another file**, ⚙ file settings
+
+</div>
 
 ## Add an object
 
 <Steps titleSize="h3">
   <Step title="Open the object library">
     On the setup's row in the Outliner, click **Add an object to this setup** (the cube). The Asset Library opens on **Objects**.
+
+    <img
+      src="/images/spark/scene-editor/add-object.jpg"
+      alt="The Outliner with a box on the cube button of the Base Setup row."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '800px' }}
+    />
   </Step>
   <Step title="Pick an object">
     Hover an object, then click **Add to Scene**. The library closes.
+
+    <img
+      src="/images/spark/scene-editor/add-object-card.jpg"
+      alt="The object library open on Objects. The pointer is on the Motorcycle card, with a box on its Add to Scene button."
+      style={{ borderRadius: '0.5rem' }}
+    />
   </Step>
   <Step title="Place it">
     Spark says **Click on canvas to place object. Press Esc to cancel.** Click where it goes in the 3D canvas.
+
+    <img
+      src="/images/spark/scene-editor/place-object.jpg"
+      alt="The empty 3D canvas with a box on the message Click on canvas to place object. Press Esc to cancel."
+      style={{ borderRadius: '0.5rem' }}
+    />
   </Step>
 </Steps>
 
@@ -37,7 +59,7 @@ Upload your own object with **Add to Library**. The **Object Settings** window a
 
 <img
   src="/images/spark/scene-editor/scale-warning.png"
-  alt="Object Settings for an uploaded USDA file: Step 1 with Subcategory Prop and the name, Step 2 detecting Y-Up, and the warning Scale hasn't been adjusted with Let me check and Add it anyway."
+  alt="Object Settings for an uploaded USDA file: Step 1 with Subcategory Prop and the name, Step 2 detecting Y-Up, and a box on the warning Scale hasn't been adjusted, with Let me check and Add it anyway."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
 />
 
@@ -51,6 +73,20 @@ Upload your own object with **Add to Library**. The **Object Settings** window a
 ## Move, rotate or scale
 
 Select the object, then drag the gizmo in the 3D canvas. Switch the gizmo with the buttons at the top right of the canvas.
+
+<img
+  src="/images/spark/scene-editor/gizmo-buttons.jpg"
+  alt="The 3D canvas with the P5 bike selected. Boxes 1 to 3 are on the three gizmo buttons at the top right: move, rotate and scale."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-3">
+
+1. **Position**
+2. **Rotation**
+3. **Scale**
+
+</div>
 
 | Button | Shortcut |
 |--------|----------|
@@ -68,6 +104,26 @@ To type exact values, use **Position**, **Rotation** and **Scale** in **Object P
 - **Remove:** click **Remove from Scene**, then **Remove**. The object leaves the scene and every setup. Its file stays in the library, and **Ctrl+Z** brings it back.
 
 The trash on the object's row does the same as **Remove from Scene**.
+
+<img
+  src="/images/spark/scene-editor/object-row-buttons.png"
+  alt="The P5 bike row in the Outliner. Box 1 is on its eye, 2 on Replace file and 3 on the trash."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '340px' }}
+/>
+
+<div className="key cols-3">
+
+1. Hide
+2. **Replace file**
+3. Delete
+
+</div>
+
+<img
+  src="/images/spark/scene-editor/remove-object.png"
+  alt="The Remove from Scene window: This will remove P5 bike from the scene and every setup. The file will remain in your library. Cancel, and a box on Remove."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '440px' }}
+/>
 
 Objects can't be parented to other objects. Only a camera can follow an object. See [Setups and cameras](/spark/scene-editor/setups-and-cameras).
 

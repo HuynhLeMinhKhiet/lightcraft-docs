@@ -20,16 +20,15 @@ html.dark #sidebar-content a:not([aria-current]) { color: #A3ACC6; }
 html.dark #sidebar-content a:not([aria-current]):hover { color: #E8EDFB; }
 
 /* Text hierarchy by lightness, weight and space, no extra colours (Material's high/medium emphasis idea).
-   Headings: brightest blue-white. Body: a step dimmer. Each H2 opens a section with a faint rule and extra space above. */
+   Headings: brightest blue-white. Body: a step dimmer. Each H2 opens a section with 3rem of space above and a blue bar, no rule (Kit, 2026-10-29). */
 #content-area h1, #content-area h2, #content-area h3, #content-area h4 { color: #050B24; }
 #content-area .prose { color: #2D3A5C; }
-#content-area h2 { margin-top: 3rem; padding-top: 1.75rem; border-top: 1px solid rgb(47 84 235 / 0.14); font-weight: 700; }
+#content-area h2 { margin-top: 3rem; font-weight: 700; }
 html.dark #content-area h1, html.dark #content-area h2, html.dark #content-area h3, html.dark #content-area h4 { color: #F5F8FF; }
 html.dark #content-area .prose { color: #C8D0E6; }
-html.dark #content-area h2 { border-top-color: rgb(89 126 247 / 0.18); }
 /* A short brand-blue bar marks each section heading (Kit picked it over a larger size, 2026-10-28). */
 #content-area h2 { position: relative; padding-left: 0.9rem; }
-#content-area h2::before { content: ""; position: absolute; left: 0; top: calc(1.75rem + 0.15em); width: 4px; height: 1.05em; border-radius: 2px; background: #2F54EB; }
+#content-area h2::before { content: ""; position: absolute; left: 0; top: 0.15em; width: 4px; height: 1.05em; border-radius: 2px; background: #2F54EB; }
 html.dark #content-area h2::before { background: #597EF7; }
 #content-area .prose strong { color: inherit; filter: brightness(1.12); }
 
@@ -40,3 +39,14 @@ html.dark #content-area h2::before { background: #597EF7; }
 html.dark #content-area #header .prose { color: #A3ACC6; }
 html.dark #table-of-contents li:not([data-active="true"]) a { color: #A3ACC6; }
 html.dark #table-of-contents li:not([data-active="true"]) a:hover { color: #E8EDFB; }
+
+/* Image key: a small centred caption under a screenshot, in even columns (cols-2 for 2 or 4 labels, cols-3 for 3 or 6,
+   none for 5 or 7), one column on a phone. Numbers are magenta dots that match the screenshot's markers. */
+#content-area .key { margin-top: -0.5rem; font-size: 0.85rem; opacity: 0.85; }
+#content-area .key ol { list-style: none !important; counter-reset: k; margin: 0 !important; padding: 0 !important; display: grid; grid-template-columns: max-content; justify-content: center; gap: 0.35rem 2rem; }
+#content-area .key.cols-2 ol { grid-template-columns: repeat(2, max-content); }
+#content-area .key.cols-3 ol { grid-template-columns: repeat(3, max-content); }
+@media (max-width: 640px) { #content-area .key ol, #content-area .key.cols-2 ol, #content-area .key.cols-3 ol { grid-template-columns: 1fr; justify-content: start; } }
+#content-area .key li { counter-increment: k; position: relative; margin: 0 !important; padding: 0.1rem 0 0.1rem 1.85rem !important; line-height: 1.4; }
+#content-area .key li::marker { content: none; }
+#content-area .key li::before { content: counter(k); position: absolute; left: 0; top: 0.1rem; width: 1.3rem; height: 1.3rem; border-radius: 50%; background: #E0107A; color: #fff; font: 800 0.72rem/1 Manrope, 'Segoe UI', sans-serif; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1.5px #fff; }

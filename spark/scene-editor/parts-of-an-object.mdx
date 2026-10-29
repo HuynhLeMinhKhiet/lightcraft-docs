@@ -7,12 +7,16 @@ A USD object built from several meshes has parts, such as the pole and shade of 
 
 <img
   src="/images/spark/scene-editor/parts-overview.jpg"
-  alt="A desk lamp object selected in the hall. Marker 1 is on the canvas hint P5 desk lamp mesh, Double-click a part to select it, and 2 on the Parts row in the Outliner with a count of 3 and a magnifier."
+  alt="A desk lamp object selected in the hall. Box 1 is on the canvas hint P5 desk lamp mesh, Double-click a part to select it, and 2 on the Parts row in the Outliner with a count of 3 and a magnifier."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. The hint for an object with parts: **Double-click a part to select it**.
-2. The **Parts** row under the object, with the part count and **Find a part**.
+<div className="key cols-2">
+
+1. Hint: **Double-click a part to select it**
+2. **Parts** row: count, **Find a part**
+
+</div>
 
 ## What a part is
 
@@ -24,14 +28,20 @@ Select the object, then double-click the part in the 3D canvas. The part turns o
 
 <img
   src="/images/spark/scene-editor/part-selected.jpg"
-  alt="The Pole part of the desk lamp selected in orange. Marker 1 is on the pole, 2 on the path P5 desk lamp mesh, DeskLamp, Pole at the bottom of the canvas, 3 on the Parts row and 4 on the Pole row."
+  alt="The Pole part of the desk lamp selected in orange. Box 1 is on the pole, 2 on the path P5 desk lamp mesh, DeskLamp, Pole at the bottom of the canvas, 3 on the Parts row and 4 on the Pole row."
   style={{ borderRadius: '0.5rem' }}
 />
 
-1. The selected part.
-2. The path to the part, with an eye that hides it. **Shift**-click adds a part, and **Esc** deselects.
-3. The **Parts** row.
-4. The part's row.
+<div className="key cols-2">
+
+1. Selected part
+2. Path to the part, with an eye
+3. **Parts** row
+4. Part row
+
+</div>
+
+The eye on the path hides the part. **Shift**-click adds a part, and **Esc** deselects.
 
 **Object Properties** still shows the whole object while a part is selected.
 
@@ -41,7 +51,7 @@ Click **Find a part** (the magnifier) on the **Parts** row. Type to filter the l
 
 <img
   src="/images/spark/scene-editor/part-search.png"
-  alt="The Find a part search box, reading Search 3 parts, listing Base, Pole and Shade."
+  alt="The Find a part list of Base, Pole and Shade, with a box on its search box, reading Search 3 parts."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '340px' }}
 />
 
@@ -52,13 +62,22 @@ Click **Find a part** (the magnifier) on the **Parts** row. Type to filter the l
 
 <img
   src="/images/spark/scene-editor/part-moved.png"
-  alt="The Pole row marked moved, with an eye, Reset transform and a trash."
+  alt="The Pole row. Box 1 is on the word moved, 2 on the eye, 3 on Reset transform and 4 on the trash."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
 />
 
+<div className="key cols-2">
+
+1. **moved**
+2. Hide
+3. **Reset transform**
+4. **Remove Overrides**
+
+</div>
+
 <img
   src="/images/spark/scene-editor/part-hidden.png"
-  alt="The Pole row dim, marked moved, with a crossed-out eye."
+  alt="The Pole row dim, marked moved, with a box on its crossed-out eye."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
 />
 
@@ -68,13 +87,19 @@ Select a part, then **Shift**-click another. The Properties panel shows **Parts*
 
 <img
   src="/images/spark/scene-editor/parts-selected-several.png"
-  alt="The Parts panel: 2 parts selected, with Hide all, Reset transforms and Remove, one line each for Pole and Shade, and a hint about Shift-click."
+  alt="The Parts panel: 2 parts selected. Box 1 is on Hide all, 2 on Reset transforms and 3 on Remove. Below are one line each for Pole and Shade, and a hint about Shift-click."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
 />
 
-- **Hide all** hides every selected part. It then reads **Show all**.
-- **Reset transforms** puts every moved part back. It's greyed out when no part has moved.
-- **Remove** clears the changes on every selected part.
+<div className="key cols-3">
+
+1. **Hide all**
+2. **Reset transforms**
+3. **Remove**
+
+</div>
+
+**Hide all** hides every selected part, and then reads **Show all**. **Reset transforms** puts every moved part back, and is greyed out when no part has moved. **Remove** clears the changes on every selected part.
 
 Drag the gizmo to move the parts together. To rotate or scale, select a single part.
 
@@ -85,7 +110,7 @@ Drag the gizmo to move the parts together. To rotate or scale, select a single p
 
 <img
   src="/images/spark/scene-editor/part-remove-overrides.png"
-  alt="The Remove Overrides window. It says the mesh stays in the scene and returns to its original position and visibility, and to use the eye icon to remove it from view."
+  alt="The Remove Overrides window. It says the mesh stays in the scene and returns to its original position and visibility, and to use the eye icon to remove it from view. A box is on Remove."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '520px' }}
 />
 

@@ -7,14 +7,18 @@ The bottom of the Outliner holds three helpers: **Locators**, **Audio** and **Ru
 
 <img
   src="/images/spark/scene-editor/audio-locators-rulers-overview.png"
-  alt="The bottom of the Outliner. Marker 1 is on the Locators row, 2 on the Audio row, 3 on a sound named P5 tone lasting 0:03, and 4 on the Rulers row with its ft button."
+  alt="The bottom of the Outliner. Box 1 is on the Locators row, 2 on the Audio row, 3 on a sound named P5 tone lasting 0:03, and 4 on the Rulers row with its ft button."
   style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
 />
 
-1. **Locators**, marked points in the scene.
-2. **Audio**, the sound files in the scene.
-3. A sound, with its length.
-4. **Rulers**, with the unit button.
+<div className="key cols-2">
+
+1. **Locators**: marked points
+2. **Audio**: sound files
+3. Sound, with its length
+4. **Rulers**, with the unit button
+
+</div>
 
 ## Add audio
 
@@ -23,23 +27,42 @@ Sound goes in two stages: you add the file to the scene, then place it on a Time
 <Steps titleSize="h3">
   <Step title="Add the sound to the scene">
     Click **+** on the **Audio** row. In the audio library, hover a sound and click **Add to Scene**. It shows under **Audio** with its length.
+
+    <img
+      src="/images/spark/scene-editor/audio-add.jpg"
+      alt="The scene editor. Box 1 is on the plus button of the Audio row in the Outliner, and 2 on the plus button of the Audio row on the Timeline."
+      style={{ borderRadius: '0.5rem' }}
+    />
+
+    <div className="key cols-2">
+
+    1. Audio **+** in the Outliner
+    2. Audio **+** on the Timeline
+
+    </div>
   </Step>
   <Step title="Add a track">
     On the Timeline, click **+** on the **Audio** row. Spark adds a track named **Audio 1**.
   </Step>
   <Step title="Place the clip">
     Move the playhead to where the sound starts. On the sound's row in the Outliner, click **+** (**Add to timeline at playhead**).
+
+    <img
+      src="/images/spark/scene-editor/audio-clip.jpg"
+      alt="The scene editor with the P5 tone clip selected. Box 1 is on the P5 tone row in the Outliner, 2 on the clip on the Timeline, 3 on the track Audio 1 and 4 on Audio Clip Properties."
+      style={{ borderRadius: '0.5rem' }}
+    />
+
+    <div className="key cols-2">
+
+    1. Sound row
+    2. Clip
+    3. Track
+    4. **Audio Clip Properties**
+
+    </div>
   </Step>
 </Steps>
-
-<img
-  src="/images/spark/scene-editor/audio-track.png"
-  alt="The Timeline with the Audio row. Marker 1 is on the Audio plus button, and 2 on the P5 tone clip on track Audio 1, with its waveform."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. **+** adds an audio track.
-2. The clip on its track.
 
 Click the clip to set its **Start Time**, **Trim Start**, **Trim End** and **Volume**. Click the track for **Track Name**, **Track Volume** and **Muted**.
 
@@ -52,19 +75,42 @@ A locator marks a point in the scene, such as where an actor stands. Locators ar
 1. Click **+** on the **Locators** row.
 2. Click the spot on the 3D canvas.
 
-**Locator Properties** holds its **Name**, **Position**, and its rotation as **Yaw (Y)** and **Pitch (X)**. A locator without a name shows as **Untitled Locator**.
-
 <img
-  src="/images/spark/scene-editor/locator-properties.png"
-  alt="Locator Properties with Name, Position X, Y and Z, and Yaw and Pitch, each with a slider."
-  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+  src="/images/spark/scene-editor/locator.jpg"
+  alt="The scene editor with a locator placed. Box 1 is on the plus button of the Locators row, 2 on the locator and its gizmo in the canvas, and 3 on Locator Properties with Name, Position, Yaw and Pitch."
+  style={{ borderRadius: '0.5rem' }}
 />
+
+<div className="key cols-3">
+
+1. Locators **+**
+2. Locator
+3. **Locator Properties**
+
+</div>
+
+**Locator Properties** holds its **Name**, **Position**, and its rotation as **Yaw (Y)** and **Pitch (X)**. A locator without a name shows as **Untitled Locator**.
 
 ## Measure with rulers
 
 <Steps titleSize="h3">
   <Step title="Pick the unit">
     Click the unit button on the **Rulers** row, then **Meters (m)** or **Feet (ft)**.
+
+    <img
+      src="/images/spark/scene-editor/ruler.png"
+      alt="The Rulers row and Ruler Properties for Ruler 1. Box 1 is on the ft unit button, 2 on the Rulers plus button, 3 on Distance, 0.401 ft, and 4 on the Start and End positions."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+    />
+
+    <div className="key cols-2">
+
+    1. Unit button
+    2. Add a ruler
+    3. **Distance**
+    4. **Start** and **End**
+
+    </div>
   </Step>
   <Step title="Add a ruler">
     Click **+** on the **Rulers** row, then click two points on the 3D canvas. The length shows on the canvas.
@@ -73,15 +119,6 @@ A locator marks a point in the scene, such as where an actor stands. Locators ar
     Drag either end with its gizmo, or type **Start** and **End** values in **Ruler Properties**.
   </Step>
 </Steps>
-
-<img
-  src="/images/spark/scene-editor/ruler-properties.png"
-  alt="Ruler Properties for Ruler 1. Marker 1 is on the ft unit button on the Rulers row, and 2 on Distance, 0.401 ft. Start and End positions sit below."
-  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
-/>
-
-1. The unit button.
-2. **Distance**, the ruler's length.
 
 To delete a locator or a ruler, hover its row, click the trash, then confirm.
 
