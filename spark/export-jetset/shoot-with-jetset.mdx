@@ -1,0 +1,71 @@
+---
+title: 'Shoot with Jetset'
+description: 'Send a 3D scene to Jetset with a QR code, or download it as a USDZ file.'
+---
+
+Jetset takes a 3D scene from Spark onto a set with a cinema camera. Export the scene from the scene editor, then scan its QR code with Jetset.
+
+<img
+  src="/images/spark/export-jetset/scene-export-menu.png"
+  alt="The Export menu at the top right of the scene editor's Outliner panel. Box 1 is on Export, 2 on Export to Jetset, 3 on Download USDZ and 4 on Export History."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '290px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. **Export**
+2. **Export to Jetset**
+3. **Download USDZ**
+4. **Export History**
+
+</div>
+
+## Spark iOS app or Jetset
+
+Use the Spark iOS app to film on an iPhone inside the 3D scene. See [Composite and record](/spark/spark-ios/compositing-and-recording). Use [Jetset](/tutorials/jetset/introduction-jetset) when a cinema camera is on set. Jetset tracks it, and Autoshot brings the tracking into Blender, Unreal, After Effects or Nuke.
+
+## Export to Jetset
+
+<Steps titleSize="h3">
+  <Step title="Export the scene">
+    In the scene editor, click **Export**, then **Export to Jetset**. Spark packs the scene and uploads it. P5 stairwell took about 15 seconds.
+
+    <img
+      src="/images/spark/export-jetset/exporting-scene.png"
+      alt="The Exporting Scene window at 6%, reading Processing Motorcycle.usdz."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '420px' }}
+    />
+  </Step>
+  <Step title="Scan the QR code">
+    Scan the code with your device to open the scene in Jetset. The link expires in 5 minutes.
+
+    <img
+      src="/images/spark/export-jetset/jetset-qr.png"
+      alt="The Scan to Open in Jetset window for P5 stairwell, with the QR code blurred. Below it: Scan this QR code with your device to open in Jetset. Link expires in 5 minutes."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '380px' }}
+    />
+  </Step>
+</Steps>
+
+To scan again later, click **Export**, then **Export History**. Each export lists its date and size. Click **QR Code** for a fresh code.
+
+<img
+  src="/images/spark/export-jetset/export-history.png"
+  alt="The Export History window with one P5 stairwell export, Oct 29, 2026, 8:39 PM, 42.7 MB, and a box on its QR Code button."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '500px' }}
+/>
+
+## Download a 3D scene as USDZ
+
+Click **Export**, then **Download USDZ**. Spark runs the same export and saves the scene as one file, such as `P5 stairwell.usdz`. P5 stairwell came to 44.7 MB.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Cameras" icon="video" href="/spark/setups-cameras/cameras">
+    Add a camera and set its lens.
+  </Card>
+  <Card title="Review and share takes" icon="images" href="/spark/gallery/gallery">
+    See every take in the Gallery.
+  </Card>
+</CardGroup>

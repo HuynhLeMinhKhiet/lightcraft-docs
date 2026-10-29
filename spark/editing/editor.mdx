@@ -1,0 +1,211 @@
+---
+title: 'Editor'
+description: 'Cut CG Takes and Takes into an edit, add sound, and export it as an MP4.'
+---
+
+The Editor cuts takes from the Gallery into one edit, with sound. An edit exports as an MP4.
+
+<img
+  src="/images/spark/editing/editor-overview.jpg"
+  alt="The Editor with P6 test edit open. Box 1 is on the Takes and Audio tabs on the left, 2 on the CLIP viewer playing Camera 2, 3 on the PROGRAM viewer, 4 on the timeline with four clips on V1 and P5 tone on A1, and 5 on Edit and Export."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-3">
+
+1. **Takes** and **Audio**
+2. **CLIP** viewer
+3. **PROGRAM** viewer
+4. Timeline
+5. **Edit** and **Export**
+
+</div>
+
+The **CLIP** viewer plays the take or clip you pick. The **PROGRAM** viewer plays the edit. The timeline has a **Video** lane, V1, and an **Audio** lane, A1. Click **+** beside **Video** or **Audio** to add a lane.
+
+## Create an edit
+
+1. Click the **Editor** tab at the bottom of the production.
+2. Click **New edit**. It opens as **Untitled Edit**, 1920 × 1080 at 24 fps.
+
+<img
+  src="/images/spark/editing/editor-edits.jpg"
+  alt="The Edits list. Box 1 is on New edit, 2 on the P6 test edit card with its length, clip count and last export, and 3 on its … button."
+  style={{ borderRadius: '0.5rem' }}
+/>
+
+<div className="key cols-3">
+
+1. **New edit**
+2. Edit
+3. **…**
+
+</div>
+
+To rename an edit, change **Name** when you export it. See [Export an edit](#export-an-edit).
+
+## Cut takes into an edit
+
+<Steps titleSize="h3">
+  <Step title="Pick where the takes come from">
+    On the **Takes** tab, open the picker. It lists every script and every list in the production, and **New list…**.
+
+    <img
+      src="/images/spark/editing/editor-source-picker.png"
+      alt="The Takes tab picker open. Box 1 is on the picker reading P6 test list, 2 on P6 test list in the menu, and 3 on New list…."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '320px' }}
+    />
+
+    <div className="key cols-3 left">
+
+    1. Picker
+    2. A list
+    3. **New list…**
+
+    </div>
+  </Step>
+  <Step title="Mark the part you want">
+    Click a take to load it in the **CLIP** viewer. Move the playhead and click **Mark in**, then move it again and click **Mark out**. A still from a **STATIC** CG Take can't be marked.
+  </Step>
+
+  <Step title="Put it on the timeline">
+    Click **Insert** to add it at the playhead and push later clips along. Click **Overwrite** to cover what's there. You can also drag a take onto a lane.
+
+    <img
+      src="/images/spark/editing/editor-cut.png"
+      alt="The CLIP viewer controls under Camera 2, with the marked part showing on the scrub bar. Box 1 is on Mark in, 2 on Mark out, 3 on Insert and 4 on Overwrite."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '560px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. **Mark in**
+    2. **Mark out**
+    3. **Insert**
+    4. **Overwrite**
+
+    </div>
+  </Step>
+</Steps>
+
+Without marks, **Insert** adds the whole take. A still goes in 5 seconds long.
+
+The timeline toolbar splits a clip at the playhead, trims its start or end, and removes clips. **Close every gap** pulls the clips together. Press **Ctrl** and scroll to zoom the timeline.
+
+<AccordionGroup>
+  <Accordion title="Editor keys">
+    | Key | Does |
+    |---|---|
+    | Space | Play or pause |
+    | ← or → | One frame back or on |
+    | Shift+← or Shift+→ | One second back or on |
+    | Shift+↑ or Shift+↓ | The start, or the end of the last clip |
+    | I or O | Mark in or Mark out |
+    | Alt+X | Clear the marks |
+    | V or B | Insert or Overwrite |
+    | Ctrl+K | Split |
+    | Q or W | Trim the start or the end |
+    | G | Close a gap |
+    | Delete | Remove the selection (Backspace on a Mac) |
+    | Ctrl+Z or Ctrl+Shift+Z | Undo or redo |
+  </Accordion>
+</AccordionGroup>
+
+## Choose which video a clip plays
+
+A clip cut from a Take can play any of its videos: **Comp**, **BG**, **Camera**, **Matte** or **Depth**. A CG Take is one video.
+
+Select a clip to see its properties in the inspector; **Shift+I** shows or hides it. It sets the clip's framing, rotates it 90° left or right, or mutes it. A clip hidden under a higher lane is flagged **It will not appear in the export.**
+
+## Add sound
+
+1. Click the **Audio** tab. To add a file, click **Upload**.
+2. On a sound's **…** menu, click **Add at playhead**. It goes on the audio lane.
+
+<img
+  src="/images/spark/editing/editor-audio.png"
+  alt="The Audio tab with P5 tone. Box 1 is on Upload, 2 on the … button of P5 tone and 3 on Add at playhead."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '320px' }}
+/>
+
+<div className="key cols-3 left">
+
+1. **Upload**
+2. **…**
+3. **Add at playhead**
+
+</div>
+
+## Export an edit
+
+<Steps titleSize="h3">
+  <Step title="Open the builds">
+    At the top, click **Export**, then **New export**.
+  </Step>
+  <Step title="Check the settings">
+    Set the name, aspect ratio, resolution and frame rate. These change the edit itself, not only this build. **This build** covers the whole timeline. To build part of it, drag a loop band on the ruler first.
+
+    <img
+      src="/images/spark/editing/editor-new-export.png"
+      alt="The New export window. Box 1 is on Name, 2 on Aspect ratio and Resolution, 3 on Frame rate, 4 on This build and 5 on Build."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '500px' }}
+    />
+
+    <div className="key cols-3 left">
+
+    1. **Name**
+    2. **Aspect ratio** and **Resolution**
+    3. **Frame rate**
+    4. **This build**
+    5. **Build**
+
+    </div>
+  </Step>
+  <Step title="Build it">
+    Click **Build**. An 11-second edit took about 18 seconds. The build joins the **Builds** list.
+
+    <img
+      src="/images/spark/editing/editor-builds.png"
+      alt="The Export view of P6 test edit. Box 1 is on Export, 2 on New export and 3 on the finished build: 0:11, 1920 × 1080, 16:9, 24 fps, 3.9 MB, 4 clips."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '980px' }}
+    />
+
+    <div className="key cols-3">
+
+    1. **Export**
+    2. **New export**
+    3. Build
+
+    </div>
+  </Step>
+  <Step title="Download it">
+    On the build's **…** menu, click **Download**. The file is an MP4.
+
+    <img
+      src="/images/spark/editing/editor-build-menu.png"
+      alt="The … menu of a build. Box 1 is on Download, 2 on Rename and 3 on Delete."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '260px' }}
+    />
+
+    <div className="key left">
+
+    1. **Download**
+    2. **Rename**
+    3. **Delete**
+
+    </div>
+  </Step>
+</Steps>
+
+A build that fails or is cancelled leaves nothing in the list.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Review and share takes" icon="images" href="/spark/gallery/gallery">
+    Find takes and collect them in lists.
+  </Card>
+  <Card title="Shoot with Jetset" icon="video" href="/spark/export-jetset/shoot-with-jetset">
+    Send a 3D scene to Jetset for the set.
+  </Card>
+</CardGroup>

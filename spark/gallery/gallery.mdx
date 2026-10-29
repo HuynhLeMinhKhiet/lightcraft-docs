@@ -1,220 +1,273 @@
 ---
-title: 'Gallery'
-description: 'Review setups and takes, track coverage, and share annotated footage with your team'
+title: 'Review and share takes'
+description: 'See every CG Take and Take in a production, collect them in lists, and share a list with a link.'
 ---
 
-## What the Gallery is for
-
-The Gallery is the production's single view of coverage. It lists every scene, grouped by script, with each scene's setups underneath — and each setup's cameras and takes underneath that. Use it to plan a shoot day, run a review meeting, or see at a glance what's left to shoot.
-
-## Browsing scenes and setups
-
-Each setup appears as a card, whether or not it has been shot yet — an unshot setup still shows, so you can see what coverage is missing. A setup's card leads with its previz render as a poster and groups its cameras underneath.
-
-## Cameras and takes
-
-A card is grouped by camera position: the camera's CG previz render and every take recorded from that position appear together on the same card as layers, not as separate cards. A take recorded with no scene camera selected on the phone is listed under **No camera**, inside its setup. This is about the camera position in the 3D scene. It is not about the phone's own camera being on or off.
-
-## Layers and missing coverage
-
-Each take's layer strip shows the artifacts that have arrived for it — composite, raw camera, background, matte, and depth. A layer that hasn't arrived yet draws as a labelled empty slot:
-
-- If the web app can produce it (the CG previz render), the slot carries a **Generate** action.
-- If it only comes from the phone (a captured layer), the slot is a passive gap — the prompt to go shoot it.
-
-On a take card, the layers are the chips **Comp**, **BG**, **Camera**, **Matte**, and **Depth**. A solid chip is a layer that has arrived. A dashed chip is a layer that is missing. Point at a dashed chip to read why.
-
-| Tooltip on the dashed chip | What it means |
-|----------------------------|---------------|
-| **Comp is on the phone and hasn't uploaded yet — upload it from the phone's Takes list** | The phone has the file. Upload the take from the phone. The same text is used for the other layers, with the layer's name first. |
-| **BG is on the phone and hasn't uploaded yet — upload it from the phone, or render one here with Regenerate BG** | The phone has a background. You can upload it, or render one on the web. |
-| **No comp rendered yet — render this take on the phone** | The take has no composite yet. |
-| **No BG yet — render it with Regenerate BG from this card's menu** | The take has no background, and the web can render one. |
-| **No BG rendered yet — render this take on the phone** | The take has no background, and the web cannot render one for this take. |
-| **This take was recorded without a camera plate** | The take never had this layer, so no upload will bring it. The same text is used for a take recorded without matte or without depth. |
-| **Waiting for this take's details from the phone** | The phone has not yet reported which files the take has. |
+The Gallery holds every take in a production. A CG Take is one camera's move through a 3D scene, rendered in the browser. A Take is a recording from the Spark iOS app.
 
 <img
-  src="/images/spark/gallery-chip-tooltip.png"
-  alt="A take card in the Gallery. The BG chip is solid. The Comp, Camera, Matte, and Depth chips are dashed. The pointer is on Matte, and a tooltip reads This take was recorded without matte. A Tracking download chip is under the layer chips."
+  src="/images/spark/gallery/gallery-overview.jpg"
+  alt="The Gallery for the Rooftop Test script. Box 1 is on the All Takes and Lists tabs, 2 on the scene headings in the sidebar, 3 on the toolbar, 4 on the Setup B row, 5 on the Camera 2 card and 6 on the Player playing Camera 2."
   style={{ borderRadius: '0.5rem' }}
 />
 
-In this example **BG** has arrived, the other four layers are missing, and the pointer is on **Matte**.
+<div className="key cols-3">
 
-For a take recorded with the phone's camera off, **BG** is the only layer chip. The other layer chips are not drawn, since there is nothing to shoot for them.
+1. **All Takes** and **Lists**
+2. Scene headings
+3. Toolbar
+4. Setup row
+5. CG Take card
+6. **Player**
 
-### A card with no picture
+</div>
 
-A take card with no video yet says what it is waiting for:
+## All Takes and Lists
 
-- A take recorded with the phone's camera on reads **The camera video and comp come from the phone. Upload this take there to see it here**.
-- A take recorded with the phone's camera off reads **No video yet. Render it with Regenerate BG from the menu**. See [regenerating a background](#regenerating-a-background).
-- A take recorded with the phone's camera off, whose background the web cannot render yet, reads the reason instead, such as **The phone hasn't uploaded this take's camera track yet**.
+**All Takes** shows the takes of the open script. Pick a scene heading in the sidebar to see its 3D scenes. Cards sit under each 3D scene, then under each setup, with one card per camera.
+
+The toolbar sets how cards show:
+
+- **Group by**: **No grouping**, **Group by 3D Scene**, **Group by Setup** or **Group by Camera**
+- Sort: **Default**, or **Date created**, newest or oldest first
+- Grid or list view
+
+**Lists** holds the lists you make. See [Create and edit a list](#create-and-edit-a-list).
+
+## Takes and CG Takes
+
+Every camera in a 3D scene gets a CG Take card, before you record anything. A card shows its preview, name, chips, 3D scene and setup, age and note. Click the pencil beside the name, or **Add note**, to change them.
+
+The chips say what the card is:
+
+- **CG TAKE**: a camera's move through the 3D scene
+- **TAKE**: a recording from the Spark iOS app
+- **STATIC**: the camera doesn't move, so the preview is a still
+- **BG ONLY**: recorded with the phone's camera off, so the CG background is all it has
+
+Click a preview to play it in the **Player**. Hover a card for its select box at the top left and **…** at the top right.
 
 <img
-  src="/images/spark/gallery-card-no-picture.png"
-  alt="A take card in the Gallery with no picture. It reads The camera video and comp come from the phone. Upload this take there to see it here. All five layer chips are dashed."
+  src="/images/spark/gallery/gallery-card-menu.png"
+  alt="The … menu of the Camera 2 card. Box 1 is on Refresh preview, 2 on Download, 3 on Add to list and 4 on Delete permanently."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '315px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. **Refresh preview**
+2. **Download**
+3. **Add to list**
+4. **Delete permanently**
+
+</div>
+
+## Take layers
+
+A Take card shows a chip for each video the take has: **Comp**, **BG**, **Camera**, **Matte** and **Depth**. Its download chips are **Tracking**, **Depth (raw)** and **G-matte**. A missing layer shows a dashed chip that says why.
+
+Takes arrive once they're uploaded. See [Upload takes from iPhone](/spark/gallery/spark-desktop).
+
+## Generate a CG Take preview
+
+A new CG Take card reads **Generate preview** until it's rendered. When you change the 3D scene, older previews go out of date, and a yellow chip counts them.
+
+1. In the toolbar, click **Generate N previews**. It renders the missing and out-of-date previews in the scene.
+2. Wait. Two previews took about 30 seconds.
+
+<img
+  src="/images/spark/gallery/generate-previews.png"
+  alt="The Gallery toolbar, with the yellow out-of-date chip reading 1, and a box on Generate 2 previews."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '440px' }}
+/>
+
+To render one card again, hover it and click the round arrow beside its **CG TAKE** chip.
+
+## Regenerate a background
+
+A Take recorded with the phone's camera off has no CG background. On its card's **…** menu, click **Regenerate BG**. The browser renders the background from the take's camera track and shows **Regenerating BG — frame N of M**.
+
+It doesn't run on a take that already has a background, isn't linked to a 3D scene, or hasn't uploaded its camera track yet.
+
+## Download takes
+
+On a card's **…** menu, click **Download**. To download several, select them first. See [Select takes](#select-takes).
+
+Every download is one zip named by date and time, such as `2026-10-29 20.05.04 Gallery Takes.zip`. Inside, folders go 3D scene, then setup, then camera. A CG Take is an MP4. A Take brings every layer file it has, with its tracking data.
+
+## Select takes
+
+1. In the toolbar, click **Select Takes**.
+2. Tick the box on each card you want.
+3. Pick what to do with them.
+
+<img
+  src="/images/spark/gallery/select-takes.png"
+  alt="Select mode with 1 selected. Box 1 is on the ticked box of the Camera 1 card, 2 on Add to a List, 3 on Download and 4 on Delete Permanently."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '480px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. Select box
+2. **Add to a List**
+3. **Download**
+4. **Delete Permanently**
+
+</div>
+
+## Delete a take
+
+On the card's **…** menu, click **Delete permanently**, then confirm. Deleting a CG Take removes its camera animation and any camera moves recorded against it.
+
+<Warning>
+You can't undo a delete. A CG Take that has recorded takes can't be deleted.
+</Warning>
+
+## Create and edit a list
+
+A list collects CG Takes and Takes from anywhere in the script.
+
+<Steps titleSize="h3">
+  <Step title="Make the list">
+    On the **Lists** tab, click **New Custom List**. Type a name and, if you like, a description, then click **Create**.
+
+    <img
+      src="/images/spark/gallery/new-list.png"
+      alt="The New List window. Box 1 is on the Name field reading P6 test list, 2 on the Description field and 3 on Create."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '540px' }}
+    />
+
+    <div className="key cols-3">
+
+    1. **Name**
+    2. **Description**
+    3. **Create**
+
+    </div>
+  </Step>
+  <Step title="Add takes">
+    Open the list and click **Add Takes**. Tick a card to add it straight away, then close the window with **×**. You can also use **Add to list** on any card.
+
+    <img
+      src="/images/spark/gallery/add-to-list.jpg"
+      alt="The Add to P6 test list window, with two CG Take added to list! messages. Box 1 is on the INT. STAIRWELL - DAWN heading and 2 on the ticked box of the Camera 1 card."
+      style={{ borderRadius: '0.5rem' }}
+    />
+
+    <div className="key cols-2">
+
+    1. Scene heading
+    2. Ticked card
+
+    </div>
+  </Step>
+</Steps>
+
+The list's page holds its takes and tools.
+
+<img
+  src="/images/spark/gallery/list-view.jpg"
+  alt="The P6 test list. Box 1 is on its row in the sidebar, 2 on its header, 3 on Share, 4 on Select Takes and Add Takes, and 5 on the comments button."
   style={{ borderRadius: '0.5rem' }}
 />
 
-### Download chips
+<div className="key cols-3">
 
-Some files of a take cannot be played in the browser. Once uploaded, each one has a chip after the layer chips. Click the chip to download the file. Its tooltip reads **Download** and the file's name.
+1. List
+2. Header
+3. **Share**
+4. **Select Takes** and **Add Takes**
+5. Comments
 
-- **Tracking** is the take's camera tracking data.
-- **Depth (raw)** is the depth of a take whose depth was saved in the phone's raw format. Its tooltip ends with **16-bit depth, lossless**. Such a take has no **Depth** chip.
+</div>
+
+To rename the list or change its description, click the pencil beside it. With **Custom order**, drag cards to reorder them. To delete the list, click the trash on its sidebar row. The takes in it stay in the Gallery.
+
+## Comment
+
+Comments belong to a list.
+
+1. On the list, click the round blue button at the bottom right.
+2. Type in **Write a comment** and press **Enter**.
 
 <img
-  src="/images/spark/gallery-depth-raw-chip.png"
-  alt="A take card in the Gallery with the chips Tracking and Depth (raw). The pointer is on Depth (raw), and a tooltip reads Download depthraw.l16, 16-bit depth, lossless."
+  src="/images/spark/gallery/comments.png"
+  alt="The Comments panel with one comment, Test comment for the docs, and its author's name blurred. A box is on the Write a comment field and its send button."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '485px' }}
+/>
+
+Each comment shows its author's name. To quote a take, click **Quote in comments** on its card's **…** menu while comments are open.
+
+## Share a list with a link
+
+Anyone with the link can open the list without a Spark account.
+
+<Steps titleSize="h3">
+  <Step title="Turn on the link">
+    On the list, click **Share**, then turn on **Web**.
+  </Step>
+  <Step title="Set a password and an expiry">
+    Turn on **Password** and type one. Under **Expires**, pick **Never**, **1 day**, **7 days**, **30 days**, **3 months** or **1 year**, or a date.
+  </Step>
+  <Step title="Save and copy the link">
+    Click **Save**, then copy the link and send it.
+
+    <img
+      src="/images/spark/gallery/share-link.png"
+      alt="The Share panel of P6 test list, with the end of the link blurred. Box 1 is on Share, 2 on the Web switch, 3 on the link, 4 on Password, 5 on Expires with 1 day picked, and 6 on Save."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '470px' }}
+    />
+
+    <div className="key cols-3 left">
+
+    1. **Share**
+    2. **Web**
+    3. Link
+    4. **Password**
+    5. **Expires**
+    6. **Save**
+
+    </div>
+  </Step>
+</Steps>
+
+To stop the link working, turn off **Web**. **Refresh link** makes a new link, and the old one stops working for everyone who has it.
+
+## Open a shared list
+
+Open the link. With a password, type it and click **Open list**.
+
+<img
+  src="/images/spark/gallery/shared-list-password.png"
+  alt="A shared list asking for its password: This list is password protected. Enter the password you were given to open it. Below are the Password field and Open list."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '440px' }}
+/>
+
+The list opens read-only, with its takes, **Select Takes** and **Download all**. Comments, notes and card menus don't show.
+
+<img
+  src="/images/spark/gallery/shared-list.jpg"
+  alt="P6 test list opened from its link, with two CG Take cards. Box 1 is on Select Takes and 2 on Download all."
   style={{ borderRadius: '0.5rem' }}
 />
 
-## View modes
+<div className="key cols-2">
 
-Switch between two view modes:
+1. **Select Takes**
+2. **Download all**
 
-- **Card grid** — Displays setups and takes as visual cards with preview thumbnails.
-- **List** — Displays them in a compact list format with key details.
+</div>
 
-In list view, the appearance button opens **Row size**, with **Compact** and **Standard**. A compact row keeps the name, the details line, and one line of the note. It leaves out the tags and the layer chips.
+A link that's off or replaced shows **This link doesn't work**. Ask the person who sent it for a new one.
 
-<img
-  src="/images/spark/gallery-row-size.png"
-  alt="The Gallery in list view with the appearance menu open. Row size is set to Compact, and compact rows show behind it."
-  style={{ borderRadius: '0.5rem' }}
-/>
+## Related
 
-## Take card actions
-
-Open the **…** menu on a card.
-
-<img
-  src="/images/spark/gallery-card-menu.png"
-  alt="A take card's menu in the Gallery with Regenerate BG, Download, Add to list, and Delete permanently."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. **Regenerate BG** renders a background for a take that has none. The render runs in the browser and uses the scene as it is now.
-2. **Download** saves the card as one zip file.
-
-### Regenerating a background
-
-Use **Regenerate BG** on a take that has no background yet. Such a take shows a dashed **BG** chip. The render uses the take's camera track, so the camera move matches the take.
-
-The take's video does not need to be uploaded first. The Spark iOS app sends each take's camera track when recording stops, even with **Auto-upload video** turned off. See [the Takes page](/spark/spark-ios/compositing-and-recording#the-takes-page).
-
-1. Open the take card's **…** menu and click **Regenerate BG**.
-2. Wait while it renders. The top bar shows "Regenerating BG" with the take's name and the frames left. The menu item reads **Regenerating BG…** and is greyed out.
-3. When the message "Background updated" appears, click the **BG** chip on the card to see the new background.
-
-**Regenerate BG** is greyed out when the web cannot render a background for the take. Its tooltip gives the reason:
-
-- **This take already has a background**
-- **The phone hasn't uploaded this take's camera track yet**
-- **This take isn't linked to a 3D scene**
-
-A background rendered later on the phone and uploaded replaces the one rendered on the web.
-
-### Downloading a zip file
-
-To download several cards at once, click **Select Takes**, tick the cards, and click **Download**. A selection is also saved as one zip file.
-
-The zip file is named with the date and time, then "Gallery Takes". Its folders follow the Gallery: 3D scene, then setup, then camera.
-
-<Tree>
-  <Tree.Folder name="2026-10-07 18.40.12 Gallery Takes.zip" defaultOpen>
-    <Tree.Folder name="INT. PARK - DAY" defaultOpen>
-      <Tree.Folder name="Base Setup" defaultOpen>
-        <Tree.Folder name="Camera 1" defaultOpen>
-          <Tree.File name="Camera 1.mp4" />
-          <Tree.Folder name="Take 1" defaultOpen>
-            <Tree.File name="Take 1.mp4" />
-            <Tree.File name="Take 1-background.mp4" />
-            <Tree.File name="Take 1-cam.mp4" />
-            <Tree.File name="Take 1-matte.mp4" />
-            <Tree.File name="Take 1-depth.mp4" />
-          </Tree.Folder>
-        </Tree.Folder>
-      </Tree.Folder>
-    </Tree.Folder>
-  </Tree.Folder>
-</Tree>
-
-- A CG Take is one MP4 inside its camera folder.
-- A take has its own folder inside the camera folder, with one file for each layer it has. The composite is named after the take. Other layers add the layer name. Tracking data, when the take has it, is saved in the same folder.
-- A take with no camera has its folder at the top of the zip file.
-
-Downloads are useful for sharing outside the Spark web app or as input for AI video tools, where a real camera move produces cleaner output than a text prompt.
-
-## Comments and annotations
-
-Add comments and annotations directly to a setup or take card. Use these to leave feedback, note blocking positions, flag issues, or document creative direction for your team.
-
-## Sharing
-
-Share the Gallery with team members within your organization. Shared views let everyone review coverage and add their own comments.
-
-### Sharing a list with a link
-
-1. In the Gallery, open **Lists** and click the list.
-2. Click **Share** and turn **Web** on.
-
-A link appears that anyone can open without signing in. Under it are the sections **Password** and **Expires**, and a **Save** button. The copy icon beside the link copies it.
-
-### Setting an expiry date
-
-1. Under **Expires**, click a chip: **Never**, **1 day**, **7 days**, **30 days**, **3 months**, or **1 year**. You can also pick a date in the date box. Days before today cannot be picked.
-2. Read the line under the chips, such as **Expires in 7 days**. Picking today shows **Expires today**.
-3. Click **Save**. The message **Share settings saved** appears, and a clock icon shows beside **Share**. Its tooltip repeats the expiry.
-
-After the date has passed, a person who opens the link sees **This link has expired** and **Ask the person who sent it for a new one.** In your **Share** window the **Web** switch reads off, and the clock icon is gone.
-
-### Setting a password
-
-1. Turn **Password** on. A box appears that reads **Choose a password**.
-2. Type a password of at least 4 characters. A shorter one shows **Use at least 4 characters**.
-3. Click **Save**. The message **Share settings saved** appears, and a lock icon shows beside **Share**, with the tooltip **Password protected**.
-
-When you open **Share** again, the box reads **Password set — type a new one to change**.
-
-A person who opens the link sees **This list is password protected**. The list's name is not shown. **Open list** is greyed out until they type something.
-
-- A wrong password shows **Wrong password. Try again.**
-- The right password opens the list. Reloading that browser tab does not ask again. A new private window asks again.
-
-If you save a different password, a person who had unlocked the list is asked again when they reload. The old password is refused.
-
-To remove the password, turn **Password** off and click **Save**. The lock icon goes away, and the link opens with no prompt.
-
-### Replacing the link
-
-Click the refresh icon beside the link. Spark asks **Refresh this link?** and warns **The current link will stop working for everyone who has it.** Click **Refresh link**. The message **New link created. The old one no longer works.** appears.
-
-A person who opens the old link then sees **This link doesn't work**.
-
-### Turning the link off and on
-
-Turn **Web** off to stop the link. A person who opens it sees **This link doesn't work** and **It may have been turned off or replaced. Ask the person who sent it for a new one.**
-
-Turning **Web** on again brings the same address back, so everyone who had the link can open the list again. To stop that, replace the link.
-
-### Downloading from a shared list
-
-A person who opens a shared list link can download from it without signing in.
-
-<img
-  src="/images/spark/shared-list-controls.png"
-  alt="A shared list page with two take cards and the buttons Select Takes and Download all."
-  style={{ borderRadius: '0.5rem' }}
-/>
-
-1. **Select Takes** shows checkboxes, so the viewer can pick cards and download only those.
-2. **Download all** saves everything in the list as one zip file.
-
-The zip file uses the same folders as a Gallery download. For a viewer, a take's folder holds only the composite, the background, and the camera layer.
-
-## Reviewing takes from the iPhone or iPad
-
-A take recorded on the Spark iOS app gets a card in the Gallery soon after recording stops, organized by scene and setup, for the whole team to review. Its video arrives when the phone uploads it. See [compositing and recording](/spark/spark-ios/compositing-and-recording) for the recording workflow and [Spark Desktop and takes](/spark/gallery/spark-desktop) for how takes get from the device into the browser.
+<CardGroup cols={2}>
+  <Card title="Editor" icon="scissors" href="/spark/editing/editor">
+    Cut takes together and export the edit.
+  </Card>
+  <Card title="Upload takes from iPhone" icon="upload" href="/spark/gallery/spark-desktop">
+    Bring Takes from the phone into the Gallery.
+  </Card>
+</CardGroup>
