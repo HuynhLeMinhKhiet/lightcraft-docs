@@ -157,22 +157,32 @@
             "pages": [
               "spark/scripts/scripts-and-script-scenes",
               "spark/scripts/script-editor",
-              "spark/scripts/versioning",
-              "spark/scripts/script-outline-and-3d-scene-list"
+              "spark/scripts/versioning"
             ]
           },
           {
-            "group": "Scene Editor",
+            "group": "Build 3D scenes",
+            "icon": "box",
             "pages": [
-              "spark/scene-editor/scene-overview",
-              "spark/scene-editor/importing-locations",
-              "spark/scene-editor/importing-objects",
-              "spark/scene-editor/arranging-objects",
+              "spark/scene-editor/3d-scenes",
+              "spark/scene-editor/scene-editor",
+              "spark/scene-editor/move-around-a-scene",
+              "spark/scene-editor/asset-library",
+              "spark/scene-editor/locations",
+              "spark/scene-editor/objects",
               "spark/scene-editor/parts-of-an-object",
-              "spark/scene-editor/setups-and-cameras",
-              "spark/scene-editor/timeline",
+              "spark/scene-editor/audio-locators-and-rulers",
               "spark/scene-editor/lights-and-environment",
               "spark/scene-editor/importing-unreal-scenes"
+            ]
+          },
+          {
+            "group": "Plan setups and cameras",
+            "icon": "layers",
+            "pages": [
+              "spark/setups-cameras/setups",
+              "spark/setups-cameras/cameras",
+              "spark/setups-cameras/timeline-and-animation"
             ]
           },
           {
@@ -381,6 +391,34 @@
     {
       "source": "/spark/get-started/introduction",
       "destination": "/spark/get-started/how-spark-works"
+    },
+    {
+      "source": "/spark/scripts/script-outline-and-3d-scene-list",
+      "destination": "/spark/scene-editor/3d-scenes"
+    },
+    {
+      "source": "/spark/scene-editor/scene-overview",
+      "destination": "/spark/scene-editor/scene-editor"
+    },
+    {
+      "source": "/spark/scene-editor/importing-locations",
+      "destination": "/spark/scene-editor/locations"
+    },
+    {
+      "source": "/spark/scene-editor/importing-objects",
+      "destination": "/spark/scene-editor/objects"
+    },
+    {
+      "source": "/spark/scene-editor/arranging-objects",
+      "destination": "/spark/scene-editor/objects"
+    },
+    {
+      "source": "/spark/scene-editor/setups-and-cameras",
+      "destination": "/spark/setups-cameras/setups"
+    },
+    {
+      "source": "/spark/scene-editor/timeline",
+      "destination": "/spark/setups-cameras/timeline-and-animation"
     }
   ]
 }
