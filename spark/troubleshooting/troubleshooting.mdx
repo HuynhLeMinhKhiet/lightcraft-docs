@@ -1,0 +1,103 @@
+---
+title: 'Troubleshooting'
+description: 'Fixes for problems in the Spark web app, the Spark iOS app and Spark Desktop.'
+---
+
+## Get help in Spark
+
+Click **Help** at the bottom left of any page in Spark. To ask about access, write to [support@lightcraft.pro](mailto:support@lightcraft.pro).
+
+## Sign-in and access
+
+<AccordionGroup>
+  <Accordion title="Spark says Email Not Whitelisted">
+    Spark lets in approved email addresses only, and an invitation doesn't add yours. Write to [support@lightcraft.pro](mailto:support@lightcraft.pro), then sign in again.
+  </Accordion>
+  <Accordion title="Spark Desktop says port 53682 is in use">
+    Windows has reserved the port Spark Desktop signs in on. Open Command Prompt as Administrator and run `net stop winnat`. Sign in, then run `net start winnat`.
+  </Accordion>
+  <Accordion title="I can't see New Production">
+    Only Admins create productions. Ask your organization's Owner to change your access. See [Members and seats](/spark/organizations-productions/members-and-seats).
+  </Accordion>
+  <Accordion title="Invite is grayed out">
+    Your seats are full. Add a seat in **Billing**, or cancel a pending invitation. See [Members and seats](/spark/organizations-productions/members-and-seats).
+  </Accordion>
+</AccordionGroup>
+
+## Scripts
+
+<AccordionGroup>
+  <Accordion title="A teammate sees an older script">
+    Your edits are still a draft that only you see. Click **Publish changes** in the **Versioning** column. See [Drafts and versions](/spark/scripts/versioning).
+  </Accordion>
+  <Accordion title="The PDF preview stays empty and Upload is grayed out">
+    Spark can't read a scan, or a PDF not laid out as a screenplay. Export the script from your screenwriting app as `.fountain` or `.fdx`.
+  </Accordion>
+</AccordionGroup>
+
+## Locations and objects
+
+<AccordionGroup>
+  <Accordion title="A location or object loads upside down or on its side">
+    The file uses a different up axis. In the upload window, tick **Invert Up (Flip 180°)** or **Z-Up (Blender/3ds Max)**. See [Locations](/spark/scene-editor/locations).
+  </Accordion>
+  <Accordion title="A performer looks giant or doll-sized in the location">
+    The location's scale is wrong. Add the human figure to check it, then change **Scale** in **Location Properties**. See [Fix orientation or scale](/spark/scene-editor/locations#fix-orientation-or-scale).
+  </Accordion>
+  <Accordion title="An object seems to be missing">
+    It may be very small or very large. Select it in the Outliner, then check **Scale** in **Object Properties**.
+  </Accordion>
+</AccordionGroup>
+
+## Cameras and animation
+
+<AccordionGroup>
+  <Accordion title="A camera or object doesn't keep its move">
+    **Auto-keyframe** is off by default, so the move added no keyframe. Select the item, turn on **Auto-keyframe**, then move it again. See [Timeline and animation](/spark/setups-cameras/timeline-and-animation#animate-with-keyframes).
+  </Accordion>
+  <Accordion title="A parented camera doesn't hold its position on the phone">
+    This is a known issue that comes and goes, most often in a new 3D scene. Reload the scene, or switch to another camera and back. Also check that no two objects share a name.
+  </Accordion>
+</AccordionGroup>
+
+## iPhone and iPad
+
+<AccordionGroup>
+  <Accordion title="A 3D scene loads on the web but not on the phone">
+    The location has more than about 5 million splats. Keep a smaller version for the app. See [Specs and limits](/spark/reference/specs-and-limits#size-limits).
+  </Accordion>
+  <Accordion title="Web Follow doesn't engage">
+    The link between the app and the browser sometimes needs a second try. Tap the lightning button again. See [Live camera sharing](/spark/spark-ios/live-camera-sharing).
+  </Accordion>
+  <Accordion title="Driving across a large 3D scene is slow">
+    Add a camera at each place the action happens, then jump between them. See [Camera setups on iPhone](/spark/spark-ios/setups-and-cameras-on-iphone).
+  </Accordion>
+  <Accordion title="The chroma key looks weak">
+    The cause is usually the lighting or the picked color. Use **Pick color** on a cleaner patch of the screen, adjust **Clip black** and **Clip white** in **Tools**, or switch to **Person**.
+  </Accordion>
+  <Accordion title="The phone gets hot">
+    Frame rate drops as the device heats up. Turn on **Fast splat preview** and **Idle render skip**, render takes after the shoot, or use a phone cooler.
+  </Accordion>
+  <Accordion title="An older device keeps crashing">
+    Older iPads have crashed repeatedly in the field. Use the newest iPhone or iPad you can for long shoots.
+  </Accordion>
+</AccordionGroup>
+
+## Take upload and sync
+
+<AccordionGroup>
+  <Accordion title="A take doesn't appear in the Gallery">
+    Takes stay on the device until you upload them. Upload from the app's Takes page, or use Spark Desktop. See [Upload takes from iPhone](/spark/gallery/spark-desktop).
+  </Accordion>
+  <Accordion title="Spark Desktop says Apple Mobile Device Service not found">
+    Windows needs Apple Devices first. Install it from the Microsoft Store, open it once, then click **Pull takes** again.
+  </Accordion>
+</AccordionGroup>
+
+## Review and edit
+
+<AccordionGroup>
+  <Accordion title="The Editor says Nothing playable to mark">
+    The CG Take is a still, because its camera doesn't move. Insert it without marks, or add keyframes to the camera and refresh its preview.
+  </Accordion>
+</AccordionGroup>

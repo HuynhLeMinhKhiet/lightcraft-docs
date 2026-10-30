@@ -206,9 +206,14 @@
             ]
           },
           {
-            "group": "Troubleshooting",
+            "group": "Reference",
+            "icon": "book-open",
             "pages": [
-              "spark/troubleshooting/common-pitfalls"
+              "spark/reference/glossary",
+              "spark/reference/faq",
+              "spark/reference/specs-and-limits",
+              "spark/reference/keyboard-shortcuts",
+              "spark/troubleshooting/troubleshooting"
             ]
           },
           {
