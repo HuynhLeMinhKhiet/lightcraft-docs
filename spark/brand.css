@@ -51,3 +51,35 @@ html.dark #table-of-contents li:not([data-active="true"]) a:hover { color: #E8ED
 #content-area .key li { counter-increment: k; position: relative; margin: 0 !important; padding: 0.1rem 0 0.1rem 1.6rem !important; line-height: 1.4; }
 #content-area .key li::marker { content: none; }
 #content-area .key li::before { content: counter(k); position: absolute; left: 0; top: 0.15rem; width: 1.1rem; height: 1.1rem; border-radius: 50%; background: #E0107A; color: #fff; font: 800 0.62rem/1 Manrope, 'Segoe UI', sans-serif; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 0 0 1.25px #fff; }
+
+/* Top tabs: the active tab is a filled box, unlike the soft tint on the sidebar's active page (Jim, 2026-10-29). */
+.nav-tabs-item[aria-current] { color: #fff !important; isolation: isolate; }
+.nav-tabs-item[aria-current] > div { display: none; }
+.nav-tabs-item[aria-current]::before { content: ""; position: absolute; inset: 9px -10px; z-index: -1; border-radius: 8px; background: #2F54EB; }
+
+/* Sidebar: even padding on all sides (Agreement 42). */
+#sidebar-content > div:first-child { padding: 16px 6px 6px !important; }
+#sidebar-content :has(+ #navigation-items):empty { display: none; }
+
+/* Spark only: sidebar.js sets data-spark. The sidebar replaces "On this page", so images can widen and text stays readable (Agreement 42). */
+html[data-spark] #content-side-layout { display: none; }
+html[data-spark] #content-area { width: 100%; max-width: calc(1000px + 5.7rem); margin-right: auto; }
+html[data-spark] #content-area #header,
+html[data-spark] #content > span:not(.zoom-image-trigger),
+html[data-spark] #content > :is(h2, h3, ul, ol, .callout, .code-block, .accordion-group, .columns, .min-w-0),
+html[data-spark] #content .steps p { max-width: 720px; }
+
+/* Collapsible groups and the open page's headings. */
+html[data-spark] [data-spk-group] .sidebar-group-header { cursor: pointer; margin-bottom: 0; padding-top: 6px; padding-bottom: 6px; border-radius: 10px; }
+html[data-spark] [data-spk-group] .sidebar-group-header::after { content: ""; margin-left: auto; margin-right: 12px; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); opacity: 0.6; transition: transform 0.15s; }
+html[data-spark] [data-spk-closed] .sidebar-group-header::after { transform: rotate(-45deg); }
+html[data-spark] [data-spk-group] { margin-top: 2px !important; }
+html[data-spark] #navigation-items { margin-top: -6px; }
+html[data-spark] [data-spk-closed] > ul { display: none; }
+html[data-spark] [data-spk-group] > ul { margin: 2px 0 8px; }
+.spk-heads { margin: 2px 0 6px 1.5rem; padding: 0; list-style: none; border-left: 1px solid rgb(47 84 235 / 0.25); }
+.spk-heads a { display: block; padding: 3px 8px 3px 10px; margin-left: -1px; border-left: 1px solid transparent; font-size: 0.8125rem; line-height: 1.35; }
+#mobile-nav .spk-heads a { color: #4A5578; }
+html.dark #mobile-nav .spk-heads a { color: #A3ACC6; }
+#sidebar-content .spk-heads a[aria-current], #mobile-nav .spk-heads a[aria-current] { color: #2F54EB; border-left-color: #2F54EB; }
+html.dark #sidebar-content .spk-heads a[aria-current], html.dark #mobile-nav .spk-heads a[aria-current] { color: #A3BEFF; border-left-color: #597EF7; }
