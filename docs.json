@@ -164,6 +164,7 @@
             "group": "Build 3D scenes",
             "icon": "box",
             "pages": [
+              "spark/scene-editor/overview",
               "spark/scene-editor/3d-scenes",
               "spark/scene-editor/scene-editor",
               "spark/scene-editor/move-around-a-scene",
