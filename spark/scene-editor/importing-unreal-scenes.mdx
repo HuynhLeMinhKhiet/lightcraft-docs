@@ -1,9 +1,9 @@
 ---
 title: "Bring in an Unreal scene"
-description: "Export a scene from Unreal Engine as a Gaussian splat and USD file for use in the Spark web app"
+description: "Export a scene from Unreal Engine as a Gaussian splat and a USD file for the Spark web app."
 ---
 
-Export a scene from Unreal Engine as both a Gaussian splat (for the environment) and a USD file (for foreground mesh geometry), then bring them into the Spark web app.
+Export a scene from Unreal Engine as a Gaussian splat for the environment and a USD file for foreground meshes. Then bring both into the Spark web app.
 
 ## 1. Separate foreground elements
 
@@ -11,20 +11,20 @@ Export a scene from Unreal Engine as both a Gaussian splat (for the environment)
 
 <video src="/images/spark/add-objects.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
-Identify which objects in your scene need to stay as mesh geometry — anything with fine detail the splat might miss, or elements you may want to shoot through (railings, stairs, furniture).
+Decide which objects in your scene stay as mesh geometry. Keep anything with fine detail the splat might miss, and anything you may shoot through, such as railings, stairs and furniture.
 
 1. In the Unreal Editor, open the **Layers** panel.
 2. Add a new layer and name it **Mesh**.
-3. Drag the foreground elements you want to keep as mesh geometry into this layer (e.g., tables, chairs, railings, staircases).
+3. Drag the foreground elements you want to keep as mesh geometry into this layer, such as tables, chairs, railings and staircases.
 
 ## 2. Add scene locators
 
 <video src="/images/spark/add-scene-locator.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
-Scene locators mark positions in the scene where you want to place actors or quickly jump to during previs.
+Scene locators mark where you place actors, and the spots you jump to during previs.
 
 1. Add an empty actor to the scene.
-2. Rename it using the naming convention `Scene_Lock_01` (replace `01` with a descriptive name or number).
+2. Name it in the form `Scene_Lock_01`, replacing `01` with a descriptive name or number.
 3. Position it where you want the first locator.
 4. **Alt\+drag** the actor to duplicate it and create additional locators at other key positions.
 
@@ -38,9 +38,9 @@ Scene locators mark positions in the scene where you want to place actors or qui
 
 <video src="/images/spark/install-usd-plugin.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
-1. Go to **Edit \> Plugins**.
-2. Search for **USD Importer** (this plugin handles both import and export).
-3. Enable the plugin.
+1. Open **Edit \> Plugins**.
+2. Search for **USD Importer**, which handles both import and export.
+3. Turn on the plugin.
 4. Restart Unreal Engine.
 
 ## 4. Export as USD
@@ -48,9 +48,9 @@ Scene locators mark positions in the scene where you want to place actors or qui
 <video src="/images/spark/export-usd.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
 1. Select the **Mesh** layer (double-click it to select all its contents, including the scene locators).
-2. Go to **File \> Export Selected**.
+2. Click **File \> Export Selected**.
 3. Choose **USD** from the file type dropdown.
-4. In the USD export settings, enable **Bake Materials**.
+4. In the USD export settings, turn on **Bake Materials**.
 
 <video src="/images/spark/bake-materials.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
@@ -61,7 +61,7 @@ Scene locators mark positions in the scene where you want to place actors or qui
 
 Render a single panoramic frame from Unreal Engine to use as the source for your Gaussian splat.
 
-1. Go to **Edit \> Plugins** and enable **Additional Render Passes**.
+1. Open **Edit \> Plugins** and turn on **Additional Render Passes**.
 2. Add a **Camera** actor to the scene and position it in the center of your environment.
 
 <video src="/images/spark/create-camera.mp4" controls style={{ borderRadius: '0.5rem' }} />
@@ -70,12 +70,12 @@ Render a single panoramic frame from Unreal Engine to use as the source for your
 
 <video src="/images/spark/sequencer-single-frame.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
-4. Go to the **Media Render Queue** for the sequence.
+4. Open the **Media Render Queue** for the sequence.
 5. In the render settings, delete the default **Deferred Rendering** pass.
 
 <video src="/images/spark/media-render-queue.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
-6. Go to **Settings \> Panoramic Rendering** and enable **Allocate History Per Pane**. Without this, the render will come out too dark.
+6. Open **Settings \> Panoramic Rendering** and turn on **Allocate History Per Pane**. Without it, the render comes out too dark.
 
 <video src="/images/spark/allocate-history.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
@@ -95,15 +95,13 @@ Render a single panoramic frame from Unreal Engine to use as the source for your
 
 <video src="/images/spark/wl-import-image.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
-2. Drag and drop your panoramic render into World Labs.
-3. World Labs generates a Gaussian splat from the image, preserving the lighting from your Unreal scene.
+2. Drag your panoramic render into World Labs.
+3. World Labs makes a Gaussian splat from the image and keeps the lighting from your Unreal scene.
 4. Download the result as a **PLY** file.
 
 <video src="/images/spark/wl-download.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
 ## 7. Import into the Spark web app
-
-Bring both the Gaussian splat and the USD foreground elements into the Spark web app.
 
 1. In the Spark web app, click **Add** and choose **Location**.
 2. Upload your PLY Gaussian splat file. This becomes the environment background with baked lighting.
@@ -114,7 +112,7 @@ Bring both the Gaussian splat and the USD foreground elements into the Spark web
 
 <video src="/images/spark/import-usd.mp4" controls style={{ borderRadius: '0.5rem' }} />
 
-4. Import your USD or USDZ file containing the foreground elements (tables, chairs, staircase, etc.).
+4. Import your USD or USDZ file with the foreground elements.
 
 The final scene combines mesh detail for foreground elements with a Gaussian splat background that preserves the original Unreal Engine lighting.
 
