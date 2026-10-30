@@ -146,6 +146,7 @@
             "group": "Set up your team",
             "icon": "users",
             "pages": [
+              "spark/organizations-productions/overview",
               "spark/organizations-productions/organizations",
               "spark/organizations-productions/members-and-seats",
               "spark/organizations-productions/productions"
@@ -155,6 +156,7 @@
             "group": "Write the script",
             "icon": "file-text",
             "pages": [
+              "spark/scripts/overview",
               "spark/scripts/scripts-and-script-scenes",
               "spark/scripts/script-editor",
               "spark/scripts/versioning"
@@ -181,6 +183,7 @@
             "group": "Plan setups and cameras",
             "icon": "layers",
             "pages": [
+              "spark/setups-cameras/overview",
               "spark/setups-cameras/setups",
               "spark/setups-cameras/cameras",
               "spark/setups-cameras/timeline-and-animation"
@@ -190,6 +193,7 @@
             "group": "Shoot takes",
             "icon": "smartphone",
             "pages": [
+              "spark/spark-ios/overview",
               "spark/spark-ios/spark-ios-app",
               "spark/spark-ios/setups-and-cameras-on-iphone",
               "spark/spark-ios/live-camera-sharing",
@@ -202,6 +206,7 @@
             "group": "Review and edit",
             "icon": "clapperboard",
             "pages": [
+              "spark/gallery/overview",
               "spark/gallery/gallery",
               "spark/editing/editor"
             ]
