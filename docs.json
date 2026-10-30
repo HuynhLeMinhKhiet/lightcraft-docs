@@ -138,8 +138,7 @@
             "pages": [
               "spark/get-started/how-spark-works",
               "spark/get-started/install-and-sign-in",
-              "spark/get-started/quickstart",
-              "spark/get-started/core-concepts"
+              "spark/get-started/quickstart"
             ]
           },
           {
@@ -224,8 +223,10 @@
           },
           {
             "group": "What's new",
+            "hidden": true,
             "pages": [
               "spark/changelog/changelog",
+              "spark/changelog/all-updates",
               {
                 "group": "Updates",
                 "pages": [
@@ -378,6 +379,22 @@
     }
   },
   "redirects": [
+    {
+      "source": "/r",
+      "destination": "/spark/changelog/changelog"
+    },
+    {
+      "source": "/u",
+      "destination": "/spark/changelog/all-updates"
+    },
+    {
+      "source": "/spark/get-started/core-concepts",
+      "destination": "/spark/reference/glossary"
+    },
+    {
+      "source": "/spark/troubleshooting/common-pitfalls",
+      "destination": "/spark/troubleshooting/troubleshooting"
+    },
     {
       "source": "/spark/spark-ios/spark-ios-setup",
       "destination": "/spark/spark-ios/spark-ios-app"

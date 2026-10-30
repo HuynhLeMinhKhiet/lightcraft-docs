@@ -89,3 +89,8 @@ html[data-spark] [data-spk-group] > ul { margin: 2px 0 8px; }
 html.dark #mobile-nav .spk-heads a { color: #A3ACC6; }
 #sidebar-content .spk-heads a[aria-current], #mobile-nav .spk-heads a[aria-current] { color: #2F54EB; border-left-color: #2F54EB; }
 html.dark #sidebar-content .spk-heads a[aria-current], html.dark #mobile-nav .spk-heads a[aria-current] { color: #A3BEFF; border-left-color: #597EF7; }
+
+/* Releases: a type tag and a small guide label before each update link. */
+.rel-type { font-size: 0.8125rem; font-weight: 600; opacity: 0.8; }
+#content-area a.rel-label { display: inline-block; margin: 0 0.15rem; padding: 0 0.45rem; border: 1px solid rgb(47 84 235 / 0.35); border-bottom: 1px solid rgb(47 84 235 / 0.35); border-radius: 6px; font-size: 0.75rem; line-height: 1.5; text-decoration: none; }
+html.dark #content-area a.rel-label { border-color: rgb(89 126 247 / 0.45); }
