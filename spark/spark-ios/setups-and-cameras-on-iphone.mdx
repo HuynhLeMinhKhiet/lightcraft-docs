@@ -1,0 +1,118 @@
+---
+title: 'Camera setups on iPhone'
+description: 'Jump to a setup or camera, add a stationary camera, and ride a moving one.'
+---
+
+The app shows every setup and camera from the web app. A camera you add on the phone also shows in the browser.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://player.vimeo.com/video/1226760568"
+  title="Video walkthrough"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+## Jump to a setup or camera
+
+<Steps titleSize="h3">
+  <Step title="Open Setups & Cameras">
+    Tap the list button in the bottom bar, then **2 Setups**. The number is how many setups the 3D scene has.
+
+    <img
+      src="/images/spark/spark-ios/setups-panel.png"
+      alt="Setups & Cameras. Box 1 is on Setup B, orange with a tick, 2 on the Camera 2 chip, 3 on 2 Setups and 4 on the list button."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+    />
+
+    <div className="key cols-2 left">
+
+    1. Setup
+    2. Camera
+    3. **2 Setups**
+    4. List button
+
+    </div>
+  </Step>
+  <Step title="Tap a setup">
+    The setup turns orange with a tick. You stand in its arrangement without jumping to a camera.
+  </Step>
+
+  <Step title="Tap a camera">
+    The view jumps to that camera and its chip turns blue. The picker beside **Record** shows the setup and camera, such as **B 2**. Slide the row sideways to see the rest.
+  </Step>
+</Steps>
+
+## Add a stationary camera
+
+Tap the blue **+** at the far right of the row. Spark adds a camera at your position, in the setup you're in, and selects it. Use one to mark a spot in a large scene and jump back later.
+
+<img
+  src="/images/spark/spark-ios/add-stationary.png"
+  alt="The Setups & Cameras row slid to its end, with a box on the blue plus chip at the far right."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+## Ride a moving camera
+
+Tap a camera with a path, then tap play. The view rides the path you set in the web app, and you keep handheld control of the framing.
+
+<img
+  src="/images/spark/spark-ios/ride-camera.jpg"
+  alt="Camera 2 playing at 1.254 seconds. Box 1 is on the picker reading B 2, 2 on the playback bar and 3 on the blue Camera 2 chip."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '360px' }}
+/>
+
+<div className="key cols-3 left">
+
+1. Picker
+2. Playback
+3. Camera
+
+</div>
+
+## Camera motion types
+
+Each camera's icon shows how it moves. You set paths and parents in the [web app](/spark/setups-cameras/cameras).
+
+<img
+  src="/images/spark/spark-ios/motion-types.png"
+  alt="Two Camera 2 chips. Box 1 is on the one with speed lines on its icon, and 2 on the one with a plain icon."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. **Path**
+2. **Stationary**
+
+</div>
+
+| Type | Icon | Camera |
+|---|---|---|
+| **Stationary** | Plain camera | Holds one position |
+| **Path** | Camera with speed lines | Follows keyframes |
+| **Parented** | Camera tethered to an object | Rides an object or a part of one, or tracks a target |
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://player.vimeo.com/video/1226786565"
+  title="Video walkthrough"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+## Hidden and moved parts
+
+Parts you hide or move in the web app look the same in the app. Each setup shows its own part changes, and a change reaches an open scene within a few seconds. See [Parts of an object](/spark/scene-editor/parts-of-an-object).
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Spark iOS app" icon="smartphone" href="/spark/spark-ios/spark-ios-app">
+    Open a 3D scene and move through it.
+  </Card>
+  <Card title="Cameras" icon="video" href="/spark/setups-cameras/cameras">
+    Add a camera and set its path in the web app.
+  </Card>
+</CardGroup>

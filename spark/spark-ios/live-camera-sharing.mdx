@@ -1,35 +1,67 @@
 ---
 title: 'Live camera sharing'
-description: 'Broadcast your iPhone or iPad camera view to teammates in the browser in real time'
+description: 'Share your iPhone or iPad camera, and follow it from the browser.'
 ---
 
-Live camera sharing, also called Direct Drive, lets a teammate drive a virtual camera on their iPhone or iPad while everyone else watches the framing update in their browser — regardless of location. Multiple teammates can broadcast at once, and each viewer in the browser chooses whose feed to follow.
+Live camera sharing lets people in the browser watch your framing as you move the phone. The browser calls it **Direct Drive**. Spark sends the camera's position, not video, so the browser draws the view itself.
 
-## How it works
+## Broadcast your camera
 
-Spark transmits 3D coordinates, not video: the device sends its virtual camera position and the browser re-renders it locally, which is why it stays smooth. This means a teammate in another city can drive the camera without lag, and anyone in the same scene can see where each broadcaster is positioned.
+1. Open the 3D scene on the phone and keep the app open.
+2. Tap the lightning button in the bottom bar. It turns green and shows **Web Follow engaged!**
 
-## Start broadcasting
+<img
+  src="/images/spark/spark-ios/web-follow.png"
+  alt="The Web Follow engaged message above the bottom bar, with a box on the green lightning button."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
 
-1. In the Spark iOS app, tap the **lightning bolt** button at the top of the shooting view.
-2. The corresponding icon in the browser changes from blue to orange, signaling that the phone is broadcasting.
+Several people can broadcast at once. Each broadcaster shows as a gray camera in the 3D scene.
 
-<Tip>
-If the lightning bolt does not engage on the first tap, tap it again. The handshake occasionally needs a second attempt.
-</Tip>
+## Follow a live camera
 
-## Follow a broadcaster
+<Steps titleSize="h3">
+  <Step title="Open the same 3D scene in the browser">
+    Sign in to the web app and open the scene the phone is in.
+  </Step>
+  <Step title="Open Direct Drive">
+    On the camera preview, click the lightning button. Its tooltip counts who's available, such as **1 cinematographer available**.
+  </Step>
+  <Step title="Click Follow">
+    Click **Follow** beside a name. The camera preview now moves with that phone.
 
-1. In the browser, click the orange lightning bolt icon.
-2. Choose **Follow [user name]** from the dropdown. If more than one teammate is broadcasting, each appears as a separate option.
-3. Your browser viewport now mirrors that broadcaster's camera in real time.
+    <img
+      src="/images/spark/spark-ios/direct-drive-list.png"
+      alt="The Direct Drive panel listing one active cinematographer on an iPhone, with the surname blurred. Box 1 is on the lightning button and 2 on Follow."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '425px' }}
+    />
 
-Each broadcaster also appears as a gray camera inside the 3D scene, visible to everyone else in the session.
+    <div className="key cols-2 left">
 
-## Recording from a live session
+    1. Lightning button
+    2. **Follow**
 
-Hitting record on the device while broadcasting plays the scene's animation while you operate the camera. Stop, name the take, and it appears instantly in the browser timeline for the whole team — teammates without a device can watch and participate purely from the browser.
+    </div>
+  </Step>
+</Steps>
 
-## Limitations
+To stop, click **Stop Following** in the same panel.
 
-- The broadcaster must have the Spark iOS app open and connected to the same scene.
+<img
+  src="/images/spark/spark-ios/direct-drive-following.png"
+  alt="The Direct Drive panel reading Following, with the surname blurred, and a box on Stop Following."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '425px' }}
+/>
+
+If the panel reads **No cinematographers broadcasting**, open the app on the phone, in this scene, and tap the lightning button again.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Composite and record" icon="video" href="/spark/spark-ios/composite-and-record">
+    Record a take on the phone.
+  </Card>
+  <Card title="Cameras" icon="video" href="/spark/setups-cameras/cameras">
+    Add a camera and set its lens.
+  </Card>
+</CardGroup>

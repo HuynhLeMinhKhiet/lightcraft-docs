@@ -1,0 +1,138 @@
+---
+title: 'Spark iOS app'
+description: 'Open a 3D scene on iPhone or iPad, move through it, and set the camera.'
+---
+
+The Spark iOS app turns an iPhone or iPad into a camera inside your 3D scenes. It opens the same scenes, setups and cameras as the web app. To install it, see [Install and sign in](/spark/get-started/install-and-sign-in#install-and-sign-in-on-iphone-or-ipad).
+
+<img
+  src="/images/spark/spark-ios/scene-overview.jpg"
+  alt="P5 stairwell open in the Spark iOS app. Box 1 is on the script button at the top left, 2 on the clapperboard at the top right, 3 on Joystick, AR and Off, 4 on the two dials and two joysticks, 5 on Base and Record, 6 on the playback bar and 7 on the bottom bar."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '360px' }}
+/>
+
+<div className="key cols-3 left">
+
+1. Script
+2. Takes
+3. **Joystick**, **AR** and camera
+4. Dials and joysticks
+5. Setup picker and **Record**
+6. Playback
+7. Bottom bar
+
+</div>
+
+## What the app does
+
+You film takes inside a 3D scene. The app can also share your camera with people in the browser. Tap the view to hide the controls and see the whole frame.
+
+The bottom bar holds the rest:
+
+| Button | Does |
+|---|---|
+| Lightning | Shares your camera. See [Live camera sharing](/spark/spark-ios/live-camera-sharing) |
+| Camera | Shows the lens, focus and T-stop controls |
+| List | Shows **Setups & Cameras** and **Script** |
+| Gear | Shows the view settings |
+| ? | Links to the Discord |
+
+## Open a 3D scene
+
+1. Tap your organization, then a production, then a script.
+2. Tap a scene heading. A blue cube shows how many 3D scenes it has.
+3. Tap **View in 3D**.
+
+<img
+  src="/images/spark/spark-ios/open-script.png"
+  alt="The Rooftop Test script in the app with INT. STAIRWELL - DAWN open, the author's surname blurred, and a box on View in 3D on the P5 stairwell card, which reads 2 Shots."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '360px' }}
+/>
+
+The app counts a 3D scene's cameras as **Shots**. Each scene loads with its locations, setups and cameras from the web app.
+
+<Note>
+The app takes about 5 million splats per scene. Above that, the scene won't load, so keep a smaller version for the phone.
+</Note>
+
+## Browse a script
+
+Tap the script button at the top left to read the script and open another 3D scene. Tap the clapperboard for Takes. Lists you make in the Gallery don't show in the app.
+
+## Move through a scene
+
+Use the two joysticks to move and turn, or drag on the view to look around. Tap a dial to open its scale:
+
+- **Speed**: how fast the joysticks move you, 3.0 m/s to begin with
+- **Height**: how far above the floor the camera sits, in metres
+
+<img
+  src="/images/spark/spark-ios/dials.png"
+  alt="The Speed scale reading 3.0 m/s, in box 1, and the Height scale reading 0.3 m, in box 2."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. **Speed**
+2. **Height**
+
+</div>
+
+Tap **AR** to fly by moving the phone itself. Raise **Speed** to cover a large scene from your chair.
+
+## Camera settings
+
+Tap the camera in the bottom bar. Slide the ruler to set the selected control.
+
+<img
+  src="/images/spark/spark-ios/camera-strip.png"
+  alt="The camera controls. Box 1 is on ARRI ALEXA 35, 4.6K 16:9, 1920×1080, 24p, 2 on Zoom at 20mm, 3 on Focus and 4 on T-Stop at T2.8."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. Camera
+2. **Zoom**
+3. **Focus**
+4. **T-Stop**
+
+</div>
+
+Tap the camera's name to open **Camera & Capture**. **Simulated camera** is the look you're matching. **Capture quality** is what the iPhone records. Picking a camera overrides the default on this device only.
+
+<img
+  src="/images/spark/spark-ios/camera-capture.png"
+  alt="Camera & Capture. Box 1 is on App default, ticked, 2 on Simulated camera reading ARRI ALEXA 35, and 3 on Capture quality reading 1920×1080, 24p."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '360px' }}
+/>
+
+<div className="key left">
+
+1. **App default**
+2. **Simulated camera**
+3. **Capture quality**
+
+</div>
+
+<AccordionGroup>
+  <Accordion title="View settings">
+    | Setting | Does |
+    |---|---|
+    | **Center mark** | Marks the exact center of the frame. It's never recorded |
+    | **Fast splat preview** | Draws splats at lower quality for a faster, cooler preview. Recorded comps keep full quality |
+    | **Idle render skip** | Reuses the last 3D render while the camera is still, which runs cooler on a tripod. Turn it off if you see compositing glitches |
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Camera setups on iPhone" icon="layers" href="/spark/spark-ios/setups-and-cameras-on-iphone">
+    Jump to a setup or camera.
+  </Card>
+  <Card title="Composite and record" icon="video" href="/spark/spark-ios/composite-and-record">
+    Put a performer in the scene and record.
+  </Card>
+</CardGroup>

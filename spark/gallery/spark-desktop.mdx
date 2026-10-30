@@ -1,19 +1,59 @@
 ---
-title: 'Syncing composite takes'
-description: 'Offload recorded takes from an iPhone or iPad and review them with your team in the browser'
+title: 'Upload takes from iPhone'
+description: 'Send takes to the Gallery from the app or with Spark Desktop, and free up the phone.'
 ---
 
-Every take recorded in [compositing mode](/spark/spark-ios/compositing-and-recording) is stored on the device until it's uploaded to the platform. The Spark Desktop app moves takes and their full metadata from the device to the cloud, where the whole team can review them in the browser.
+Takes stay on the phone until you upload them. Upload from the app's Takes page, or offload them over USB with Spark Desktop. A take's data always syncs, so the web can render a camera-off take.
 
-<Warning>
-Takes are stored on the device until uploaded. Do not delete the Spark iOS app while it holds unuploaded takes — an app version update is safe, but deleting the app may not be.
-</Warning>
+## Upload from the app
 
-## Install Spark Desktop
+<Steps titleSize="h3">
+  <Step title="Open Takes">
+    In a 3D scene, tap the clapperboard. To upload video by itself after each take, turn on **Auto-upload video**.
+  </Step>
+  <Step title="Upload">
+    Tap **Upload** on a take, or **Upload All**. A bar counts the takes still uploading, and **Pause** stops them.
 
-Spark Desktop is a lightweight companion app for Mac and Windows, downloadable from the Gallery in the Spark web app.
+    <img
+      src="/images/spark/gallery/upload-progress.jpg"
+      alt="Takes uploading, with a box on the bar reading 2 takes uploading. Take 2 reads Queued and Take 1 reads scene_usd 1/3."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+    />
+  </Step>
+  <Step title="Check the cloud">
+    A green tick means the take is rendered, and a green cloud means it's uploaded. Two rendered takes, 8.5 MB in all, uploaded in about a minute.
+
+    <img
+      src="/images/spark/gallery/takes-uploaded.jpg"
+      alt="Both takes uploaded. Box 1 is on the green tick of Take 2, 2 on its green cloud and 3 on Free Up Space."
+      style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+    />
+
+    <div className="key cols-3 left">
+
+    1. Rendered
+    2. Uploaded
+    3. **Free Up Space**
+
+    </div>
+  </Step>
+</Steps>
+
+The takes then show in the [Gallery](/spark/gallery/gallery).
+
+## Free up space
+
+Tap **Free Up Space**, then **Remove All**. The app removes only fully uploaded takes, checking each against the cloud first. They stay in the list and can stream anytime.
+
+<img
+  src="/images/spark/gallery/free-up-space.png"
+  alt="The Free up space? window, with Remove All 2 Takes (8,5 MB) and Cancel."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '340px' }}
+/>
 
 ## Offload takes
+
+Spark Desktop pulls takes off the phone over USB, with every file. It installs as **Spark Atlas**. See [Install and sign in](/spark/get-started/install-and-sign-in#install-spark-desktop).
 
 <iframe
   className="w-full aspect-video rounded-xl"
@@ -23,16 +63,42 @@ Spark Desktop is a lightweight companion app for Mac and Windows, downloadable f
   allowFullScreen
 ></iframe>
 
-1. Plug the iPhone or iPad into your computer over USB-C.
-2. Open Spark Desktop and choose a destination folder.
-3. Pull takes from the device.
+<img
+  src="/images/spark/gallery/atlas-steps.jpg"
+  alt="Spark Atlas with its four numbered steps. Box 1 is on Destination, 2 on Pull from iPhone, 3 on Organize and 4 on Upload."
+  style={{ borderRadius: '0.5rem' }}
+/>
 
-Spark Desktop locates everything on the device, pulls each take with its full metadata, organizes the local folder by production, and uploads takes to the cloud. Each recording reserves a slot in the Gallery (marked with a lightning bolt while it waits); uploading fills that slot.
+<div className="key cols-2">
 
-## Reviewing takes in the browser
+1. **Destination**
+2. **Pull from iPhone**
+3. **Organize**
+4. **Upload**
 
-In the Gallery, the whole team can review takes organized by scene and setup. Web downloads of takes are MP4 only — the full separated file set (raw camera, composite, background plate, depth map, tracking data, and metadata) lives locally with whoever ran the Spark Desktop offload.
+</div>
 
-## Sending takes to post
+1. Plug in the phone over USB.
+2. Under **Destination**, click **Choose folder…**.
+3. Click **Pull takes**. Takes land in `Raw/`.
+4. Click **Organize**. Takes are renamed into `Takes/`.
+5. Click **Check cloud**, then **Upload all**.
 
-The take bundle can be pushed directly into a pre-configured Nuke or Blender project. See [Autoshot overview](/autoshot/autoshot-overview) for the broader post-production pipeline once footage moves beyond Spark.
+<Note>
+On Windows, install Apple Devices from the Microsoft Store and open it once. Without it, **Pull takes** shows **Apple Mobile Device Service not found**.
+</Note>
+
+## Send a take to Nuke or Blender
+
+Spark Desktop can push a take's files into a set-up Nuke or Blender project. See [Autoshot overview](/autoshot/autoshot-overview) for work after Spark.
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Review and share takes" icon="images" href="/spark/gallery/gallery">
+    Find takes and collect them in lists.
+  </Card>
+  <Card title="Composite and record" icon="video" href="/spark/spark-ios/composite-and-record">
+    Record a take on the phone.
+  </Card>
+</CardGroup>

@@ -1,0 +1,166 @@
+---
+title: 'Composite and record'
+description: 'Put a performer in a 3D scene, record a take, and render it.'
+---
+
+The app puts a real performer into your 3D scene live, with or without a green screen. Each take keeps its layers separate for the Gallery and the Editor.
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://player.vimeo.com/video/1221837068"
+  title="Video walkthrough"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+## Turn on compositing and key a performer
+
+Tap **Off** at the top. The **CAMERA/KEY** menu opens. Allow camera access if the phone asks.
+
+<img
+  src="/images/spark/spark-ios/key-menu.png"
+  alt="The camera button, in box 1, with its CAMERA/KEY menu open in box 2: Person, Chroma, Depth and Off."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '340px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. Camera button
+2. **CAMERA/KEY**
+
+</div>
+
+- **Person**: cuts the performer out of the room, with no green screen
+- **Chroma**: keys out a green or blue screen, for a cleaner edge
+- **Off**: records the 3D scene with no camera
+
+With **Chroma**, tap **Pick color**, then tap the screen. **Clip black** and **Clip white** in **Tools** fine-tune the key. **Find Screen** finds the edges of a small screen, and the 3D scene fills everything outside it.
+
+<img
+  src="/images/spark/spark-ios/chroma-row.png"
+  alt="Chroma on, with the message Tap the green or blue screen to set the key color. Box 1 is on Pick color, 2 on Match floor with a tick and 3 on Find Screen."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+<div className="key cols-3 left">
+
+1. **Pick color**
+2. **Match floor**
+3. **Find Screen**
+
+</div>
+
+## Compositing views
+
+Tap **Tools** to switch views and set what shows on screen.
+
+<img
+  src="/images/spark/spark-ios/person-tools.png"
+  alt="Person on with Tools open. Box 1 is on Match floor, 2 on Align, 3 on Tools, 4 on the Comp, Cam, Depth and Matte tabs, and 5 on the three switches."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '380px' }}
+/>
+
+<div className="key cols-3 left">
+
+1. **Match floor**
+2. **Align**
+3. **Tools**
+4. Views
+5. Switches
+
+</div>
+
+| View | Shows |
+|---|---|
+| **Comp** | The performer over the 3D scene |
+| **Cam** | The raw camera |
+| **Depth** | Depth for each frame |
+| **Matte** | The matte used for the key |
+
+| Switch | Does |
+|---|---|
+| **Show Virtual World** | Off shows the full camera view, and the floor grid stays |
+| **Floor grid** | Shows the grid on screen. It's never recorded |
+| **Match Floor uses splat** | Off assumes the scene's floor is at height 0 |
+
+## Place a performer
+
+Point the camera at the real floor and tap **Match floor**. It measures the distance and sets your height, then shows a tick. It can't run while you're locked to a camera.
+
+Tap **Align** to seat the performer in the scene, such as behind a desk or in a car seat.
+
+## Record a take
+
+1. Pick the setup and camera. See [Camera setups on iPhone](/spark/spark-ios/setups-and-cameras-on-iphone).
+2. Tap **Record**. The button shows the time and the take number.
+3. Tap it again to stop.
+
+<img
+  src="/images/spark/spark-ios/record.jpg"
+  alt="Recording in P5 stairwell, with a box on the red button reading 00:05, Take 1."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '360px' }}
+/>
+
+Takes number themselves in each setup. A take with the camera off reads **No camera**, and shows **BG ONLY** in the Gallery.
+
+<Note>
+Recording claims the camera, so screen sharing over Zoom or Meet stops until the take ends.
+</Note>
+
+## Render now or later
+
+Tap the clapperboard to open Takes. A new take shows **Render** and **Upload**.
+
+<img
+  src="/images/spark/spark-ios/takes-render.png"
+  alt="Takes for Rooftop Test with Take 1 and Take 2. Box 1 is on Render All (2), 2 on Upload All (2), 3 on the Auto-upload video switch and 4 on the layer chips cam, comp, depth, matte and bg."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '400px' }}
+/>
+
+<div className="key cols-2 left">
+
+1. **Render All**
+2. **Upload All**
+3. **Auto-upload video**
+4. Layers
+
+</div>
+
+Tap **Render** on one take, or **Render All**. Rendering later saves heat and battery on a fast set. Two takes of about 7 seconds took about a minute on an iPhone 14 Pro Max.
+
+<img
+  src="/images/spark/spark-ios/render-sheet.png"
+  alt="The Rendering Takes sheet: Take 1 of 2, This take and All takes progress bars, 5 of 164 frames, and Pause."
+  style={{ borderRadius: '0.5rem', width: '100%', maxWidth: '340px' }}
+/>
+
+## Record offline, sync later
+
+A take recorded offline saves on the phone. It syncs to the web app when the phone reconnects.
+
+## Take files on the device
+
+Each take keeps its elements as separate files, sorted by production, then script scene.
+
+| File prefix | Contents |
+|---|---|
+| `cam_*` | Raw camera footage |
+| `comp_*` | The live composite |
+| `depth_*` | Depth for each frame |
+| `tracking_*.json` | 3D camera tracking |
+| `meta_*.json` | Take metadata |
+
+<Warning>
+Takes stay on the device until they're uploaded. An app update is safe, but deleting the app may not be.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Upload takes from iPhone" icon="upload" href="/spark/gallery/spark-desktop">
+    Send takes to the Gallery.
+  </Card>
+  <Card title="Review and share takes" icon="images" href="/spark/gallery/gallery">
+    See every take in the Gallery.
+  </Card>
+</CardGroup>
