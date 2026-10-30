@@ -57,7 +57,8 @@ html.dark #table-of-contents li:not([data-active="true"]) a:hover { color: #E8ED
 .nav-tabs-item[aria-current] > div { display: none; }
 .nav-tabs-item[aria-current]::before { content: ""; position: absolute; inset: 9px -10px; z-index: -1; border-radius: 8px; background: #2F54EB; }
 
-/* Sidebar: even padding on all sides (Agreement 42). */
+/* Sidebar: even padding on all sides (Agreement 42), and a gap under the top bar (Jim, 2026-10-30). */
+#sidebar-content { inset: 16px 0 !important; }
 #sidebar-content > div:first-child { padding: 16px 6px 6px !important; }
 #sidebar-content :has(+ #navigation-items):empty { display: none; }
 
@@ -73,11 +74,16 @@ html[data-spark] #content .steps p { max-width: 720px; }
 html[data-spark] [data-spk-group] .sidebar-group-header { cursor: pointer; margin-bottom: 0; padding-top: 6px; padding-bottom: 6px; border-radius: 10px; }
 html[data-spark] [data-spk-group] .sidebar-group-header::after { content: ""; margin-left: auto; margin-right: 12px; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); opacity: 0.6; transition: transform 0.15s; }
 html[data-spark] [data-spk-closed] .sidebar-group-header::after { transform: rotate(-45deg); }
-html[data-spark] [data-spk-group] { margin-top: 2px !important; }
+html[data-spark] [data-spk-group] { margin-top: 6px !important; }
 html[data-spark] #navigation-items { margin-top: -6px; }
+/* Three levels: group titles are larger and bold, pages sit under the title text at regular weight, headings are smallest and dimmer. */
+html[data-spark] [data-spk-group] .sidebar-group-header { font-size: 0.9375rem; font-weight: 700; }
+html[data-spark] [data-spk-group] > ul > li > a { padding-left: 2.45rem !important; font-size: 0.875rem; font-weight: 400; }
+#sidebar-content .spk-heads a:not([aria-current]) { color: #66708F; }
+html.dark #sidebar-content .spk-heads a:not([aria-current]) { color: #8791AE; }
 html[data-spark] [data-spk-closed] > ul { display: none; }
 html[data-spark] [data-spk-group] > ul { margin: 2px 0 8px; }
-.spk-heads { margin: 2px 0 6px 1.5rem; padding: 0; list-style: none; border-left: 1px solid rgb(47 84 235 / 0.25); }
+.spk-heads { margin: 2px 0 6px 2.6rem; padding: 0; list-style: none; border-left: 1px solid rgb(47 84 235 / 0.25); }
 .spk-heads a { display: block; padding: 3px 8px 3px 10px; margin-left: -1px; border-left: 1px solid transparent; font-size: 0.8125rem; line-height: 1.35; }
 #mobile-nav .spk-heads a { color: #4A5578; }
 html.dark #mobile-nav .spk-heads a { color: #A3ACC6; }
