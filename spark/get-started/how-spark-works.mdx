@@ -23,11 +23,11 @@ export const StageStrip = () => {
   const s = STAGES[active];
   return (
     <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} style={{
-      borderRadius: '1rem', padding: '1rem', margin: '1.5rem 0',
+      borderRadius: '1rem', padding: '1rem', margin: '1.5rem 0', containerType: 'inline-size',
       background: 'radial-gradient(120% 90% at 0% 0%, rgba(47,84,235,0.6), transparent 60%), radial-gradient(90% 80% at 100% 100%, rgba(54,207,201,0.4), transparent 60%), #06142F',
       border: '1px solid rgba(89,126,247,0.35)',
     }}>
-      <div role="tablist" aria-label="Stages of a Spark production" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, minmax(0, 1fr))', gap: '0.4rem', marginBottom: '0.9rem' }}>
+      <div role="tablist" aria-label="Stages of a Spark production" style={{ display: 'grid', gridTemplateColumns: 'repeat(5, auto)', gap: '0.25rem', marginBottom: '0.9rem' }}>
         {STAGES.map((st, i) => (
           <button key={st.title} role="tab" aria-selected={i === active} onClick={() => { setActive(i); setPaused(true); }}
             style={{ textAlign: 'left', cursor: 'pointer', border: 'none', background: 'transparent', padding: '0.35rem 0.25rem 0', color: i === active ? '#FFFFFF' : 'rgba(230,236,250,0.6)' }}>
@@ -40,7 +40,7 @@ export const StageStrip = () => {
             </div>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.35rem' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: i === active ? '#36CFC9' : 'inherit' }}>{i + 1}</span>
-              <span className="spk-tab-title" style={{ fontSize: '0.85rem', fontWeight: 700, lineHeight: 1.25 }}>{st.title}</span>
+              <span className="spk-tab-title" style={{ fontSize: '0.85rem', fontWeight: 700, lineHeight: 1.25, whiteSpace: 'nowrap' }}>{st.title}</span>
             </div>
           </button>
         ))}
@@ -60,7 +60,7 @@ export const StageStrip = () => {
           </div>
         </div>
       </a>
-      <style>{`@keyframes sparkStageFill { from { width: 0% } to { width: 100% } } @media (max-width: 640px) { .spk-tab-title { display: none } .spk-cap-title { display: inline !important } }`}</style>
+      <style>{`@keyframes sparkStageFill { from { width: 0% } to { width: 100% } } @container (max-width: 630px) { .spk-tab-title { display: none } .spk-cap-title { display: inline !important } }`}</style>
     </div>
   );
 };
