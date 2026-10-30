@@ -186,32 +186,23 @@
             ]
           },
           {
-            "group": "Spark iOS",
+            "group": "Shoot takes",
+            "icon": "smartphone",
             "pages": [
-              "spark/spark-ios/spark-ios-setup",
-              "spark/spark-ios/iphone-camera-controls",
-              "spark/spark-ios/mobile-setups-and-cameras",
+              "spark/spark-ios/spark-ios-app",
+              "spark/spark-ios/setups-and-cameras-on-iphone",
               "spark/spark-ios/live-camera-sharing",
-              "spark/spark-ios/compositing-and-recording"
-            ]
-          },
-          {
-            "group": "Gallery",
-            "pages": [
-              "spark/gallery/gallery",
+              "spark/spark-ios/composite-and-record",
+              "spark/export-jetset/shoot-with-jetset",
               "spark/gallery/spark-desktop"
             ]
           },
           {
-            "group": "Editing",
+            "group": "Review and edit",
+            "icon": "clapperboard",
             "pages": [
-              "spark/editing/editing"
-            ]
-          },
-          {
-            "group": "Export & Jetset",
-            "pages": [
-              "spark/export-jetset/exporting-to-jetset"
+              "spark/gallery/gallery",
+              "spark/editing/editor"
             ]
           },
           {
@@ -376,6 +367,30 @@
     }
   },
   "redirects": [
+    {
+      "source": "/spark/spark-ios/spark-ios-setup",
+      "destination": "/spark/spark-ios/spark-ios-app"
+    },
+    {
+      "source": "/spark/spark-ios/iphone-camera-controls",
+      "destination": "/spark/spark-ios/spark-ios-app"
+    },
+    {
+      "source": "/spark/spark-ios/mobile-setups-and-cameras",
+      "destination": "/spark/spark-ios/setups-and-cameras-on-iphone"
+    },
+    {
+      "source": "/spark/spark-ios/compositing-and-recording",
+      "destination": "/spark/spark-ios/composite-and-record"
+    },
+    {
+      "source": "/spark/export-jetset/exporting-to-jetset",
+      "destination": "/spark/export-jetset/shoot-with-jetset"
+    },
+    {
+      "source": "/spark/editing/editing",
+      "destination": "/spark/editing/editor"
+    },
     {
       "source": "/spark/scripts/importing-scripts",
       "destination": "/spark/scripts/scripts-and-script-scenes"
